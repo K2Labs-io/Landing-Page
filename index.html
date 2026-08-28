@@ -40,58 +40,55 @@
   <style>
     /* ── Hero ── */
     .hero {
-      background: linear-gradient(145deg, #2e1d40 0%, #3d2a52 45%, #5e4074 100%);
-      padding: 96px 0 112px;
-      overflow: hidden;
       position: relative;
+      min-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      overflow: hidden;
+      background: #1e1228;
     }
-    .hero::before {
-      content: '';
+    .hero-video {
       position: absolute;
       inset: 0;
-      background: radial-gradient(ellipse 70% 80% at 70% 50%, rgba(232,216,245,0.08) 0%, transparent 70%);
-      pointer-events: none;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(
+        to bottom,
+        rgba(20,12,34,0.52) 0%,
+        rgba(30,18,40,0.60) 60%,
+        rgba(20,12,34,0.80) 100%
+      );
     }
     .hero-inner {
-      max-width: var(--max-w);
-      margin: 0 auto;
-      padding: 0 40px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 64px;
-      align-items: center;
       position: relative;
+      z-index: 2;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 120px 40px 100px;
+      text-align: center;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
     .hero-sub {
       font-size: clamp(17px, 1.8vw, 21px);
-      color: rgba(247,249,236,0.75);
+      color: rgba(247,249,236,0.78);
       line-height: 1.65;
-      margin: 20px 0 36px;
-      max-width: 420px;
+      margin: 20px 0 40px;
+      max-width: 560px;
     }
     .hero-ctas {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-    }
-    .hero-visual {
-      display: flex;
-      align-items: center;
       justify-content: center;
-    }
-    .hero-app-mockup {
-      width: 100%;
-      max-width: 380px;
-      aspect-ratio: 9/18;
-      background: rgba(255,255,255,0.06);
-      border: 1px solid rgba(247,249,236,0.15);
-      border-radius: 40px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 80px;
-      backdrop-filter: blur(8px);
-      box-shadow: 0 24px 64px rgba(0,0,0,0.30);
     }
 
     /* ── Intro ── */
@@ -167,41 +164,60 @@
       max-width: 600px;
       margin: 0 auto 48px;
     }
-    .demo-embed {
-      max-width: 800px;
-      margin: 0 auto;
-      aspect-ratio: 16/9;
-      background: rgba(62,42,82,0.15);
-      border: 1px solid rgba(94,64,116,0.22);
-      border-radius: var(--radius-xl);
-      display: flex;
-      align-items: center;
-      justify-content: center;
+
+    /* Facade container */
+    .demo-video {
+      width: 100%;
+      max-width: 860px;
+      aspect-ratio: 16 / 9;
       overflow: hidden;
-      box-shadow: 0 8px 40px rgba(62,42,82,0.12);
+      border-radius: 24px;
+      margin: 0 auto;
+      box-shadow: 0 12px 48px rgba(62,42,82,0.22);
+      background: #000;
     }
-    .demo-placeholder {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 16px;
-      text-align: center;
-      padding: 40px;
+    .demo-video iframe {
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block;
     }
-    .demo-play-btn {
+
+    /* Facade button (shown before click) */
+    .demo-facade {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border: none;
+      padding: 0;
+      margin: 0;
+      cursor: pointer;
+      background: #000;
+      display: block;
+    }
+    .demo-facade-thumb {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: opacity 0.22s;
+    }
+    .demo-facade:hover .demo-facade-thumb { opacity: 0.82; }
+
+    /* YouTube-style play button */
+    .demo-play-icon {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
       width: 72px;
-      height: 72px;
-      background: var(--plum-dark);
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
+      height: 50px;
+      filter: drop-shadow(0 4px 16px rgba(0,0,0,0.45));
+      transition: transform 0.2s;
+      pointer-events: none;
     }
-    .demo-play-btn svg {
-      width: 28px;
-      height: 28px;
-      fill: var(--cream);
-      margin-left: 4px;
+    .demo-facade:hover .demo-play-icon {
+      transform: translate(-50%, -50%) scale(1.12);
     }
 
     /* ── Pricing ── */
@@ -261,14 +277,12 @@
 
     /* ── Responsive ── */
     @media (max-width: 900px) {
-      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
-      .hero-visual { display: none; }
       .intro-inner { grid-template-columns: 1fr; gap: 48px; }
       .steps-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
     }
     @media (max-width: 700px) {
-      .hero { padding: 72px 0 88px; }
-      .hero-inner { padding: 0 24px; }
+      .hero { min-height: 80vh; }
+      .hero-inner { padding: 96px 24px 80px; }
       .intro { padding: 72px 0; }
       .how, .features, .demo, .pricing, .faq { padding: 72px 0; }
       .final-cta { padding: 80px 0; }
@@ -316,18 +330,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <!-- ══════════ HERO ══════════ -->
 <section class="hero" aria-labelledby="hero-heading">
+  <video class="hero-video" autoplay muted loop playsinline poster="images/hero-poster.jpg">
+    <source src="images/hero.webm" type="video/webm">
+    <source src="images/hero-web.mp4" type="video/mp4">
+    <source src="images/hero.mp4" type="video/mp4">
+  </video>
+  <div class="hero-overlay" aria-hidden="true"></div>
   <div class="hero-inner">
-    <div class="hero-content">
-      <span class="eyebrow" style="color:rgba(232,216,245,0.70);">For teachers</span>
-      <h1 id="hero-heading" class="display-1">Grade paper quizzes in seconds.</h1>
-      <p class="hero-sub">Scan the answer key. Scan your students' sheets. CamGrader does the rest.</p>
-      <div class="hero-ctas">
-        <a href="account/create" class="btn btn-primary-light">Get CamGrader</a>
-        <a href="#how-it-works" class="btn btn-outline-light btn-sm" style="padding:16px 24px;">See how it works</a>
-      </div>
-    </div>
-    <div class="hero-visual" aria-hidden="true">
-      <div class="hero-app-mockup">📷</div>
+    <span class="eyebrow" style="color:rgba(232,216,245,0.65);">For teachers</span>
+    <h1 id="hero-heading" class="display-1">Grade paper quizzes<br>in seconds.</h1>
+    <p class="hero-sub">Scan the answer key. Scan your students' sheets. CamGrader does the rest.</p>
+    <div class="hero-ctas">
+      <a href="account/create" class="btn btn-primary-light">Get CamGrader</a>
+      <a href="#how-it-works" class="btn btn-outline-light" style="font-size:15px;padding:16px 28px;">See how it works</a>
     </div>
   </div>
 </section>
@@ -459,14 +474,19 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <span class="eyebrow">See it in action</span>
       <h2 id="demo-heading" class="heading-2">Watch a class get graded in under two minutes.</h2>
     </div>
-    <div class="demo-embed">
-      <!-- YouTube embed will be placed here -->
-      <div class="demo-placeholder">
-        <div class="demo-play-btn" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
-        </div>
-        <p class="body-sm" style="color:var(--text-secondary);">Demo video coming soon</p>
-      </div>
+    <div class="demo-video" id="demoPlayer">
+      <button class="demo-facade" id="demoPlayBtn"
+              aria-label="Play CamGrader demo video"
+              title="Play CamGrader demo video">
+        <img class="demo-facade-thumb"
+             src="https://i.ytimg.com/vi/-EcdWtk38j8/maxresdefault.jpg"
+             alt="CamGrader demo video thumbnail"
+             loading="lazy">
+        <svg class="demo-play-icon" viewBox="0 0 68 48" aria-hidden="true">
+          <path d="M66.5 7.8C65.7 4.8 63.3 2.4 60.3 1.6 55 0 34 0 34 0S13 0 7.7 1.6C4.7 2.4 2.3 4.8 1.5 7.8 0 13.1 0 24 0 24s0 10.9 1.5 16.2c.8 3 3.2 5.4 6.2 6.2C13 48 34 48 34 48s21 0 26.3-1.6c3-.8 5.4-3.2 6.2-6.2C68 34.9 68 24 68 24s0-10.9-1.5-16.2z" fill="#ff0000"/>
+          <path d="M45 24L27 14v20l18-10z" fill="#fff"/>
+        </svg>
+      </button>
     </div>
     <p style="text-align:center;margin-top:24px;">
       <a href="keygen" class="btn btn-outline btn-sm">Try the answer key generator →</a>
@@ -673,5 +693,22 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </footer>
 
 <script src="js/nav.js"></script>
+<script>
+(function () {
+  var btn = document.getElementById('demoPlayBtn');
+  if (!btn) return;
+  btn.addEventListener('click', function () {
+    var player = document.getElementById('demoPlayer');
+    var iframe = document.createElement('iframe');
+    iframe.src = 'https://www.youtube-nocookie.com/embed/-EcdWtk38j8?rel=0&modestbranding=1';
+    iframe.title = 'CamGrader Demo';
+    iframe.loading = 'lazy';
+    iframe.allow = 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share';
+    iframe.allowFullscreen = true;
+    player.innerHTML = '';
+    player.appendChild(iframe);
+  }, { once: true });
+})();
+</script>
 </body>
 </html>
