@@ -4,13 +4,15 @@
 
   document.addEventListener('DOMContentLoaded', function () {
     var nav        = document.querySelector('.nav');
+    var utilBar    = document.querySelector('.util-topbar');
     var hamburger  = document.querySelector('.nav-hamburger');
     var mobileMenu = document.querySelector('.nav-mobile');
 
-    /* Scroll shadow */
-    if (nav) {
+    /* Scroll shadow — homepage nav or utility topbar */
+    var stickyEl = nav || utilBar;
+    if (stickyEl) {
       window.addEventListener('scroll', function () {
-        nav.classList.toggle('scrolled', window.scrollY > 8);
+        stickyEl.classList.toggle('scrolled', window.scrollY > 8);
       }, { passive: true });
     }
 
