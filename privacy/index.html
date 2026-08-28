@@ -58,13 +58,15 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </ul>
   <p class="util-p">All of this data is stored exclusively on your device using a local SQLite database. It is never transmitted to our servers, never uploaded to the cloud, and never shared with any third party. Deleting the app removes all locally stored data permanently.</p>
 
-  <h2 class="util-h2">2. Analytics and Crash Reporting</h2>
-  <p class="util-p">CamGrader uses <strong>Firebase Analytics</strong> and <strong>Firebase Crashlytics</strong>, both provided by Google. These services collect anonymized, non-personally-identifiable information to help us understand how the app is used and to detect crashes:</p>
+  <h2 class="util-h2">2. Crash Reporting</h2>
+  <p class="util-p">CamGrader uses <strong>Sentry</strong> for crash reporting and performance monitoring. When the app encounters an unexpected error, Sentry automatically captures a report containing:</p>
   <ul class="util-ul">
-    <li><strong>Firebase Analytics</strong> records events such as app opens, scans completed, sheet downloads, and export actions. No student data, test content, or identifying information is included in these events.</li>
-    <li><strong>Firebase Crashlytics</strong> automatically captures crash reports when the app encounters an unexpected error. Crash reports include device model, OS version, app version, and a stack trace. They do not include any classroom data.</li>
+    <li>Device model and manufacturer</li>
+    <li>Operating system version</li>
+    <li>App version</li>
+    <li>A technical stack trace describing where the error occurred</li>
   </ul>
-  <p class="util-p">Firebase data is processed by Google in accordance with <a href="https://policies.google.com/privacy" target="_blank" rel="noopener" class="util-a">Google's Privacy Policy</a>. You can review Firebase's data practices at <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener" class="util-a">firebase.google.com/support/privacy</a>.</p>
+  <p class="util-p">Crash reports do not include any classroom data, student IDs, test content, or scores. They are used solely to identify and fix bugs. Sentry data is processed in accordance with <a href="https://sentry.io/privacy/" target="_blank" rel="noopener" class="util-a">Sentry's Privacy Policy</a>.</p>
 
   <h2 class="util-h2">3. Student Data</h2>
   <p class="util-p">CamGrader reads numeric student ID numbers from printed bubble grids on answer sheets. These IDs are stored locally on your device only and are never transmitted externally. No student names, photos, or other personal information are collected by the app. As the teacher using the app, you are responsible for ensuring your use of student ID data complies with applicable regulations in your jurisdiction, including FERPA in the United States.</p>
