@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CamGrader — Grade Paper Quizzes in Seconds</title>
+  <meta name="description" content="Scan the answer key. Scan your students' sheets. CamGrader does the rest. The fastest way to grade paper quizzes.">
+  <meta name="theme-color" content="#3d2a52">
+  <link rel="canonical" href="https://camgrader.com/">
+
+  <!-- Open Graph -->
+  <meta property="og:type"        content="website">
+  <meta property="og:url"         content="https://camgrader.com/">
+  <meta property="og:title"       content="CamGrader — Grade Paper Quizzes in Seconds">
+  <meta property="og:description" content="Scan the answer key. Scan your students' sheets. CamGrader does the rest.">
+  <meta property="og:image"       content="https://camgrader.com/images/og.png">
+  <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- Favicons -->
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ5SX8ZM');</script>
+  <!-- End Google Tag Manager -->
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    /* ── Hero ── */
+    .hero {
+      background: linear-gradient(145deg, #2e1d40 0%, #3d2a52 45%, #5e4074 100%);
+      padding: 96px 0 112px;
+      overflow: hidden;
+      position: relative;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse 70% 80% at 70% 50%, rgba(232,216,245,0.08) 0%, transparent 70%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      padding: 0 40px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: center;
+      position: relative;
+    }
+    .hero-sub {
+      font-size: clamp(17px, 1.8vw, 21px);
+      color: rgba(247,249,236,0.75);
+      line-height: 1.65;
+      margin: 20px 0 36px;
+      max-width: 420px;
+    }
+    .hero-ctas {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+    .hero-visual {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-app-mockup {
+      width: 100%;
+      max-width: 380px;
+      aspect-ratio: 9/18;
+      background: rgba(255,255,255,0.06);
+      border: 1px solid rgba(247,249,236,0.15);
+      border-radius: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 80px;
+      backdrop-filter: blur(8px);
+      box-shadow: 0 24px 64px rgba(0,0,0,0.30);
+    }
+
+    /* ── Intro ── */
+    .intro {
+      padding: 96px 0;
+    }
+    .intro-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center;
+    }
+    .stat-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .stat-box {
+      background: var(--lavender-pale);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 24px 20px;
+      text-align: center;
+    }
+    .stat-number {
+      font-size: 36px;
+      font-weight: 800;
+      color: var(--text-primary);
+      letter-spacing: -1px;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-label {
+      font-size: 13px;
+      color: var(--text-secondary);
+    }
+    .intro-text .heading-2 { margin-bottom: 20px; }
+
+    /* ── How It Works ── */
+    .how {
+      padding: 96px 0;
+    }
+    .how-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 56px;
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+
+    /* ── Features ── */
+    .features {
+      padding: 96px 0;
+    }
+    .features-header {
+      margin-bottom: 64px;
+    }
+    .feature-section {
+      margin-bottom: 80px;
+    }
+    .feature-section:last-child { margin-bottom: 0; }
+
+    /* ── Demo ── */
+    .demo {
+      padding: 96px 0;
+    }
+    .demo-header {
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 48px;
+    }
+    .demo-embed {
+      max-width: 800px;
+      margin: 0 auto;
+      aspect-ratio: 16/9;
+      background: rgba(62,42,82,0.15);
+      border: 1px solid rgba(94,64,116,0.22);
+      border-radius: var(--radius-xl);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      box-shadow: 0 8px 40px rgba(62,42,82,0.12);
+    }
+    .demo-placeholder {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 16px;
+      text-align: center;
+      padding: 40px;
+    }
+    .demo-play-btn {
+      width: 72px;
+      height: 72px;
+      background: var(--plum-dark);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .demo-play-btn svg {
+      width: 28px;
+      height: 28px;
+      fill: var(--cream);
+      margin-left: 4px;
+    }
+
+    /* ── Pricing ── */
+    .pricing {
+      padding: 96px 0;
+    }
+    .pricing-header {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 56px;
+    }
+
+    /* ── FAQ ── */
+    .faq {
+      padding: 96px 0;
+    }
+    .faq-header {
+      text-align: center;
+      max-width: 560px;
+      margin: 0 auto 48px;
+    }
+    .faq-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+
+    /* ── Final CTA ── */
+    .final-cta {
+      padding: 112px 0;
+      text-align: center;
+    }
+    .final-cta .display-1 { margin-bottom: 20px; }
+    .final-cta .body-lg { max-width: 500px; margin: 0 auto 40px; }
+    .final-cta-btns {
+      display: flex;
+      gap: 14px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── App Store badges ── */
+    .store-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(247,249,236,0.10);
+      border: 1px solid rgba(247,249,236,0.22);
+      border-radius: var(--radius-sm);
+      padding: 12px 20px;
+      color: var(--cream);
+      font-size: 14px;
+      font-weight: 600;
+      transition: background 0.18s, border-color 0.18s;
+    }
+    .store-badge:hover { background: rgba(247,249,236,0.16); border-color: rgba(247,249,236,0.35); }
+    .store-badge svg { width: 20px; height: 20px; fill: currentColor; }
+
+    /* ── Responsive ── */
+    @media (max-width: 900px) {
+      .hero-inner { grid-template-columns: 1fr; gap: 48px; }
+      .hero-visual { display: none; }
+      .intro-inner { grid-template-columns: 1fr; gap: 48px; }
+      .steps-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
+    }
+    @media (max-width: 700px) {
+      .hero { padding: 72px 0 88px; }
+      .hero-inner { padding: 0 24px; }
+      .intro { padding: 72px 0; }
+      .how, .features, .demo, .pricing, .faq { padding: 72px 0; }
+      .final-cta { padding: 80px 0; }
+      .stat-row { grid-template-columns: 1fr 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ5SX8ZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<!-- ══════════ NAV ══════════ -->
+<header>
+  <nav class="nav" role="navigation" aria-label="Main">
+    <div class="nav-inner">
+      <a href="/" class="nav-brand" aria-label="CamGrader home">
+        <img src="/images/logo.png" alt="CamGrader">
+        <span class="nav-brand-name">CamGrader</span>
+      </a>
+      <div class="nav-links">
+        <a href="#how-it-works">How It Works</a>
+        <a href="#features">Features</a>
+        <a href="#pricing">Pricing</a>
+        <a href="#faq">FAQ</a>
+        <a href="/support">Support</a>
+        <a href="/account/create" class="nav-cta">Get CamGrader</a>
+      </div>
+      <button class="nav-hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </nav>
+  <nav class="nav-mobile" aria-label="Mobile menu">
+    <a href="#how-it-works">How It Works</a>
+    <a href="#features">Features</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#faq">FAQ</a>
+    <a href="/support">Support</a>
+    <a href="/account/create" class="nav-cta">Get CamGrader</a>
+  </nav>
+</header>
+
+<!-- ══════════ HERO ══════════ -->
+<section class="hero" aria-labelledby="hero-heading">
+  <div class="hero-inner">
+    <div class="hero-content">
+      <span class="eyebrow" style="color:rgba(232,216,245,0.70);">For teachers</span>
+      <h1 id="hero-heading" class="display-1">Grade paper quizzes in seconds.</h1>
+      <p class="hero-sub">Scan the answer key. Scan your students' sheets. CamGrader does the rest.</p>
+      <div class="hero-ctas">
+        <a href="/account/create" class="btn btn-primary-light">Get CamGrader</a>
+        <a href="#how-it-works" class="btn btn-outline-light btn-sm" style="padding:16px 24px;">See how it works</a>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <div class="hero-app-mockup">📷</div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ INTRO ══════════ -->
+<section class="intro section--cream" aria-labelledby="intro-heading">
+  <div class="container">
+    <div class="intro-inner">
+      <div class="intro-text">
+        <span class="eyebrow">Why CamGrader</span>
+        <h2 id="intro-heading" class="heading-2">Your phone is all you need.</h2>
+        <p class="body-lg">No scanners. No spreadsheets. No subscription to a bloated platform. CamGrader turns your iPhone into a grading machine — point, scan, done.</p>
+        <p class="body-lg" style="margin-top:16px;">Works entirely offline. Your classroom data never leaves your device.</p>
+      </div>
+      <div>
+        <div class="stat-row">
+          <div class="stat-box">
+            <div class="stat-number">~5s</div>
+            <div class="stat-label">Per student sheet</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">100%</div>
+            <div class="stat-label">Offline — no Wi-Fi needed</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">25–100</div>
+            <div class="stat-label">Questions supported</div>
+          </div>
+          <div class="stat-box">
+            <div class="stat-number">0</div>
+            <div class="stat-label">Data sent to servers</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ HOW IT WORKS ══════════ -->
+<section id="how-it-works" class="how section--lavender-pale" aria-labelledby="how-heading">
+  <div class="container">
+    <div class="how-header">
+      <span class="eyebrow">Simple by design</span>
+      <h2 id="how-heading" class="heading-2">Three steps. That's it.</h2>
+      <p class="body-lg" style="margin-top:16px;">No training required. If you can take a photo, you can use CamGrader.</p>
+    </div>
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-number">1</div>
+        <div class="step-title">Scan the answer key</div>
+        <p class="step-body">Generate a bubble-sheet answer key in the app (or use the web tool), hold it up to your phone's camera, and CamGrader reads it instantly.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">2</div>
+        <div class="step-title">Scan student sheets</div>
+        <p class="step-body">Students fill in their bubble sheets on paper. You scan each one — CamGrader detects the student ID and scores every question automatically.</p>
+      </div>
+      <div class="step-card">
+        <div class="step-number">3</div>
+        <div class="step-title">Review &amp; export</div>
+        <p class="step-body">See scores, per-question breakdowns, and class statistics instantly. Export results as CSV to paste into any gradebook.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FEATURES ══════════ -->
+<section id="features" class="features section--cream" aria-labelledby="features-heading">
+  <div class="container">
+    <div class="features-header">
+      <span class="eyebrow">What you get</span>
+      <h2 id="features-heading" class="heading-2">Built for the classroom, not the IT department.</h2>
+    </div>
+
+    <!-- Feature 1 -->
+    <div class="feature-section">
+      <div class="feature-row">
+        <div class="feature-visual" aria-hidden="true">📋</div>
+        <div>
+          <h3 class="heading-3">Instant optical grading</h3>
+          <p class="body-lg" style="margin-top:12px;">CamGrader's computer vision reads filled bubbles in real time — no internet, no cloud processing. Everything happens on your device.</p>
+          <ul class="feature-list">
+            <li>25-Q, 50-Q, and 100-Q sheet formats</li>
+            <li>Multiple darkness levels for any printer</li>
+            <li>Handles minor sheet misalignment automatically</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 2 -->
+    <div class="feature-section">
+      <div class="feature-row reverse">
+        <div class="feature-visual" aria-hidden="true">📊</div>
+        <div>
+          <h3 class="heading-3">Real results, right away</h3>
+          <p class="body-lg" style="margin-top:12px;">Score summaries, per-question analytics, and class averages are ready the moment your last sheet is scanned.</p>
+          <ul class="feature-list">
+            <li>Per-question correct/incorrect breakdown</li>
+            <li>Class-wide score distribution</li>
+            <li>CSV export for any gradebook</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- Feature 3 -->
+    <div class="feature-section">
+      <div class="feature-row">
+        <div class="feature-visual" aria-hidden="true">🔒</div>
+        <div>
+          <h3 class="heading-3">Private by design</h3>
+          <p class="body-lg" style="margin-top:12px;">Student scores, IDs, and test data are stored only on your device in a local encrypted database. Nothing is sent to our servers — ever.</p>
+          <ul class="feature-list">
+            <li>No cloud sync, no accounts required to scan</li>
+            <li>FERPA-friendly offline architecture</li>
+            <li>Delete the app, delete everything</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ DEMO ══════════ -->
+<section class="demo section--lavender" aria-labelledby="demo-heading">
+  <div class="container">
+    <div class="demo-header">
+      <span class="eyebrow">See it in action</span>
+      <h2 id="demo-heading" class="heading-2">Watch a class get graded in under two minutes.</h2>
+    </div>
+    <div class="demo-embed">
+      <!-- YouTube embed will be placed here -->
+      <div class="demo-placeholder">
+        <div class="demo-play-btn" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+        </div>
+        <p class="body-sm" style="color:var(--text-secondary);">Demo video coming soon</p>
+      </div>
+    </div>
+    <p style="text-align:center;margin-top:24px;">
+      <a href="/keygen" class="btn btn-outline btn-sm">Try the answer key generator →</a>
+    </p>
+  </div>
+</section>
+
+<!-- ══════════ PRICING ══════════ -->
+<section id="pricing" class="pricing section--cream" aria-labelledby="pricing-heading">
+  <div class="container">
+    <div class="pricing-header">
+      <span class="eyebrow">Simple pricing</span>
+      <h2 id="pricing-heading" class="heading-2">Start free. Upgrade when you're ready.</h2>
+      <p class="body-lg" style="margin-top:16px;">No hidden fees. Cancel anytime.</p>
+    </div>
+    <div class="pricing-grid">
+
+      <!-- Free -->
+      <div class="pricing-card">
+        <div class="pricing-tier">Free</div>
+        <div class="pricing-price">$0</div>
+        <div class="pricing-period">forever</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> 50 scans per month</li>
+          <li><span class="check">✓</span> 25-Q sheets</li>
+          <li><span class="check">✓</span> CSV export</li>
+          <li><span class="check">✓</span> Fully offline</li>
+        </ul>
+        <a href="/account/create" class="btn btn-outline" style="width:100%;text-align:center;">Get CamGrader</a>
+      </div>
+
+      <!-- Personal (featured) -->
+      <div class="pricing-card pricing-card--featured">
+        <div class="pricing-badge">Most Popular</div>
+        <div class="pricing-tier">Personal</div>
+        <div class="pricing-price"><sup>$</sup>72</div>
+        <div class="pricing-period">per year &nbsp;·&nbsp; or $9.99/month</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Unlimited scans</li>
+          <li><span class="check">✓</span> 25-Q, 50-Q &amp; 100-Q sheets</li>
+          <li><span class="check">✓</span> CSV export</li>
+          <li><span class="check">✓</span> Fully offline</li>
+          <li><span class="check">✓</span> Priority support</li>
+        </ul>
+        <a href="/account/create" class="btn btn-primary" style="width:100%;text-align:center;">Get Personal</a>
+      </div>
+
+      <!-- Institutional -->
+      <div class="pricing-card">
+        <div class="pricing-tier">Institutional</div>
+        <div class="pricing-price"><sup>$</sup>540</div>
+        <div class="pricing-period">per year &nbsp;·&nbsp; up to 10 teachers</div>
+        <ul class="pricing-features">
+          <li><span class="check">✓</span> Everything in Personal</li>
+          <li><span class="check">✓</span> Up to 10 teacher seats</li>
+          <li><span class="check">✓</span> Centralized billing</li>
+          <li><span class="check">✓</span> Dedicated support</li>
+        </ul>
+        <a href="mailto:camgrader@gmail.com?subject=Institutional%20Plan%20Inquiry" class="btn btn-outline" style="width:100%;text-align:center;">Contact us for a quote</a>
+        <p class="pricing-note">Need more seats? We'll work something out.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FAQ ══════════ -->
+<section id="faq" class="faq section--white" aria-labelledby="faq-heading">
+  <div class="container">
+    <div class="faq-header">
+      <span class="eyebrow">FAQ</span>
+      <h2 id="faq-heading" class="heading-2">Questions? We've got answers.</h2>
+    </div>
+    <div class="faq-inner">
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What devices does CamGrader support?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">CamGrader is available for iPhone (iOS 16 and later). An Android version is in development. Check the App Store for the most current device requirements.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Do I need internet access to use the app?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">No. CamGrader is fully offline. All grading, scoring, and data storage happens on your device. Internet is only used to download answer sheet templates or (optionally) to sync app updates.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            What answer sheet formats are supported?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">CamGrader supports 25-question, 50-question, and 100-question bubble sheets (A–D format). Sheets are available as PDF and JPEG in multiple print darkness levels so they work reliably on any printer.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Is student data stored securely?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Yes. All data — student IDs, scores, and test results — is stored only in a local database on your device. It is never transmitted to our servers, never uploaded to the cloud, and never shared with third parties. Deleting the app removes all data.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            Can I use CamGrader for standardized tests?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">CamGrader is designed for classroom quizzes and teacher-created assessments. For state-mandated standardized tests, please follow your district's approved procedures.</div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            How do I cancel my subscription?
+            <svg class="faq-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="6 9 12 15 18 9"/></svg>
+          </button>
+          <div class="faq-answer">Subscriptions are managed through the App Store. You can cancel anytime in iOS Settings → Apple ID → Subscriptions. Your access continues until the end of the current billing period.</div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FINAL CTA ══════════ -->
+<section class="final-cta section--plum" aria-labelledby="cta-heading">
+  <div class="container">
+    <span class="eyebrow">Ready?</span>
+    <h2 id="cta-heading" class="display-1" style="margin-bottom:20px;">Start grading smarter today.</h2>
+    <p class="body-lg" style="max-width:480px;margin:0 auto 40px;">Free to download. Free to start. No credit card required.</p>
+    <div class="final-cta-btns">
+      <a href="/account/create" class="btn btn-primary-light">Get CamGrader</a>
+      <a href="https://apps.apple.com/app/camgrader" target="_blank" rel="noopener" class="store-badge">
+        <svg viewBox="0 0 24 24"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg>
+        Download on the App Store
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ══════════ FOOTER ══════════ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="footer-inner">
+    <div class="footer-top">
+      <div>
+        <div class="footer-brand">
+          <img src="/images/logo.png" alt="CamGrader">
+          <span class="footer-brand-name">CamGrader</span>
+        </div>
+        <p class="footer-tagline">The fastest way to grade paper quizzes. Built for teachers.</p>
+        <div class="footer-socials">
+          <a href="https://instagram.com/camgrader" target="_blank" rel="noopener" aria-label="Instagram">
+            <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm6-1.25a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 18 6.25zM12 9a3 3 0 1 1-3 3 3 3 0 0 1 3-3z"/></svg>
+          </a>
+          <a href="https://x.com/camgrader" target="_blank" rel="noopener" aria-label="X (Twitter)">
+            <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.892-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+          </a>
+          <a href="https://snapchat.com/add/camgrader" target="_blank" rel="noopener" aria-label="Snapchat">
+            <svg class="snap-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3 C15.5 3 18 5.5 18 9 V10.5 C18 11.5 18.6 12.2 19.5 12.5 C20.3 12.8 20.7 13.1 20.7 13.7 C20.7 14.3 20.1 14.7 19.2 14.9 C18.6 15 18.3 15.4 18.4 16 C18.6 17.2 19.4 18.1 20.4 18.7 C20.7 18.9 20.8 19.2 20.8 19.5 C20.8 20.1 20.3 20.5 19.6 20.5 C17.5 20.5 16.2 21.1 15.4 22 H8.6 C7.8 21.1 6.5 20.5 4.4 20.5 C3.7 20.5 3.2 20.1 3.2 19.5 C3.2 19.2 3.3 18.9 3.6 18.7 C4.6 18.1 5.4 17.2 5.6 16 C5.7 15.4 5.4 15 4.8 14.9 C3.9 14.7 3.3 14.3 3.3 13.7 C3.3 13.1 3.7 12.8 4.5 12.5 C5.4 12.2 6 11.5 6 10.5 V9 C6 5.5 8.5 3 12 3Z"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title">Product</div>
+        <ul class="footer-links">
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#pricing">Pricing</a></li>
+          <li><a href="/keygen">Key Generator</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Support</div>
+        <ul class="footer-links">
+          <li><a href="/support">Help Center</a></li>
+          <li><a href="mailto:camgrader@gmail.com">Contact Us</a></li>
+          <li><a href="/account/create">Create Account</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer-col-title">Legal</div>
+        <ul class="footer-links">
+          <li><a href="/privacy">Privacy Policy</a></li>
+          <li><a href="/terms">Terms of Service</a></li>
+          <li><a href="/refunds">Refund Policy</a></li>
+        </ul>
+      </div>
+    </div>
+    <hr class="footer-divider">
+    <div class="footer-bottom">
+      <span class="footer-bottom-copy">&copy; 2026 CamGrader. All rights reserved.</span>
+      <div class="footer-bottom-links">
+        <a href="/privacy">Privacy</a>
+        <a href="/terms">Terms</a>
+        <a href="/refunds">Refunds</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="/js/nav.js"></script>
+</body>
+</html>

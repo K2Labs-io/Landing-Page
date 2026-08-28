@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Create Account | CamGrader</title>
+  <meta name="description" content="Create your CamGrader account.">
+  <link rel="canonical" href="https://camgrader.com/account/create">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ5SX8ZM');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/main.css">
+
+  <style>
+    .auth-page {
+      min-height: 100vh;
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+    }
+    .auth-header {
+      background: var(--plum-dark);
+      border-bottom: 1px solid rgba(247,249,236,0.12);
+      padding: 20px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .auth-header a {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .auth-header img { width: 36px; height: 36px; border-radius: 9px; }
+    .auth-header-name { font-size: 18px; font-weight: 800; color: var(--cream); }
+
+    .auth-body {
+      flex: 1;
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 64px 24px 96px;
+    }
+    .auth-card {
+      width: 100%;
+      max-width: 440px;
+      background: var(--white);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-xl);
+      padding: 40px 36px;
+      box-shadow: var(--shadow-card);
+    }
+    .auth-card-title {
+      font-size: 24px;
+      font-weight: 800;
+      color: var(--text-primary);
+      margin-bottom: 6px;
+      letter-spacing: -0.3px;
+    }
+    .auth-card-sub {
+      font-size: 14px;
+      color: var(--text-secondary);
+      margin-bottom: 32px;
+    }
+    .auth-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 24px 0;
+    }
+    .auth-footer-text {
+      text-align: center;
+      font-size: 13px;
+      color: var(--text-secondary);
+      margin-top: 20px;
+    }
+    .auth-footer-text a {
+      color: var(--plum-mid);
+      font-weight: 600;
+      text-underline-offset: 2px;
+      text-decoration: underline;
+    }
+    .auth-terms {
+      font-size: 12px;
+      color: var(--text-secondary);
+      text-align: center;
+      margin-top: 16px;
+      line-height: 1.6;
+    }
+    .auth-terms a {
+      color: var(--plum-mid);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+    @media (max-width: 480px) {
+      .auth-card { padding: 28px 24px; }
+      .auth-header { padding: 16px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ5SX8ZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+<div class="auth-page">
+  <div class="auth-header">
+    <a href="/">
+      <img src="/images/logo.png" alt="CamGrader">
+      <span class="auth-header-name">CamGrader</span>
+    </a>
+  </div>
+
+  <div class="auth-body">
+    <div class="auth-card">
+      <h1 class="auth-card-title">Create your account</h1>
+      <p class="auth-card-sub">Start grading for free. No credit card required.</p>
+
+      <!-- Auth form — wired up once Supabase auth is integrated -->
+      <form id="createAccountForm" novalidate>
+        <div class="form-group">
+          <label class="form-label" for="fullName">Full name</label>
+          <input class="form-input" type="text" id="fullName" name="fullName" autocomplete="name" placeholder="Jane Smith" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="email">Email address</label>
+          <input class="form-input" type="email" id="email" name="email" autocomplete="email" placeholder="you@school.edu" required>
+        </div>
+        <div class="form-group">
+          <label class="form-label" for="password">Password</label>
+          <input class="form-input" type="password" id="password" name="password" autocomplete="new-password" placeholder="At least 8 characters" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width:100%;margin-top:8px;">Create account</button>
+      </form>
+
+      <hr class="auth-divider">
+
+      <p class="auth-footer-text">Already have an account? <a href="/account/login">Sign in</a></p>
+      <p class="auth-terms">By creating an account you agree to our <a href="/terms">Terms of Service</a> and <a href="/privacy">Privacy Policy</a>.</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

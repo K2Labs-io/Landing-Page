@@ -1,0 +1,947 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Answer Key Generator | CamGrader</title>
+  <meta name="description" content="Generate a scannable answer key sheet for CamGrader.">
+  <link rel="canonical" href="https://camgrader.com/keygen">
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16.png">
+  <link rel="manifest" href="/images/site.webmanifest">
+
+  <!-- Google Tag Manager -->
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-WJ5SX8ZM');</script>
+  <!-- End Google Tag Manager -->
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --cream:        #f7f9ec;
+      --plum-dark:    #3d2a52;
+      --plum-mid:     #5e4074;
+      --plum-light:   #7a5a8c;
+      --border:       rgba(94,64,116,0.15);
+      --panel:        rgba(94,64,116,0.07);
+      --panel-2:      rgba(94,64,116,0.12);
+      --accent-light: #ede6f5;
+      --white:        #ffffff;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html, body {
+      font-family: 'Manrope', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+      font-size: 16px;
+      line-height: 1.6;
+      background: var(--cream);
+      color: var(--plum-dark);
+      min-height: 100%;
+    }
+
+    /* ── Topbar ── */
+    .topbar {
+      background: var(--plum-dark);
+      border-bottom: 1px solid rgba(247,249,236,0.12);
+    }
+    .topbar-inner {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 20px 32px;
+    }
+    .topbar-brand {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+    .topbar-brand img {
+      width: 38px; height: 38px;
+      border-radius: 10px;
+      object-fit: contain;
+    }
+    .topbar-name {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--cream);
+    }
+    .topbar-back {
+      margin-left: auto;
+      color: rgba(247,249,236,0.70);
+      text-decoration: none;
+      font-size: 14px;
+      font-weight: 600;
+      transition: color 0.18s;
+    }
+    .topbar-back:hover { color: var(--cream); }
+
+    /* ── Social icons ── */
+    .brand-socials {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .brand-socials a {
+      width: 34px; height: 34px;
+      border: 1.5px solid rgba(247,249,236,0.30);
+      color: rgba(247,249,236,0.70);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      transition: background 0.18s, color 0.18s, border-color 0.18s;
+    }
+    .brand-socials a:hover {
+      background: rgba(247,249,236,0.10);
+      color: var(--cream);
+      border-color: rgba(247,249,236,0.55);
+    }
+    .brand-socials svg { width: 16px; height: 16px; fill: currentColor; }
+    .snap-icon { fill: none !important; stroke: currentColor; stroke-width: 1.5; stroke-linecap: round; stroke-linejoin: round; }
+
+    /* ── Footer ── */
+    .site-footer {
+      text-align: center;
+      padding: 24px 32px 40px;
+      font-size: 12px;
+      color: var(--plum-light);
+      border-top: 1px solid var(--border);
+      background: var(--cream);
+    }
+    .site-footer a {
+      color: var(--plum-dark);
+      font-weight: 600;
+      text-underline-offset: 3px;
+    }
+    .site-footer a:hover { opacity: 0.7; }
+
+    /* ── Page body ── */
+    .page-body {
+      max-width: 720px;
+      margin: 0 auto;
+      padding: 48px 32px 80px;
+    }
+
+    /* ── Steps ── */
+    .step { display: none; }
+    .step.active { display: block; }
+
+    /* ── Section headers ── */
+    .page-title {
+      font-size: 22px;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      color: var(--plum-dark);
+      margin-bottom: 6px;
+    }
+    .page-sub {
+      font-size: 14px;
+      color: var(--plum-light);
+      margin-bottom: 32px;
+    }
+
+    /* ── Card ── */
+    .card {
+      background: var(--panel);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 24px;
+      margin-bottom: 20px;
+    }
+    .card-title {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      color: var(--plum-light);
+      margin-bottom: 14px;
+      text-transform: uppercase;
+    }
+
+    /* ── Tabs ── */
+    .tabs {
+      display: flex;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 20px;
+    }
+    .tab-btn {
+      flex: 1;
+      padding: 11px 16px;
+      background: transparent;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--plum-light);
+      transition: background 0.15s, color 0.15s;
+    }
+    .tab-btn.active {
+      background: var(--plum-mid);
+      color: var(--cream);
+    }
+    .tab-btn:not(.active):hover { background: var(--panel-2); }
+
+    .tab-panel { display: none; min-height: 310px; }
+    .tab-panel.active { display: block; }
+
+    /* ── Textarea ── */
+    textarea {
+      width: 100%;
+      min-height: 245px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-family: 'Manrope', monospace;
+      font-size: 14px;
+      color: var(--plum-dark);
+      resize: vertical;
+      outline: none;
+      transition: border-color 0.15s;
+    }
+    textarea:focus { border-color: var(--plum-mid); }
+    textarea::placeholder { color: var(--plum-light); opacity: 0.6; }
+
+    /* ── File upload ── */
+    .upload-area {
+      border: 2px dashed var(--border);
+      border-radius: 10px;
+      padding: 32px;
+      text-align: center;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+      background: white;
+    }
+    .upload-area:hover, .upload-area.drag-over {
+      border-color: var(--plum-mid);
+      background: var(--accent-light);
+    }
+    .upload-area input[type="file"] { display: none; }
+    .upload-icon { font-size: 32px; margin-bottom: 10px; }
+    .upload-label {
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--plum-dark);
+      margin-bottom: 4px;
+    }
+    .upload-hint { font-size: 13px; color: var(--plum-light); }
+    .file-chosen {
+      margin-top: 10px;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--plum-mid);
+    }
+
+    /* ── Template link ── */
+    .template-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 16px;
+      padding: 10px 20px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      background: white;
+      font-family: inherit;
+      font-size: 13px;
+      font-weight: 600;
+      color: var(--plum-mid);
+      text-decoration: none;
+      cursor: pointer;
+      transition: border-color 0.15s, background 0.15s;
+    }
+    .template-link:hover { border-color: var(--plum-mid); background: var(--accent-light); }
+
+    /* ── Format selector ── */
+    .format-row {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .format-label {
+      font-size: 14px;
+      font-weight: 600;
+      color: var(--plum-dark);
+      white-space: nowrap;
+    }
+    .format-btns { display: flex; gap: 8px; }
+    .format-btn {
+      padding: 9px 20px;
+      border-radius: 8px;
+      border: 1px solid var(--border);
+      background: white;
+      font-family: inherit;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--plum-light);
+      cursor: pointer;
+      transition: all 0.15s;
+    }
+    .format-btn.active {
+      background: var(--plum-mid);
+      border-color: var(--plum-mid);
+      color: var(--cream);
+    }
+    .format-btn:not(.active):hover { border-color: var(--plum-mid); color: var(--plum-mid); }
+
+    /* ── Error box ── */
+    .error-box {
+      background: #fef2f2;
+      border: 1px solid #fca5a5;
+      border-radius: 10px;
+      padding: 14px 16px;
+      font-size: 14px;
+      color: #991b1b;
+      margin-bottom: 20px;
+      display: none;
+    }
+    .error-box.visible { display: block; }
+
+    /* ── Buttons ── */
+    .btn-row {
+      display: flex;
+      gap: 12px;
+      margin-top: 24px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      padding: 13px 28px;
+      border-radius: 10px;
+      border: none;
+      font-family: inherit;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity 0.15s, transform 0.1s;
+      letter-spacing: 0.1px;
+    }
+    .btn:active { transform: scale(0.98); }
+    .btn-primary {
+      background: var(--plum-mid);
+      color: var(--cream);
+    }
+    .btn-primary:hover { opacity: 0.88; }
+    .btn-secondary {
+      background: white;
+      color: var(--plum-dark);
+      border: 1px solid var(--border);
+    }
+    .btn-secondary:hover { background: var(--panel-2); }
+
+    /* ── Preview grid ── */
+    .preview-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+    }
+    .preview-count {
+      font-size: 13px;
+      color: var(--plum-light);
+    }
+
+    .key-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+      gap: 8px;
+      margin-bottom: 24px;
+    }
+    .key-cell {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 10px 8px;
+      text-align: center;
+    }
+    .key-cell-q {
+      font-size: 11px;
+      font-weight: 600;
+      color: var(--plum-light);
+      margin-bottom: 4px;
+    }
+    .key-cell-a {
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--plum-mid);
+    }
+    .key-cell.missing {
+      background: #fef2f2;
+      border-color: #fca5a5;
+    }
+    .key-cell.missing .key-cell-a { color: #dc2626; font-size: 14px; }
+
+    /* ── Sheet display ── */
+    .sheet-instructions {
+      background: var(--accent-light);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 16px 20px;
+      margin-bottom: 24px;
+    }
+    .sheet-instructions p {
+      font-size: 14px;
+      color: var(--plum-dark);
+      margin-bottom: 4px;
+    }
+    .sheet-instructions p:last-child { margin-bottom: 0; }
+    .sheet-instructions strong { font-weight: 700; }
+
+    .sheet-container {
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      overflow: hidden;
+      margin-bottom: 24px;
+      cursor: none;
+    }
+    .sheet-container svg {
+      width: 100%;
+      height: auto;
+      display: block;
+      filter: brightness(0.75);
+    }
+
+    @media (max-width: 600px) {
+      .topbar-inner { padding: 16px 20px; }
+      .topbar-brand img { width: 32px; height: 32px; }
+      .topbar-name { font-size: 18px; }
+      .page-body { padding: 32px 20px 64px; }
+      .key-grid { grid-template-columns: repeat(auto-fill, minmax(58px, 1fr)); }
+      .brand-socials { gap: 6px; }
+      .brand-socials a { width: 28px; height: 28px; }
+      .brand-socials svg { width: 14px; height: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WJ5SX8ZM"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+
+  <div class="topbar">
+    <div class="topbar-inner">
+      <a href="/" class="topbar-brand">
+        <img src="/images/logo.png" alt="CamGrader Logo">
+        <span class="topbar-name">CamGrader</span>
+      </a>
+      <a href="/" class="topbar-back">← Back</a>
+
+      <div class="brand-socials">
+        <a href="https://instagram.com/camgrader" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24"><path d="M7 2h10a5 5 0 0 1 5 5v10a5 5 0 0 1-5 5H7a5 5 0 0 1-5-5V7a5 5 0 0 1 5-5zm5 5.5A4.5 4.5 0 1 0 16.5 12 4.5 4.5 0 0 0 12 7.5zm6-1.25a1.25 1.25 0 1 0 1.25 1.25A1.25 1.25 0 0 0 18 6.25zM12 9a3 3 0 1 1-3 3 3 3 0 0 1 3-3z"/></svg>
+        </a>
+        <a href="https://x.com/camgrader" target="_blank" rel="noopener" aria-label="X">
+          <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.746l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.892-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        </a>
+        <a href="https://snapchat.com/add/camgrader" target="_blank" rel="noopener" aria-label="Snapchat">
+          <svg class="snap-icon" viewBox="0 0 24 24"><path d="M12 3 C15.5 3 18 5.5 18 9 V10.5 C18 11.5 18.6 12.2 19.5 12.5 C20.3 12.8 20.7 13.1 20.7 13.7 C20.7 14.3 20.1 14.7 19.2 14.9 C18.6 15 18.3 15.4 18.4 16 C18.6 17.2 19.4 18.1 20.4 18.7 C20.7 18.9 20.8 19.2 20.8 19.5 C20.8 20.1 20.3 20.5 19.6 20.5 C17.5 20.5 16.2 21.1 15.4 22 H8.6 C7.8 21.1 6.5 20.5 4.4 20.5 C3.7 20.5 3.2 20.1 3.2 19.5 C3.2 19.2 3.3 18.9 3.6 18.7 C4.6 18.1 5.4 17.2 5.6 16 C5.7 15.4 5.4 15 4.8 14.9 C3.9 14.7 3.3 14.3 3.3 13.7 C3.3 13.1 3.7 12.8 4.5 12.5 C5.4 12.2 6 11.5 6 10.5 V9 C6 5.5 8.5 3 12 3Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-body">
+
+    <!-- ── Step 1: Input ── -->
+    <div class="step active" id="step1">
+      <h1 class="page-title">Answer Key Generator</h1>
+      <p class="page-sub">Enter your answer key below to generate a scannable sheet you can hold up to your phone.</p>
+
+      <!-- Format selector -->
+      <div class="format-row">
+        <span class="format-label">Sheet format:</span>
+        <div class="format-btns">
+          <button class="format-btn active" data-format="25">25-Q</button>
+          <button class="format-btn" data-format="50">50-Q</button>
+          <button class="format-btn" data-format="100">100-Q</button>
+        </div>
+      </div>
+
+      <!-- Input tabs -->
+      <div class="card">
+        <div class="card-title">Answer Key</div>
+
+        <div class="tabs">
+          <button class="tab-btn active" data-tab="paste">Copy / Paste</button>
+          <button class="tab-btn" data-tab="upload">Upload CSV</button>
+        </div>
+
+        <!-- Paste tab -->
+        <div class="tab-panel active" id="tab-paste">
+          <textarea id="pasteInput" placeholder="1,A&#10;2,C&#10;3,B&#10;4,D&#10;...one question per line"></textarea>
+          <p style="font-size:13px;color:var(--plum-light);margin-top:8px;">Format: question number, comma, letter (A–D). One per line. No headers.</p>
+        </div>
+
+        <!-- Upload tab -->
+        <div class="tab-panel" id="tab-upload">
+          <div class="upload-area" id="uploadArea">
+            <input type="file" id="csvFile" accept=".csv,.txt">
+            <div class="upload-icon">📄</div>
+            <div class="upload-label">Click to choose a CSV file</div>
+            <div class="upload-hint">or drag and drop here</div>
+            <div class="file-chosen" id="fileChosen"></div>
+          </div>
+          <label style="display:flex;align-items:center;gap:8px;margin-top:12px;font-size:13px;color:var(--plum-light);cursor:pointer;">
+            <input type="checkbox" id="hasHeader"> My CSV has a header row
+          </label>
+          <div style="text-align:center">
+            <a class="template-link" id="downloadTemplate" href="#">
+              ↓ Download template CSV
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <div class="error-box" id="step1Error"></div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="parseBtn">Preview Key →</button>
+      </div>
+    </div>
+
+    <!-- ── Step 2: Preview ── -->
+    <div class="step" id="step2">
+      <div class="preview-header">
+        <div>
+          <h1 class="page-title">Confirm Answer Key</h1>
+          <p class="preview-count" id="previewCount"></p>
+        </div>
+        <button class="btn btn-secondary" id="backToStep1">← Edit</button>
+      </div>
+
+      <div class="error-box" id="step2Error"></div>
+
+      <div class="key-grid" id="keyGrid"></div>
+
+      <div class="btn-row">
+        <button class="btn btn-primary" id="generateBtn">Generate Sheet →</button>
+      </div>
+    </div>
+
+    <!-- ── Step 3: Sheet ── -->
+    <div class="step" id="step3">
+      <div class="preview-header">
+        <div>
+          <h1 class="page-title">Scan This Sheet</h1>
+        </div>
+        <button class="btn btn-secondary" id="backToStep2">← Back</button>
+      </div>
+
+      <div class="sheet-instructions">
+        <p><strong>How to scan:</strong> Open CamGrader, go to <strong>Tests</strong>, tap <strong>+NEW</strong>, and choose <strong>Scan Answer Key</strong>.</p>
+        <p>Hold your phone parallel to the screen at full brightness for best results.</p>
+      </div>
+
+      <div class="sheet-container" id="sheetContainer"></div>
+
+      <div class="btn-row">
+        <button class="btn btn-secondary" id="startOver">Start Over</button>
+      </div>
+    </div>
+
+  </div><!-- /page-body -->
+
+  <script>
+  (() => {
+
+    // ── Sheet geometry ──────────────────────────────────────────────────────────
+
+    const VIEWBOX = '0 0 548.5 774.85';
+    const RADIUS  = 7.09;
+
+    const SHEETS = {
+      25: {
+        corners: [
+          {x:137.86, y:195.04, w:20.77},
+          {x:389.86, y:195.04, w:20.77},
+          {x:137.86, y:569.73, w:20.77},
+          {x:389.86, y:569.73, w:20.77},
+        ],
+        topMark: {x:269.06, y:195.04, w:10.39},
+        botMark: {x:269.06, y:580.12, w:10.39, r:5.195},
+        cols: [
+          { qs:[1,9],   xs:[167.08,184.09,201.10,218.11],
+            ys:[377.25,397.64,418.03,438.42,458.81,479.20,499.59,519.98,540.37] },
+          { qs:[10,18], xs:[252.40,269.86,287.31,304.76],
+            ys:[377.25,397.64,418.03,438.42,458.81,479.20,499.59,519.98,540.37] },
+          { qs:[19,25], xs:[337.39,354.40,371.41,388.41],
+            ys:[377.25,397.64,418.03,438.42,458.81,479.20,499.59] },
+        ],
+        total: 25,
+      },
+      50: {
+        corners: [
+          {x:82.24,  y:114.39, w:20.77},
+          {x:445.48, y:114.39, w:20.77},
+          {x:82.24,  y:650.38, w:20.77},
+          {x:445.48, y:650.38, w:20.77},
+        ],
+        topMark: {x:269.05, y:114.39, w:10.39},
+        botMark: {x:269.05, y:660.76, w:10.39, r:5.195},
+        cols: [
+          { qs:[1,17],  xs:[139.6,159.9,180.2,200.5],
+            ys:[293.51,313.9,334.29,354.68,375.07,395.46,415.85,436.24,456.63,477.02,497.41,517.8,538.19,558.58,578.97,599.36,619.75] },
+          { qs:[18,34], xs:[251.7,272.0,292.3,312.6],
+            ys:[293.51,313.9,334.29,354.68,375.07,395.46,415.85,436.24,456.63,477.02,497.41,517.8,538.19,558.58,578.97,599.36,619.75] },
+          { qs:[35,50], xs:[364.3,384.6,404.9,425.2],
+            ys:[293.51,313.9,334.29,354.68,375.07,395.46,415.85,436.24,456.63,477.02,497.41,517.8,538.19,558.58,578.97,599.36] },
+        ],
+        total: 50,
+      },
+      100: {
+        corners: [
+          {x:12.24,  y:12.9,   w:28.35},
+          {x:507.91, y:12.9,   w:28.35},
+          {x:12.24,  y:744.29, w:28.35},
+          {x:507.91, y:744.29, w:28.35},
+        ],
+        topMark: {x:267.16, y:12.9,   w:14.17},
+        botMark: {x:267.16, y:758.46, w:14.17, r:7.09},
+        cols: [
+          { qs:[1,25],   xs:[75.6,96.0,116.3,136.6],   ys:null },
+          { qs:[26,50],  xs:[191.0,211.3,231.6,251.9],  ys:null },
+          { qs:[51,75],  xs:[306.4,326.7,347.0,367.3],  ys:null },
+          { qs:[76,100], xs:[421.8,442.1,462.4,482.7],  ys:null },
+        ],
+        ys: [215.36,235.75,256.14,276.53,296.92,317.31,337.7,358.09,378.48,398.87,
+             419.26,439.65,460.04,480.43,500.82,521.21,541.6,561.99,582.38,602.77,
+             623.16,643.55,663.94,684.33,704.72],
+        total: 100,
+      },
+    };
+
+    // ── State ───────────────────────────────────────────────────────────────────
+
+    let selectedFormat = 25;
+    let parsedKey = {}; // { qNum: 'A' }
+
+    // ── Parse key text ──────────────────────────────────────────────────────────
+
+    function parseKeyText(text, skipHeader = false) {
+      const result = {};
+      const errors = [];
+      let lines = text.split('\n').map(l => l.trim()).filter(l => l.length > 0);
+
+      if (skipHeader && lines.length > 0) lines = lines.slice(1);
+
+      if (lines.length === 0) return { result: null, errors: ['No data found. Please enter your answer key.'] };
+
+      for (let i = 0; i < lines.length; i++) {
+        const line = lines[i];
+        const parts = line.split(/[,\t ]+/);
+        if (parts.length < 2) {
+          errors.push(`Line ${i+1}: "${line}" — expected format is "1,A"`);
+          continue;
+        }
+        const qNum = parseInt(parts[0].trim(), 10);
+        const letter = parts[1].trim().toUpperCase();
+        if (isNaN(qNum) || qNum < 1) {
+          errors.push(`Line ${i+1}: "${parts[0]}" is not a valid question number`);
+          continue;
+        }
+        if (!'ABCD'.includes(letter) || letter.length !== 1) {
+          errors.push(`Line ${i+1}: "${parts[1]}" is not a valid answer (must be A, B, C, or D)`);
+          continue;
+        }
+        result[qNum] = letter;
+      }
+
+      if (errors.length > 0) return { result: null, errors };
+
+      // Check question range
+      const total = SHEETS[selectedFormat].total;
+      const outOfRange = Object.keys(result).filter(q => parseInt(q) > total);
+      if (outOfRange.length > 0) {
+        return { result: null, errors: [`Question(s) ${outOfRange.join(', ')} exceed ${total} for ${selectedFormat}-Q format`] };
+      }
+
+      return { result, errors: [] };
+    }
+
+    // ── SVG generator ───────────────────────────────────────────────────────────
+
+    function getBubblePos(format, question, letterIndex) {
+      const sheet = SHEETS[format];
+      for (const col of sheet.cols) {
+        if (question >= col.qs[0] && question <= col.qs[1]) {
+          const rowIndex = question - col.qs[0];
+          const ys = col.ys || sheet.ys;
+          return { cx: col.xs[letterIndex], cy: ys[rowIndex] };
+        }
+      }
+      return null;
+    }
+
+    function generateSVG(format, key) {
+      const sheet = SHEETS[format];
+      let svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="${VIEWBOX}">`;
+
+      // White background
+      svg += `<rect width="548.5" height="774.85" fill="white"/>`;
+
+      // Corner markers
+      for (const c of sheet.corners) {
+        svg += `<rect x="${c.x}" y="${c.y}" width="${c.w}" height="${c.w}" fill="black"/>`;
+      }
+
+      // Top center orientation mark (solid square)
+      if (sheet.topMark) {
+        const m = sheet.topMark;
+        svg += `<rect x="${m.x}" y="${m.y}" width="${m.w}" height="${m.w}" fill="black"/>`;
+      }
+
+      // Bottom center orientation mark (hollow circle)
+      if (sheet.botMark) {
+        const m = sheet.botMark;
+        svg += `<rect x="${m.x}" y="${m.y}" width="${m.w}" height="${m.w}" rx="${m.r}" ry="${m.r}" fill="none" stroke="black" stroke-width="0.7"/>`;
+      }
+
+      // Outline circles (all bubbles)
+      for (const col of sheet.cols) {
+        const ys = col.ys || sheet.ys;
+        for (let q = col.qs[0]; q <= col.qs[1]; q++) {
+          const rowIndex = q - col.qs[0];
+          for (let li = 0; li < 4; li++) {
+            const cx = col.xs[li];
+            const cy = ys[rowIndex];
+            svg += `<circle cx="${cx}" cy="${cy}" r="${RADIUS}" fill="none" stroke="#999" stroke-width="0.5"/>`;
+          }
+        }
+      }
+
+      // Question numbers
+      const FONT = `font-family="Arial,sans-serif" font-size="6" fill="#555"`;
+      for (const col of sheet.cols) {
+        const ys = col.ys || sheet.ys;
+        for (let q = col.qs[0]; q <= col.qs[1]; q++) {
+          const rowIndex = q - col.qs[0];
+          const cy = ys[rowIndex];
+          const labelX = col.xs[0] - 16;
+          svg += `<text ${FONT} x="${labelX}" y="${cy + 2.5}" text-anchor="end">${q}.</text>`;
+        }
+      }
+
+      // Option letters (A B C D headers per column group)
+      const HFONT = `font-family="Arial,sans-serif" font-size="5.5" fill="#888" font-weight="bold"`;
+      const LETTERS = ['A','B','C','D'];
+      for (const col of sheet.cols) {
+        const ys = col.ys || sheet.ys;
+        const headerY = ys[0] - 12;
+        for (let li = 0; li < 4; li++) {
+          svg += `<text ${HFONT} x="${col.xs[li]}" y="${headerY}" text-anchor="middle">${LETTERS[li]}</text>`;
+        }
+      }
+
+      // Filled bubbles for answer key
+      for (const [qStr, letter] of Object.entries(key)) {
+        const q = parseInt(qStr);
+        const li = LETTERS.indexOf(letter);
+        if (li === -1) continue;
+        const pos = getBubblePos(format, q, li);
+        if (!pos) continue;
+        svg += `<circle cx="${pos.cx}" cy="${pos.cy}" r="${RADIUS - 0.5}" fill="#1a1a1a"/>`;
+      }
+
+      svg += `</svg>`;
+      return svg;
+    }
+
+    // ── Template CSV ────────────────────────────────────────────────────────────
+
+    function buildTemplateCSV(total) {
+      const lines = [];
+      for (let i = 1; i <= total; i++) lines.push(`${i},`);
+      return lines.join('\n');
+    }
+
+    function updateTemplateLink() {
+      const csv = buildTemplateCSV(SHEETS[selectedFormat].total);
+      const blob = new Blob([csv], { type: 'text/csv' });
+      const url  = URL.createObjectURL(blob);
+      const link = document.getElementById('downloadTemplate');
+      link.href = url;
+      link.download = `camgrader-key-template-${selectedFormat}q.csv`;
+    }
+
+    // ── UI helpers ──────────────────────────────────────────────────────────────
+
+    function showStep(n) {
+      document.querySelectorAll('.step').forEach(s => s.classList.remove('active'));
+      document.getElementById(`step${n}`).classList.add('active');
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function showError(id, msg) {
+      const el = document.getElementById(id);
+      el.textContent = msg;
+      el.classList.add('visible');
+    }
+    function clearError(id) {
+      const el = document.getElementById(id);
+      el.textContent = '';
+      el.classList.remove('visible');
+    }
+
+    // ── Build preview grid ──────────────────────────────────────────────────────
+
+    function buildPreviewGrid(key) {
+      const total = SHEETS[selectedFormat].total;
+      const grid  = document.getElementById('keyGrid');
+      const count = document.getElementById('previewCount');
+      grid.innerHTML = '';
+
+      let filled = 0;
+      for (let q = 1; q <= total; q++) {
+        const cell = document.createElement('div');
+        const answer = key[q];
+        cell.className = 'key-cell' + (answer ? '' : ' missing');
+        cell.innerHTML = `<div class="key-cell-q">Q${q}</div><div class="key-cell-a">${answer || '—'}</div>`;
+        grid.appendChild(cell);
+        if (answer) filled++;
+      }
+
+      const missing = total - filled;
+      count.textContent = `${filled} of ${total} questions entered${missing > 0 ? ` · ${missing} missing (will be left blank)` : ''}`;
+    }
+
+    // ── Event: format buttons ───────────────────────────────────────────────────
+
+    document.querySelectorAll('.format-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.format-btn').forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        selectedFormat = parseInt(btn.dataset.format);
+        updateTemplateLink();
+      });
+    });
+
+    // ── Event: input tabs ───────────────────────────────────────────────────────
+
+    document.querySelectorAll('.tab-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+        document.querySelectorAll('.tab-panel').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        document.getElementById(`tab-${btn.dataset.tab}`).classList.add('active');
+      });
+    });
+
+    // ── Event: CSV file upload ──────────────────────────────────────────────────
+
+    const csvFile    = document.getElementById('csvFile');
+    const uploadArea = document.getElementById('uploadArea');
+    const fileChosen = document.getElementById('fileChosen');
+    let csvText = '';
+
+    csvFile.addEventListener('change', () => {
+      const file = csvFile.files[0];
+      if (!file) return;
+      fileChosen.textContent = file.name;
+      const reader = new FileReader();
+      reader.onload = e => { csvText = e.target.result; };
+      reader.readAsText(file);
+    });
+
+    uploadArea.addEventListener('click', () => csvFile.click());
+    uploadArea.addEventListener('dragover', e => { e.preventDefault(); uploadArea.classList.add('drag-over'); });
+    uploadArea.addEventListener('dragleave', () => uploadArea.classList.remove('drag-over'));
+    uploadArea.addEventListener('drop', e => {
+      e.preventDefault();
+      uploadArea.classList.remove('drag-over');
+      const file = e.dataTransfer.files[0];
+      if (!file) return;
+      fileChosen.textContent = file.name;
+      const reader = new FileReader();
+      reader.onload = ev => { csvText = ev.target.result; };
+      reader.readAsText(file);
+    });
+
+    // ── Event: Parse → Step 2 ──────────────────────────────────────────────────
+
+    document.getElementById('parseBtn').addEventListener('click', () => {
+      clearError('step1Error');
+
+      const activeTab = document.querySelector('.tab-btn.active').dataset.tab;
+      let text = '';
+
+      let skipHeader = false;
+      if (activeTab === 'paste') {
+        text = document.getElementById('pasteInput').value.trim();
+        if (!text) { showError('step1Error', 'Please enter your answer key above.'); return; }
+      } else {
+        if (!csvText) { showError('step1Error', 'Please choose a CSV file first.'); return; }
+        text = csvText.trim();
+        skipHeader = document.getElementById('hasHeader').checked;
+      }
+
+      const { result, errors } = parseKeyText(text, skipHeader);
+      if (errors.length > 0) {
+        showError('step1Error', errors[0]);
+        return;
+      }
+
+      parsedKey = result;
+      buildPreviewGrid(parsedKey);
+      clearError('step2Error');
+      showStep(2);
+    });
+
+    // ── Event: Generate → Step 3 ───────────────────────────────────────────────
+
+    document.getElementById('generateBtn').addEventListener('click', () => {
+      const svgMarkup = generateSVG(selectedFormat, parsedKey);
+      document.getElementById('sheetContainer').innerHTML = svgMarkup;
+      showStep(3);
+    });
+
+    // ── Navigation ──────────────────────────────────────────────────────────────
+
+    document.getElementById('backToStep1').addEventListener('click', () => showStep(1));
+    document.getElementById('backToStep2').addEventListener('click', () => showStep(2));
+    document.getElementById('startOver').addEventListener('click', () => {
+      document.getElementById('pasteInput').value = '';
+      csvText = '';
+      fileChosen.textContent = '';
+      csvFile.value = '';
+      parsedKey = {};
+      clearError('step1Error');
+      clearError('step2Error');
+      showStep(1);
+    });
+
+    // ── Init ────────────────────────────────────────────────────────────────────
+
+    updateTemplateLink();
+
+  })();
+  </script>
+
+  <footer class="site-footer">
+    &copy; 2026 CamGrader &nbsp;&middot;&nbsp;
+    <a href="/privacy">Privacy Policy</a> &nbsp;&middot;&nbsp;
+    <a href="/terms">Terms</a>
+  </footer>
+
+</body>
+</html>
