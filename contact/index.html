@@ -141,12 +141,18 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <select class="form-input" id="topic" name="topic" required>
             <option value="" disabled selected>Select a topic</option>
             <option value="general">General question</option>
+            <option value="quote">Institutional quote</option>
             <option value="technical">Technical support</option>
-            <option value="billing">Billing</option>
-            <option value="account">Account</option>
+            <option value="billing">Billing &amp; account</option>
             <option value="feedback">Feedback</option>
             <option value="other">Other</option>
           </select>
+        </div>
+
+        <div id="quoteHint" class="form-group" hidden>
+          <p style="font-size:13px;color:var(--text-secondary);background:var(--lavender-pale,#ede8f4);border-radius:var(--radius-sm);padding:12px 16px;margin:0;line-height:1.6;">
+            To prepare a quote, it helps to know your <strong>school or district name</strong>, <strong>location</strong>, <strong>number of teachers</strong> who would use CamGrader, and an <strong>estimated number of students</strong>. Include whatever you have — we'll follow up if we need more.
+          </p>
         </div>
 
         <div class="form-group">
@@ -238,6 +244,12 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var submitBtn = document.getElementById('submitBtn');
   var successMsg = document.getElementById('successMsg');
   var errorMsg   = document.getElementById('errorMsg');
+  var topicSel   = document.getElementById('topic');
+  var quoteHint  = document.getElementById('quoteHint');
+
+  topicSel.addEventListener('change', function () {
+    quoteHint.hidden = topicSel.value !== 'quote';
+  });
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
