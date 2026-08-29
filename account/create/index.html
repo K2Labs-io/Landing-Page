@@ -219,12 +219,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 
   <div class="error-msg" id="errorMsg">
-    Something went wrong. Please try again or <a href="../../contact">contact us</a>.
+    Something went wrong. Please try again — if the problem persists, contact us and we'll sort it out.
   </div>
 
   <button class="btn btn-primary" id="checkoutBtn" style="width:100%;" onclick="startCheckout()">
     Continue to payment
   </button>
+
+  <a href="../../contact" class="btn" id="contactBtn" style="width:100%;display:none;text-align:center;margin-top:10px;">
+    Contact us
+  </a>
 
   <p class="fine-print">
     By continuing you agree to our <a href="../../terms">Terms of Service</a> and <a href="../../refunds">Refund Policy</a>.<br>
@@ -265,8 +269,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     })
     .catch(function () {
       err.style.display = 'block';
+      document.getElementById('contactBtn').style.display = 'block';
       btn.disabled = false;
-      btn.textContent = 'Continue to payment';
+      btn.textContent = 'Try again';
     });
   };
 })();
