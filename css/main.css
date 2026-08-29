@@ -390,37 +390,8 @@ a   { color: inherit; text-decoration: none; }
   border-radius: var(--radius-xl);
   aspect-ratio: 4/3;
   overflow: hidden;
-  perspective: 1200px;
 }
-
-/* Flip card */
-.flip-card {
-  width: 100%;
-  height: 100%;
-  position: relative;
-}
-.flip-card-inner {
-  width: 100%;
-  height: 100%;
-  position: relative;
-  transform-style: preserve-3d;
-  transition: transform 0.55s cubic-bezier(0.4, 0, 0.2, 1);
-}
-.feature-visual:hover .flip-card-inner {
-  transform: rotateY(180deg);
-}
-.flip-card-front,
-.flip-card-back {
-  position: absolute;
-  inset: 0;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-}
-.flip-card-back {
-  transform: rotateY(180deg);
-}
-.flip-card-front img,
-.flip-card-back img {
+.feature-visual img {
   width: 100%;
   height: 100%;
   object-fit: cover;
