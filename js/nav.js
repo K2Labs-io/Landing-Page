@@ -46,7 +46,8 @@
     document.body.appendChild(backBtn);
 
     window.addEventListener('scroll', function () {
-      backBtn.classList.toggle('visible', window.scrollY > 400);
+      var scrolled = window.scrollY || document.documentElement.scrollTop || 0;
+      backBtn.classList.toggle('visible', scrolled > 200);
     }, { passive: true });
 
     backBtn.addEventListener('click', function () {
