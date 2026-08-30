@@ -1,20 +1,10 @@
-/* nav.js — sticky scroll shadow + mobile hamburger */
+/* nav.js — mobile hamburger + back-to-top */
 (function () {
   'use strict';
 
   document.addEventListener('DOMContentLoaded', function () {
-    var nav        = document.querySelector('.nav');
-    var utilBar    = document.querySelector('.util-topbar');
     var hamburger  = document.querySelector('.nav-hamburger');
     var mobileMenu = document.querySelector('.nav-mobile');
-
-    /* Scroll shadow — homepage nav or utility topbar */
-    var stickyEl = nav || utilBar;
-    if (stickyEl) {
-      window.addEventListener('scroll', function () {
-        stickyEl.classList.toggle('scrolled', window.scrollY > 8);
-      }, { passive: true });
-    }
 
     /* Hamburger toggle */
     if (hamburger && mobileMenu) {
@@ -46,6 +36,21 @@
         /* Open clicked (if it was closed) */
         if (!isOpen) item.classList.add('open');
       });
+    });
+
+    /* Back to top */
+    var backBtn = document.createElement('button');
+    backBtn.className = 'back-to-top';
+    backBtn.setAttribute('aria-label', 'Back to top');
+    backBtn.innerHTML = '&#8679;';
+    document.body.appendChild(backBtn);
+
+    window.addEventListener('scroll', function () {
+      backBtn.classList.toggle('visible', window.scrollY > 400);
+    }, { passive: true });
+
+    backBtn.addEventListener('click', function () {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
     });
   });
 })();

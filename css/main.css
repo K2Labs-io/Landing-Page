@@ -61,8 +61,7 @@ a   { color: inherit; text-decoration: none; }
    =========================== ── */
 
 .nav {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   height: var(--nav-h);
   background: var(--plum-dark);
@@ -588,6 +587,42 @@ a   { color: inherit; text-decoration: none; }
 .faq-item.open .faq-answer { display: block; }
 
 /* ── ===========================
+   BACK TO TOP
+   =========================== ── */
+
+.back-to-top {
+  position: fixed;
+  bottom: 28px;
+  right: 28px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--plum-dark);
+  border: 1px solid rgba(247,249,236,0.25);
+  color: var(--cream);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: opacity 0.25s, visibility 0.25s, transform 0.25s, background 0.18s;
+  z-index: 99;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.2);
+}
+.back-to-top.visible {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+.back-to-top:hover {
+  background: var(--plum-mid);
+}
+
+/* ── ===========================
    FOOTER
    =========================== ── */
 
@@ -717,8 +752,7 @@ a   { color: inherit; text-decoration: none; }
 }
 
 .util-topbar {
-  position: sticky;
-  top: 0;
+  position: relative;
   z-index: 100;
   background: var(--plum-dark);
   border-bottom: 1px solid rgba(247,249,236,0.12);
