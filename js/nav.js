@@ -29,11 +29,9 @@
       btn.addEventListener('click', function () {
         var item = btn.closest('.faq-item');
         var isOpen = item.classList.contains('open');
-        /* Close all */
         document.querySelectorAll('.faq-item').forEach(function (i) {
           i.classList.remove('open');
         });
-        /* Open clicked (if it was closed) */
         if (!isOpen) item.classList.add('open');
       });
     });
@@ -42,13 +40,21 @@
     var backBtn = document.createElement('button');
     backBtn.className = 'back-to-top';
     backBtn.setAttribute('aria-label', 'Back to top');
-    backBtn.innerHTML = '&#8679;';
+    backBtn.innerHTML = '&uarr;';
     document.body.appendChild(backBtn);
 
-    window.addEventListener('scroll', function () {
-      var scrolled = window.scrollY || document.documentElement.scrollTop || 0;
-      backBtn.classList.toggle('visible', scrolled > 200);
-    }, { passive: true });
+    function getScrollY() {
+      return window.pageYOffset !== undefined
+        ? window.pageYOffset
+        : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+    }
+
+    function onScroll() {
+      backBtn.classList.toggle('visible', getScrollY() > 150);
+    }
+
+    window.addEventListener('scroll',   onScroll, { passive: true });
+    document.addEventListener('scroll', onScroll, { passive: true });
 
     backBtn.addEventListener('click', function () {
       window.scrollTo({ top: 0, behavior: 'smooth' });
