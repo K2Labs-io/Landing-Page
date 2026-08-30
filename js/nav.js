@@ -40,7 +40,7 @@
     var backBtn = document.createElement('button');
     backBtn.className = 'back-to-top';
     backBtn.setAttribute('aria-label', 'Back to top');
-    backBtn.innerHTML = '&uarr;';
+    backBtn.innerHTML = '<svg width="20" height="12" viewBox="0 0 20 12" fill="none" aria-hidden="true"><path d="M2 10L10 2L18 10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>';
     document.body.appendChild(backBtn);
 
     function getScrollY() {

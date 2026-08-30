@@ -606,10 +606,9 @@ header {
   background: var(--plum-dark);
   border: 1px solid rgba(247,249,236,0.3);
   color: var(--cream);
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 48px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   cursor: pointer;
   padding: 0;
   opacity: 0;
