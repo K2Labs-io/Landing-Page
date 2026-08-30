@@ -44,21 +44,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="util-wrap">
   <h1 class="util-h1">Privacy Policy</h1>
-  <p class="util-meta">Effective date: June 14, 2026 &nbsp;·&nbsp; Last updated: June 14, 2026</p>
+  <p class="util-meta">Effective date: June 14, 2026 &nbsp;·&nbsp; Last updated: August 30, 2026</p>
 
-  <p class="util-p">CamGrader is an offline-first grading app designed for teachers. This policy explains what data the app collects, where it is stored, and how it is used. We keep things simple: your classroom data stays on your device.</p>
+  <p class="util-p">CamGrader is a grading app built for teachers. This policy explains what data the app collects, where it goes, and how it is handled.</p>
 
-  <h2 class="util-h2">1. Data You Enter</h2>
-  <p class="util-p">When you use CamGrader you create tests, scan answer sheets, and the app records the following on your device:</p>
+  <h2 class="util-h2">1. Two Ways to Use CamGrader</h2>
+  <p class="util-p"><strong>Guest users</strong> do not create an account. All classroom data stays on your device in a local database. Nothing is transmitted to our servers.</p>
+  <p class="util-p"><strong>Signed-in users</strong> create an account with their email address. Signing in enables cloud backup, which stores your data on Supabase servers so it can be restored if you reinstall the app or switch devices. Before cloud backup is enabled, you are shown a plain-language consent screen explaining exactly what gets backed up and where it goes.</p>
+
+  <h2 class="util-h2">2. Data You Enter</h2>
+  <p class="util-p">When you use CamGrader you create tests, scan answer sheets, and the app records:</p>
   <ul class="util-ul">
-    <li>Test names, question counts, and answer keys you set up</li>
+    <li>Test names, question counts, and answer keys</li>
     <li>Student ID numbers detected from scanned answer sheets</li>
     <li>Per-question grading results and scores</li>
-    <li>Scan thumbnails saved to your device's local storage</li>
+    <li>Scan thumbnails saved to your device</li>
   </ul>
-  <p class="util-p">All of this data is stored exclusively on your device using a local SQLite database. It is never transmitted to our servers, never uploaded to the cloud, and never shared with any third party. Deleting the app removes all locally stored data permanently.</p>
+  <p class="util-p">For guest users, all of this stays on your device. Deleting the app removes it permanently.</p>
+  <p class="util-p">For signed-in users, this data is also backed up to Supabase after you give consent. Camera frames are processed on-device and are never transmitted externally.</p>
 
-  <h2 class="util-h2">2. Crash Reporting</h2>
+  <h2 class="util-h2">3. Authentication</h2>
+  <p class="util-p">When you sign in, you provide your email address. CamGrader uses <strong>Supabase Auth</strong> to manage your account. A one-time sign-in code is sent to your email via <strong>Resend</strong>, an email delivery service. Resend receives your email address solely to deliver this code. No password is ever created or stored. Your email address is stored in Supabase and is used to identify your account and restore your backed-up data.</p>
+
+  <h2 class="util-h2">4. Cloud Backup (Signed-In Users)</h2>
+  <p class="util-p">With your consent, CamGrader backs up the following to Supabase:</p>
+  <ul class="util-ul">
+    <li>Tests and answer keys</li>
+    <li>Student ID numbers and scan results</li>
+    <li>Scan images (stored in a private Supabase Storage bucket)</li>
+  </ul>
+  <p class="util-p">Cloud backup happens automatically in the background when a connection is available. Your device remains the source of truth. Backed-up data is stored in the United States on Supabase infrastructure and is governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="util-a">Supabase's Privacy Policy</a>.</p>
+
+  <h2 class="util-h2">5. Crash Reporting</h2>
   <p class="util-p">CamGrader uses <strong>Sentry</strong> for crash reporting and performance monitoring. When the app encounters an unexpected error, Sentry automatically captures a report containing:</p>
   <ul class="util-ul">
     <li>Device model and manufacturer</li>
@@ -66,25 +83,39 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <li>App version</li>
     <li>A technical stack trace describing where the error occurred</li>
   </ul>
-  <p class="util-p">Crash reports do not include any classroom data, student IDs, test content, or scores. They are used solely to identify and fix bugs. Sentry data is processed in accordance with <a href="https://sentry.io/privacy/" target="_blank" rel="noopener" class="util-a">Sentry's Privacy Policy</a>.</p>
+  <p class="util-p">Crash reports never include classroom data, student IDs, test content, or scores. They are used solely to identify and fix bugs. Sentry data is processed in accordance with <a href="https://sentry.io/privacy/" target="_blank" rel="noopener" class="util-a">Sentry's Privacy Policy</a>.</p>
 
-  <h2 class="util-h2">3. Student Data</h2>
-  <p class="util-p">CamGrader reads numeric student ID numbers from printed bubble grids on answer sheets. These IDs are stored locally on your device only and are never transmitted externally. No student names, photos, or other personal information are collected by the app. As the teacher using the app, you are responsible for ensuring your use of student ID data complies with applicable regulations in your jurisdiction, including FERPA in the United States.</p>
+  <h2 class="util-h2">6. Student Data</h2>
+  <p class="util-p">CamGrader reads numeric student ID numbers from printed bubble grids on answer sheets. No student names, photos, or government-issued IDs are collected. As the teacher using the app, you are responsible for ensuring your use of student data complies with applicable regulations in your jurisdiction, including FERPA in the United States.</p>
+  <p class="util-p">For signed-in users, student ID numbers and associated scores are included in the cloud backup described in Section 4. They are stored on your account only and are never shared with any third party.</p>
 
-  <h2 class="util-h2">4. Permissions</h2>
+  <h2 class="util-h2">7. Permissions</h2>
   <p class="util-p">CamGrader requests the following device permissions:</p>
   <ul class="util-ul">
     <li><strong>Camera:</strong> required to scan printed answer sheets. Camera frames are processed on-device and never transmitted externally.</li>
-    <li><strong>Local file system access:</strong> required to save scan thumbnails and exported backup files to your device.</li>
+    <li><strong>Local file system access:</strong> required to save scan thumbnails and exported files to your device.</li>
+    <li><strong>Network access (signed-in users only):</strong> required to sync with Supabase and to receive sign-in codes via email.</li>
   </ul>
 
-  <h2 class="util-h2">5. Data Export and Backup</h2>
-  <p class="util-p">CamGrader includes an optional Export feature that lets you save a backup of your tests and results as a JSON file. This file is generated on your device and shared only through your device's standard share sheet. You choose where it goes (Files, email, cloud storage, etc.). We do not receive a copy of any exported file.</p>
+  <h2 class="util-h2">8. Data Export</h2>
+  <p class="util-p">CamGrader includes an Export feature that lets you save a backup of your tests and results as a file, shared through your device's native share sheet. You choose where it goes. We do not receive a copy of any exported file.</p>
 
-  <h2 class="util-h2">6. Children's Privacy</h2>
+  <h2 class="util-h2">9. Deleting Your Data</h2>
+  <p class="util-p">You can delete your data at any time:</p>
+  <ul class="util-ul">
+    <li><strong>Individual tests or students:</strong> swipe to delete in the app. Local and cloud data are removed immediately.</li>
+    <li><strong>All data (Clear All Data):</strong> available in Settings. Removes all tests and students from your device and from Supabase.</li>
+    <li><strong>Your account (Delete Account):</strong> available in Settings. Permanently removes all your data from Supabase, including tests, students, scan results, scan images, and your account record, and signs you out. Supabase automated backups may retain the data briefly before it is fully purged.</li>
+  </ul>
+  <p class="util-p">To request deletion by email, contact <a href="mailto:hello@camgrader.com" class="util-a">hello@camgrader.com</a>.</p>
+
+  <h2 class="util-h2">10. Data Retention</h2>
+  <p class="util-p">Data for active accounts is retained as long as the account exists. If you delete your account, your data is permanently removed from Supabase. Accounts that have been inactive for 24 months are notified by email and given 30 days to sign in before data is deleted.</p>
+
+  <h2 class="util-h2">11. Children's Privacy</h2>
   <p class="util-p">CamGrader is intended for use by teachers and educational professionals. The app is not directed at children and does not knowingly collect personal information from anyone under the age of 13.</p>
 
-  <h2 class="util-h2">7. Changes to This Policy</h2>
+  <h2 class="util-h2">12. Changes to This Policy</h2>
   <p class="util-p">We may update this policy as the app adds new features. When we do, the "Last updated" date at the top of this page will change. We encourage you to review this page periodically. Continued use of the app after changes are posted constitutes acceptance of the revised policy.</p>
 
   <hr class="util-divider">
