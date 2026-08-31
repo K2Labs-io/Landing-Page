@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+Disallow: /payment-success/
+Disallow: /account/
+
+Sitemap: https://camgrader.com/sitemap.xml

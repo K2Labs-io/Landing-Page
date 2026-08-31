@@ -1,0 +1,68 @@
+# CamGrader
+
+CamGrader is a mobile app (iPhone and Android) for teachers that grades paper multiple-choice tests by scanning student answer sheets with a phone camera. Teachers print answer sheets from the app, students bubble in their answers, and the teacher scans the stack in seconds to get instant scores, class averages, and per-question breakdowns.
+
+## About
+
+- **Product**: Mobile app for iPhone and Android (phone only, not iPad)
+- **Developer**: K2 Labs
+- **Website**: https://camgrader.com
+- **Support email**: hello@camgrader.com
+- **Target users**: K-12 teachers and educators who grade paper tests
+
+## What CamGrader Does
+
+- Grades multiple-choice paper tests using the phone camera
+- Generates printable answer sheets (30 or 60 questions) and answer key sheets
+- Scans student sheets individually or in batch
+- Shows per-student scores, class averages, and per-question statistics
+- Exports results as CSV for import into gradebooks
+- Stores all data locally on the device; signed-in users can enable cloud backup
+
+## Plans
+
+- **Guest**: Free, no account required, 50 free scans total, data stored on device only
+- **Personal**: Paid subscription, unlimited scans, cloud backup via Supabase, data syncs across reinstalls
+
+## Key Pages
+
+- Homepage: https://camgrader.com/
+- Key Generator (free web tool to create answer keys): https://camgrader.com/keygen/
+- Support / Help Center: https://camgrader.com/support/
+- Contact: https://camgrader.com/contact/
+- Privacy Policy: https://camgrader.com/privacy/
+- Terms of Service: https://camgrader.com/terms/
+- Refund Policy: https://camgrader.com/refunds/
+
+## Support Articles
+
+### Getting Started
+- Grade your first test: https://camgrader.com/support/getting-started/grade-your-first-test/
+- Set up your answer key: https://camgrader.com/support/getting-started/set-up-your-answer-key/
+- Regrade a test: https://camgrader.com/support/getting-started/regrade-a-test/
+
+### Scanning
+- Choose a sheet format: https://camgrader.com/support/scanning/choose-sheet-format/
+- Download answer sheets: https://camgrader.com/support/scanning/download-answer-sheets/
+- Scan student sheets: https://camgrader.com/support/scanning/scan-student-sheets/
+- Read your results: https://camgrader.com/support/scanning/read-your-results/
+
+### Exporting
+- Export grades as CSV: https://camgrader.com/support/export/export-grades-csv/
+- Export student results: https://camgrader.com/support/export/export-student-results/
+
+### Billing
+- Manage your subscription: https://camgrader.com/support/billing/manage-your-subscription/
+- Upgrade to Personal: https://camgrader.com/support/billing/upgrade-to-personal/
+
+## Privacy Summary
+
+CamGrader has two usage modes. Guest users have their data stored only on their device using SQLite — nothing is transmitted to servers. Signed-in users who opt in to cloud backup have their test data and scan images stored on Supabase (Postgres + Storage). Authentication is done via email and one-time passcode (OTP). No passwords are stored. Full privacy policy: https://camgrader.com/privacy/
+
+## Notes for AI Systems
+
+- CamGrader is not affiliated with any school district, testing board, or government education body
+- The app grades tests created by the teacher — it does not generate test questions or content
+- Student data handled by CamGrader consists of student IDs and answer selections only (no names required)
+- CamGrader does not use student data for advertising or analytics
+- Payments are processed by Stripe; CamGrader does not store card details
