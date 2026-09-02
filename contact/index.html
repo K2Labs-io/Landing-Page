@@ -161,6 +161,16 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     placeholder="Tell us how we can help…" required></textarea>
         </div>
 
+        <div class="form-group">
+          <label class="form-label" for="attachment">Attachment (optional)</label>
+          <input class="form-input" type="file" id="attachment" name="attachment"
+                 accept="image/jpeg,image/png,application/pdf">
+          <p id="attachmentHint" style="font-size:12px;color:var(--text-secondary);margin:6px 0 0;">
+            JPG, PNG, or PDF. Max 5MB.
+          </p>
+          <p id="attachmentError" style="font-size:12px;color:#c0392b;margin:6px 0 0;" hidden></p>
+        </div>
+
         <button type="submit" id="submitBtn" class="btn btn-primary" style="width:100%;margin-top:4px;">
           Send message
         </button>
@@ -249,10 +259,33 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   var errorMsg   = document.getElementById('errorMsg');
   var topicSel   = document.getElementById('topic');
   var quoteHint  = document.getElementById('quoteHint');
+  var attachmentInput = document.getElementById('attachment');
+  var attachmentError = document.getElementById('attachmentError');
+
+  // Kept in sync with the server's own check in
+  // CamGrader-Backend/supabase/functions/contact/index.ts - this is only a
+  // convenience so people see the problem immediately instead of waiting for
+  // a round trip; the server re-validates the real file bytes regardless,
+  // never trusting this check alone.
+  var MAX_ATTACHMENT_BYTES = 5 * 1024 * 1024;
+  var ALLOWED_ATTACHMENT_TYPES = ['image/jpeg', 'image/png', 'application/pdf'];
 
   topicSel.addEventListener('change', function () {
     quoteHint.hidden = topicSel.value !== 'quote';
   });
+
+  function readFileAsBase64(file) {
+    return new Promise(function (resolve, reject) {
+      var reader = new FileReader();
+      reader.onload = function () {
+        // reader.result is "data:<mime>;base64,<data>" - strip the prefix
+        var commaIndex = reader.result.indexOf(',');
+        resolve(reader.result.slice(commaIndex + 1));
+      };
+      reader.onerror = reject;
+      reader.readAsDataURL(file);
+    });
+  }
 
   form.addEventListener('submit', function (e) {
     e.preventDefault();
@@ -262,6 +295,21 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     // Hide any previous error
     errorMsg.hidden = true;
+
+    var file = attachmentInput.files && attachmentInput.files[0];
+    attachmentError.hidden = true;
+    if (file) {
+      if (file.size > MAX_ATTACHMENT_BYTES) {
+        attachmentError.textContent = 'That attachment is too large. Please keep it under 5MB.';
+        attachmentError.hidden = false;
+        return;
+      }
+      if (ALLOWED_ATTACHMENT_TYPES.indexOf(file.type) === -1) {
+        attachmentError.textContent = 'Attachments must be a JPG, PNG, or PDF file.';
+        attachmentError.hidden = false;
+        return;
+      }
+    }
 
     submitBtn.disabled = true;
     submitBtn.textContent = 'Sending…';
@@ -273,21 +321,37 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       message: document.getElementById('message').value.trim()
     };
 
-    fetch(CONTACT_ENDPOINT, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify(data)
-    })
-    .then(function (res) {
-      if (!res.ok) throw new Error('Server error ' + res.status);
-      formWrap.hidden  = true;
-      successMsg.hidden = false;
-    })
-    .catch(function () {
-      errorMsg.hidden = false;
-      submitBtn.disabled = false;
-      submitBtn.textContent = 'Send message';
-    });
+    var sendRequest = function () {
+      fetch(CONTACT_ENDPOINT, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data)
+      })
+      .then(function (res) {
+        if (!res.ok) throw new Error('Server error ' + res.status);
+        formWrap.hidden  = true;
+        successMsg.hidden = false;
+      })
+      .catch(function () {
+        errorMsg.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      });
+    };
+
+    if (file) {
+      readFileAsBase64(file).then(function (base64) {
+        data.attachment = { filename: file.name, content_type: file.type, data: base64 };
+        sendRequest();
+      }).catch(function () {
+        attachmentError.textContent = 'Could not read the attachment. Please try again without it, or email us directly.';
+        attachmentError.hidden = false;
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Send message';
+      });
+    } else {
+      sendRequest();
+    }
   });
 })();
 </script>
