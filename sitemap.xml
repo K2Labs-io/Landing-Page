@@ -49,60 +49,66 @@
     <priority>0.8</priority>
   </url>
 
-  <!-- Getting Started -->
+  <!-- Quick Start -->
   <url>
-    <loc>https://camgrader.com/support/getting-started/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/quick-start/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/getting-started/grade-your-first-test/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/quick-start/create-your-first-test/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/getting-started/set-up-your-answer-key/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/quick-start/scan-your-first-test/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/getting-started/regrade-a-test/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/quick-start/use-the-key-generator/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
-  <!-- Scanning -->
+  <!-- Deploy Your First Test -->
   <url>
-    <loc>https://camgrader.com/support/scanning/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/deploy-your-first-test/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/scanning/choose-sheet-format/</loc>
+    <loc>https://camgrader.com/support/deploy-your-first-test/choose-sheet-format/</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/scanning/download-answer-sheets/</loc>
+    <loc>https://camgrader.com/support/deploy-your-first-test/download-answer-sheets/</loc>
     <lastmod>2026-08-30</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/scanning/scan-student-sheets/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/deploy-your-first-test/student-id-section/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://camgrader.com/support/scanning/read-your-results/</loc>
-    <lastmod>2026-08-30</lastmod>
+    <loc>https://camgrader.com/support/deploy-your-first-test/editing-student-results/</loc>
+    <lastmod>2026-09-04</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://camgrader.com/support/deploy-your-first-test/regrade-a-test/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
@@ -143,6 +149,12 @@
   <url>
     <loc>https://camgrader.com/support/billing/upgrade-to-personal/</loc>
     <lastmod>2026-08-30</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://camgrader.com/support/billing/backup-and-restore/</loc>
+    <lastmod>2026-09-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>

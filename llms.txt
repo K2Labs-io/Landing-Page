@@ -36,16 +36,17 @@ CamGrader is a mobile app (iPhone and Android) for teachers that grades paper mu
 
 ## Support Articles
 
-### Getting Started
-- Grade your first test: https://camgrader.com/support/getting-started/grade-your-first-test/
-- Set up your answer key: https://camgrader.com/support/getting-started/set-up-your-answer-key/
-- Regrade a test: https://camgrader.com/support/getting-started/regrade-a-test/
+### Quick Start
+- Create your first test: https://camgrader.com/support/quick-start/create-your-first-test/
+- Scan your first test: https://camgrader.com/support/quick-start/scan-your-first-test/
+- How to use the online Key Generator: https://camgrader.com/support/quick-start/use-the-key-generator/
 
-### Scanning
-- Choose a sheet format: https://camgrader.com/support/scanning/choose-sheet-format/
-- Download answer sheets: https://camgrader.com/support/scanning/download-answer-sheets/
-- Scan student sheets: https://camgrader.com/support/scanning/scan-student-sheets/
-- Read your results: https://camgrader.com/support/scanning/read-your-results/
+### Deploy Your First Test
+- Choose a sheet format: https://camgrader.com/support/deploy-your-first-test/choose-sheet-format/
+- Download answer sheets: https://camgrader.com/support/deploy-your-first-test/download-answer-sheets/
+- How to use the Student ID section: https://camgrader.com/support/deploy-your-first-test/student-id-section/
+- Editing student results: https://camgrader.com/support/deploy-your-first-test/editing-student-results/
+- Regrade a test: https://camgrader.com/support/deploy-your-first-test/regrade-a-test/
 
 ### Exporting
 - Export grades as CSV: https://camgrader.com/support/export/export-grades-csv/
@@ -54,6 +55,7 @@ CamGrader is a mobile app (iPhone and Android) for teachers that grades paper mu
 ### Billing
 - Manage your subscription: https://camgrader.com/support/billing/manage-your-subscription/
 - Upgrade to Personal: https://camgrader.com/support/billing/upgrade-to-personal/
+- Backup and restore: https://camgrader.com/support/billing/backup-and-restore/
 
 ## Privacy Summary
 

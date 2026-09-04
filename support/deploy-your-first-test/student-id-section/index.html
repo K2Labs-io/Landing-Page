@@ -3,14 +3,14 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started | CamGrader Help</title>
-  <meta name="description" content="Learn how to grade your first test, set up your answer key, and re-grade after editing.">
-  <link rel="canonical" href="https://camgrader.com/support/getting-started/">
+  <title>How to Use the Student ID Section | CamGrader Help</title>
+  <meta name="description" content="How the Student ID section works on a CamGrader bubble sheet, including null IDs and how to edit a student's ID after scanning.">
+  <link rel="canonical" href="https://camgrader.com/support/deploy-your-first-test/student-id-section/">
 
-  <link rel="apple-touch-icon" sizes="180x180" href="../../images/apple-touch-icon.png">
-  <link rel="icon" type="image/png" sizes="32x32" href="../../images/favicon-32x32.png">
-  <link rel="icon" type="image/png" sizes="16x16" href="../../images/favicon-16x16.png">
-  <link rel="manifest" href="../../images/site.webmanifest">
+  <link rel="apple-touch-icon" sizes="180x180" href="../../../images/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="../../../images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="../../../images/favicon-16x16.png">
+  <link rel="manifest" href="../../../images/site.webmanifest">
 
   <!-- Google Tag Manager -->
   <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -23,21 +23,24 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../css/main.css">
-
+  <link rel="stylesheet" href="../../../css/main.css">
   <style>
-    .tut-list { display: flex; flex-direction: column; gap: 12px; margin: 24px 0 40px; }
-    .tut-list-item {
-      display: flex; align-items: center; justify-content: space-between;
-      background: var(--white); border: 1px solid var(--border);
-      border-radius: var(--radius-lg); padding: 18px 20px;
-      text-decoration: none; color: inherit; box-shadow: var(--shadow-card);
-      transition: border-color 0.18s, box-shadow 0.18s;
+    .tut-screenshot {
+      background: #f0ebf8;
+      border: 2px dashed rgba(94,64,116,0.3);
+      border-radius: var(--radius-lg);
+      min-height: 200px;
+      margin: 16px 0 32px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 32px 24px;
+      text-align: center;
+      color: var(--text-secondary);
+      font-size: 13px;
+      font-style: italic;
+      line-height: 1.6;
     }
-    .tut-list-item:hover { border-color: var(--plum-mid); box-shadow: 0 4px 20px rgba(62,42,82,0.12); }
-    .tut-list-title { font-size: 15px; font-weight: 700; color: var(--text-primary); margin-bottom: 4px; }
-    .tut-list-desc { font-size: 13px; color: var(--text-secondary); line-height: 1.5; }
-    .tut-list-arrow { color: var(--text-secondary); font-size: 18px; flex-shrink: 0; margin-left: 16px; }
   </style>
 </head>
 <body class="util-body">
@@ -49,49 +52,38 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
 <div class="util-topbar">
   <div class="util-topbar-inner">
-    <a href="../../" class="util-topbar-brand">
-      <img src="../../images/logo.png" alt="CamGrader">
+    <a href="../../../" class="util-topbar-brand">
+      <img src="../../../images/logo.png" alt="CamGrader">
       <span class="util-topbar-name">CamGrader</span>
     </a>
-    <a href="../" class="util-topbar-back">← Help Center</a>
+    <a href="../" class="util-topbar-back">← Deploy Your First Test</a>
   </div>
 </div>
 
 <div class="util-wrap">
-  <h1 class="util-h1">Getting Started</h1>
-  <p class="util-meta">Tutorials · Getting Started</p>
-  <p class="util-p">Everything you need to go from download to graded tests.</p>
+  <h1 class="util-h1">How to Use the Student ID Section</h1>
+  <p class="util-meta">Deploy Your First Test · Student ID Section</p>
+  <p class="util-p">Every bubble sheet has a Student ID section so results can be matched to the right student. Here's how to fill it in and how to fix it if something goes wrong.</p>
 
-  <div class="tut-list">
-    <a href="grade-your-first-test/" class="tut-list-item">
-      <div>
-        <div class="tut-list-title">Grade your first test</div>
-        <p class="tut-list-desc">End-to-end walkthrough: create a test, enter the key, scan sheets, see results.</p>
-      </div>
-      <span class="tut-list-arrow">→</span>
-    </a>
-    <a href="set-up-your-answer-key/" class="tut-list-item">
-      <div>
-        <div class="tut-list-title">Set up your answer key</div>
-        <p class="tut-list-desc">Enter answers manually or scan a printed key, and edit after the fact.</p>
-      </div>
-      <span class="tut-list-arrow">→</span>
-    </a>
-    <a href="regrade-a-test/" class="tut-list-item">
-      <div>
-        <div class="tut-list-title">Re-grade a test</div>
-        <p class="tut-list-desc">Edit any answer on the key and CamGrader automatically recalculates every score.</p>
-      </div>
-      <span class="tut-list-arrow">→</span>
-    </a>
-  </div>
+  <h2 class="util-h2">What can go in the Student ID section</h2>
+  <p class="util-p">The Student ID section accepts any number up to 6 digits - there's no need to pad it with leading zeros. It can be an actual student ID number issued by your school, or, if your school's IDs don't fit in 6 digits, a serial number you assign yourself offline (for example, an alphabetical class roster number).</p>
+  <div class="tut-screenshot">Screenshot: the Student ID bubble section on a sheet</div>
+
+  <h2 class="util-h2">If a student ID can't be read</h2>
+  <p class="util-p">If the ID grid is left blank, filled in incorrectly, or otherwise can't be read during a scan, CamGrader assigns the result a placeholder "null ID" so nothing gets lost - you can still see and grade the sheet, you'll just need to assign it to the right student afterward.</p>
+
+  <h2 class="util-h2">Editing an ID after a scan</h2>
+  <p class="util-p">Open the student's result from the test's results list. If the ID needs to be corrected - or it's showing a null ID - tap <strong>Edit ID</strong> and enter the correct number. This works the same way whether you're fixing a simple mistake or assigning a real ID to a null-ID result.</p>
+  <div class="tut-screenshot">Screenshot: the Edit ID control on a student result page</div>
+
+  <p class="util-p">Once corrected, the result is linked to that student going forward, including in any exports or reports.</p>
 
   <hr class="util-divider">
 
   <div class="util-contact-box">
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
-    <a href="../../contact" class="btn btn-primary">Contact us</a>
+    <a href="../../../contact" class="btn btn-primary">Contact us</a>
   </div>
 </div>
 
@@ -100,7 +92,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-top">
       <div>
         <div class="footer-brand">
-          <img src="../../images/logo.png" alt="CamGrader">
+          <img src="../../../images/logo.png" alt="CamGrader">
           <span class="footer-brand-name">CamGrader</span>
         </div>
         <p class="footer-tagline">The fastest way to grade paper tests. Built for teachers.</p>
@@ -122,26 +114,26 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       <div>
         <div class="footer-col-title">Product</div>
         <ul class="footer-links">
-          <li><a href="../../#how-it-works">How It Works</a></li>
-          <li><a href="../../#features">Features</a></li>
-          <li><a href="../../#pricing">Pricing</a></li>
-          <li><a href="../../keygen">Key Generator</a></li>
+          <li><a href="../../../#how-it-works">How It Works</a></li>
+          <li><a href="../../../#features">Features</a></li>
+          <li><a href="../../../#pricing">Pricing</a></li>
+          <li><a href="../../../keygen">Key Generator</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Support</div>
         <ul class="footer-links">
-          <li><a href="../../support">Help Center</a></li>
-          <li><a href="../../contact">Contact Us</a></li>
+          <li><a href="../../../support">Help Center</a></li>
+          <li><a href="../../../contact">Contact Us</a></li>
           <li><a href="https://billing.stripe.com/p/login/cNi14n7zrgJTd1Y7m557W01">Manage Your Account</a></li>
         </ul>
       </div>
       <div>
         <div class="footer-col-title">Legal</div>
         <ul class="footer-links">
-          <li><a href="../../privacy">Privacy Policy</a></li>
-          <li><a href="../../terms">Terms of Service</a></li>
-          <li><a href="../../refunds">Refund Policy</a></li>
+          <li><a href="../../../privacy">Privacy Policy</a></li>
+          <li><a href="../../../terms">Terms of Service</a></li>
+          <li><a href="../../../refunds">Refund Policy</a></li>
         </ul>
       </div>
     </div>
@@ -149,14 +141,14 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     <div class="footer-bottom">
       <span class="footer-bottom-copy">&copy; 2026 CamGrader. All rights reserved.</span>
       <div class="footer-bottom-links">
-        <a href="../../privacy">Privacy</a>
-        <a href="../../terms">Terms</a>
-        <a href="../../refunds">Refunds</a>
+        <a href="../../../privacy">Privacy</a>
+        <a href="../../../terms">Terms</a>
+        <a href="../../../refunds">Refunds</a>
       </div>
     </div>
   </div>
 </footer>
 
-<script src="../../js/nav.js"></script>
+<script src="../../../js/nav.js"></script>
 </body>
 </html>
