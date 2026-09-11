@@ -890,7 +890,7 @@ header {
   outline: none;
   transition: border-color 0.18s;
 }
-.form-input:focus { border-color: var(--plum-mid); }
+.form-input:focus { border-color: var(--plum-mid); box-shadow: 0 0 0 3px rgba(94,64,116,0.22); }
 .form-input::placeholder { color: var(--text-secondary); opacity: 0.55; }
 select.form-input {
   appearance: none;
@@ -968,4 +968,72 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
 
 @media (max-width: 480px) {
   .pricing-grid { max-width: 100%; }
+}
+
+/* ── ===========================
+   COOKIE CONSENT BANNER
+=========================== ── */
+.consent-banner {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 999;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 18px 28px;
+  background: var(--plum-dark);
+  color: var(--cream);
+  box-shadow: 0 -4px 24px rgba(62,42,82,0.28);
+}
+.consent-banner-text {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.5;
+  color: var(--cream);
+  max-width: 640px;
+}
+.consent-banner-link {
+  color: var(--lavender);
+  text-decoration: underline;
+}
+.consent-banner-link:hover { color: var(--cream); }
+.consent-banner-actions {
+  display: flex;
+  gap: 10px;
+  flex-shrink: 0;
+}
+.consent-btn {
+  font-family: inherit;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: background 0.18s, border-color 0.18s;
+}
+.consent-btn-decline {
+  background: transparent;
+  border-color: rgba(247,249,236,0.35);
+  color: var(--cream);
+}
+.consent-btn-decline:hover { border-color: var(--cream); }
+.consent-btn-accept {
+  background: var(--lavender);
+  color: var(--plum-dark);
+}
+.consent-btn-accept:hover { background: var(--cream); }
+.consent-btn:focus-visible {
+  outline: 2px solid var(--cream);
+  outline-offset: 2px;
+}
+
+@media (max-width: 700px) {
+  .consent-banner { padding: 16px 20px; }
+  .consent-banner-actions { width: 100%; }
+  .consent-btn { flex: 1; text-align: center; }
 }
