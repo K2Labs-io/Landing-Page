@@ -14,7 +14,118 @@
   <meta property="og:title"       content="CamGrader | Grade Paper Tests in Seconds">
   <meta property="og:description" content="Scan the answer key. Scan your students' sheets. CamGrader does the rest.">
   <meta property="og:image"       content="https://camgrader.com/images/og.png">
+  <meta property="og:site_name"   content="CamGrader">
   <meta name="twitter:card"       content="summary_large_image">
+
+  <!-- RSS feed -->
+  <link rel="alternate" type="application/rss+xml" title="CamGrader Help Center" href="https://camgrader.com/feed.xml">
+
+  <!-- Structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": "https://camgrader.com/#organization",
+        "name": "K2 Labs",
+        "url": "https://camgrader.com/",
+        "logo": "https://camgrader.com/images/logo.png",
+        "email": "hello@camgrader.com",
+        "contactPoint": {
+          "@type": "ContactPoint",
+          "email": "hello@camgrader.com",
+          "contactType": "customer support",
+          "url": "https://camgrader.com/contact/"
+        }
+      },
+      {
+        "@type": "WebSite",
+        "@id": "https://camgrader.com/#website",
+        "url": "https://camgrader.com/",
+        "name": "CamGrader",
+        "publisher": { "@id": "https://camgrader.com/#organization" }
+      },
+      {
+        "@type": "SoftwareApplication",
+        "name": "CamGrader",
+        "url": "https://camgrader.com/",
+        "description": "Grade multiple-choice paper tests by scanning them with your phone camera. Scan the answer key, scan your students' sheets, and CamGrader scores everything instantly, fully offline.",
+        "applicationCategory": "EducationalApplication",
+        "operatingSystem": "iOS, Android",
+        "image": "https://camgrader.com/images/og.png",
+        "publisher": { "@id": "https://camgrader.com/#organization" },
+        "offers": {
+          "@type": "Offer",
+          "price": "0",
+          "priceCurrency": "USD",
+          "description": "Free to download. Includes 50 scans per month; a paid plan removes the monthly scan limit."
+        }
+      },
+      {
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "How do I manage or cancel my subscription?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "You can view invoices, update your payment method, or cancel anytime from your account management page. Enter the email you used at checkout and we'll send you a link."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What devices does CamGrader support?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CamGrader is available on iOS (iPhone, iOS 16 and later) and Android. Check the App Store or Google Play for the most current device requirements."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I need internet access to use the app?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No Wi-Fi is required to scan and grade. All grading and scoring happens on your device. An internet connection is only used for things like downloading answer sheet templates or installing app updates."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What answer sheet formats are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CamGrader supports 25-question, 50-question, and 100-question bubble sheets (A-D format). Sheets are available as PDF and JPEG in multiple print darkness levels so they work reliably on any printer."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Do I have to use the matching sheet size for my test?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "No. You can use any sheet format for any test length. For example, a 20-question test can use the 25-Q sheet. Students simply leave the extra bubbles blank and CamGrader grades only the questions on the answer key."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is student data stored securely?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. Student IDs, scores, and test results are stored in an encrypted local database on your device and are never shared with third parties. Deleting the app removes all data."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Can I use CamGrader for standardized tests?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "CamGrader is designed for classroom tests and teacher-created assessments. For state-mandated standardized tests, please follow your district's approved procedures."
+            }
+          }
+        ]
+      }
+    ]
+  }
+  </script>
 
   <!-- Favicons -->
   <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
@@ -480,7 +591,7 @@
               aria-label="Play CamGrader demo video"
               title="Play CamGrader demo video">
         <img class="demo-facade-thumb"
-             src="https://i.ytimg.com/vi/-EcdWtk38j8/maxresdefault.jpg"
+             src="images/demo-thumbnail.jpg"
              alt="CamGrader demo video thumbnail"
              loading="lazy">
         <svg class="demo-play-icon" viewBox="0 0 68 48" aria-hidden="true">
@@ -697,7 +808,7 @@
     </div>
     <hr class="footer-divider">
     <div class="footer-bottom">
-      <span class="footer-bottom-copy">&copy; 2026 CamGrader. All rights reserved. &middot; K2 Labs, SRTIP, Sharjah, United Arab Emirates</span>
+      <span class="footer-bottom-copy">&copy; 2026 CamGrader. All rights reserved.</span>
       <div class="footer-bottom-links">
         <a href="privacy">Privacy</a>
         <a href="terms">Terms</a>

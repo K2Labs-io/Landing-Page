@@ -2,6 +2,8 @@
 
 CamGrader is a mobile app (iPhone and Android) for teachers that grades paper multiple-choice tests by scanning student answer sheets with a phone camera. Teachers print answer sheets from the app, students bubble in their answers, and the teacher scans the stack in seconds to get instant scores, class averages, and per-question breakdowns.
 
+Full page-by-page content: https://camgrader.com/llms-full.txt
+
 ## About
 
 - **Product**: Mobile app for iPhone and Android (phone only, not iPad)

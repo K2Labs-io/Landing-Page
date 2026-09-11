@@ -1,0 +1,943 @@
+# CamGrader — Full Site Content
+
+This file contains the complete text content of every page on camgrader.com, for AI systems that need more than the summary in /llms.txt. See /llms.txt for a shorter overview.
+
+---
+
+## Homepage
+
+URL: https://camgrader.com/
+
+For teachers
+Paper tests.
+Graded in seconds.
+Grade multiple-choice tests with your phone. Scan the answer key, scan your students' sheets, and CamGrader does the rest.
+Get CamGrader
+See how it works
+Why CamGrader
+Your phone is all you need.
+No scanners. No spreadsheets. No subscription to a bloated platform. CamGrader turns your phone into a grading machine. Point, scan, done.
+Works offline. No Wi-Fi needed to scan and grade in your classroom.
+~1s
+Per student sheet
+Offline
+No Wi-Fi needed to grade
+Up to 100
+Questions per sheet
+iOS & Android
+Available on both platforms
+Simple by design
+Three steps. That's it.
+No training required. If you can take a photo, you can use CamGrader.
+1
+Scan the answer key
+Generate a bubble-sheet answer key in the app (or use the web tool), hold it up to your phone's camera, and CamGrader reads it instantly.
+2
+Scan student sheets
+Students fill in their bubble sheets on paper. You scan each one and CamGrader detects the student ID and scores every question automatically.
+3
+Review & export
+See scores, per question breakdowns, and class statistics instantly. Export results as CSV to paste into any gradebook.
+What you get
+Built for the classroom, not the IT department.
+Instant optical grading
+CamGrader's computer vision reads filled bubbles in real time, right on your device. No special hardware, no setup. Just your phone's camera.
+25-Q, 50-Q, and 100-Q sheet formats
+Multiple darkness levels for any printer
+Handles minor sheet misalignment automatically
+Real results, right away
+Score summaries, per question analytics, and class averages are ready the moment your last sheet is scanned.
+Per question correct/incorrect breakdown
+Class-wide score distribution
+CSV export for any gradebook
+From scan to gradebook in seconds.
+The moment your last sheet is scanned, your results are ready to export. One CSV file, compatible with Google Sheets, Excel, Canvas, or any gradebook and LMS your school uses.
+Export after every scan or batch the whole class
+Compatible with any gradebook or spreadsheet
+One tap. No reformatting, no copying by hand
+See it in action
+Watch a class get graded in under two minutes.
+Try the answer key generator →
+Simple pricing
+Start free. Upgrade when you're ready.
+No hidden fees. Cancel anytime.
+Free
+$
+0
+always free
+✓
+50 scans per month
+✓
+On-device storage only
+✓
+CSV export
+✓
+Fully offline
+Get CamGrader
+Most Popular
+Personal
+$
+72
+per year · or $9.99/month
+✓
+Unlimited scans
+✓
+Online backups
+✓
+CSV export
+✓
+Fully offline
+✓
+Priority support
+Get Personal
+Institutional
+$
+540
+per year · up to 10 teachers
+✓
+Everything in Personal
+✓
+Up to 10 teacher seats
+✓
+Dedicated support
+✓
+Personalized onboarding
+Contact us for a quote
+Need more seats? We'll work something out.
+FAQ
+Questions? We've got answers.
+How do I manage or cancel my subscription?
+You can view invoices, update your payment method, or cancel anytime from your
+account management page
+. Enter the email you used at checkout and we'll send you a link.
+What devices does CamGrader support?
+CamGrader is available on iOS (iPhone, iOS 16 and later) and Android. Check the App Store or Google Play for the most current device requirements.
+Do I need internet access to use the app?
+No Wi-Fi is required to scan and grade. All grading and scoring happens on your device. An internet connection is only used for things like downloading answer sheet templates or installing app updates.
+What answer sheet formats are supported?
+CamGrader supports 25-question, 50-question, and 100-question bubble sheets (A–D format). Sheets are available as PDF and JPEG in multiple print darkness levels so they work reliably on any printer.
+Do I have to use the matching sheet size for my test?
+No. You can use any sheet format for any test length. For example, a 20-question test can use the 25-Q sheet. Students simply leave the extra bubbles blank and CamGrader grades only the questions on the answer key.
+Is student data stored securely?
+Yes. Student IDs, scores, and test results are stored in an encrypted local database on your device and are never shared with third parties. Deleting the app removes all data.
+Can I use CamGrader for standardized tests?
+CamGrader is designed for classroom tests and teacher-created assessments. For state-mandated standardized tests, please follow your district's approved procedures.
+Ready?
+Start grading smarter today.
+Free to download. Free to start. No credit card required.
+App Store
+Play Store
+
+---
+
+## Key Generator
+
+URL: https://camgrader.com/keygen/
+
+CamGrader
+← Back to home
+Answer Key Generator
+Enter your answer key below to generate a scannable sheet you can hold up to your phone.
+Sheet format:
+25-Q
+50-Q
+100-Q
+Answer Key
+Copy / Paste
+Upload CSV
+Format: question number, comma, letter (A–D). One per line. No headers.
+📄
+Click to choose a CSV file
+or drag and drop here
+My CSV has a header row
+↓ Download template CSV
+Preview Key →
+Confirm Answer Key
+← Edit
+Generate Sheet →
+Scan This Sheet
+← Back
+How to scan:
+Open CamGrader, go to
+Tests
+, tap
++NEW
+, and choose
+Scan Answer Key
+.
+Hold your phone parallel to the screen at full brightness for best results.
+Start Over
+
+---
+
+## Support Home
+
+URL: https://camgrader.com/support/
+
+Help Center
+Find answers or get in touch. We're happy to help.
+Tutorials
+Quick Start
+Create your first test, scan it, and use the online key generator.
+Deploy Your First Test
+Print answer sheets, scan and manage student results, and re-grade a test.
+Results & Export
+Export grades to CSV and export individual student results as a PDF.
+Account & Billing
+Upgrade to unlimited scans and manage your plan.
+Frequently Asked Questions
+How do I manage or cancel my subscription?
+You can view invoices, update your payment method, or cancel anytime from your
+account management page
+. Enter the email you used at checkout and we'll send you a link.
+What devices does CamGrader support?
+CamGrader is available on iOS (iPhone, iOS 16 and later) and Android. Check the App Store or Google Play for the most current device requirements.
+What answer sheet formats are supported?
+CamGrader supports 25-question, 50-question, and 100-question bubble sheets (A–D format). Sheets are available as PDF and JPEG in multiple print darkness levels so they work reliably on any printer.
+Do I have to use the matching sheet size for my test?
+No. You can use any sheet format for any test length. For example, a 20-question test can use the 25-Q sheet. Students simply leave the extra bubbles blank and CamGrader grades only the questions on the answer key.
+Is student data stored securely?
+Yes. Student IDs, scores, and test results are stored in an encrypted local database on your device and are never shared with third parties. Deleting the app removes all data.
+Can I use CamGrader for standardized tests?
+CamGrader is designed for classroom tests and teacher-created assessments. For state-mandated standardized tests, please follow your district's approved procedures.
+Can I use CamGrader without internet?
+Yes. CamGrader is fully offline. All grading happens on your device. No internet is required to scan, grade, or view results. An internet connection is only used to download answer sheet templates or install app updates.
+Why are some bubbles not being detected?
+Make sure you're using the correct answer sheet format for your test (25-Q, 50-Q, or 100-Q). Try a lighter print darkness if bubbles are too dark, or a darker print if they're too light. Hold the sheet flat, well-lit, and parallel to the screen. Download sheet templates from the Sheets tab inside the app.
+The app says "MULTIPLE" for a question. What does that mean?
+This means the scanner detected more than one filled bubble for that question. Ask the student to re-check their sheet. If the sheet was clean but the error persists, try scanning at better lighting or with a lighter-darkness sheet.
+How do I export grades to my gradebook?
+Open the test, tap the Share / Export button, and choose "Export as CSV." The file includes each student's ID and score and can be opened in Excel, Google Sheets, or any gradebook that accepts CSV.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Quick Start (hub)
+
+URL: https://camgrader.com/support/quick-start/
+
+Quick Start
+Tutorials · Quick Start
+New to CamGrader? Start here. These three tutorials walk you through creating your first test, scanning it, and using the online key generator.
+Create Your First Test
+Set up a test and its answer key, whether you scan a paper key or enter it manually.
+→
+Scan Your First Test
+Lighting tips, do's and don'ts, and how to read the Question Breakdown colors on your results.
+→
+How to Use the Online Key Generator
+Build and print an answer key or a pre-filled sheet you can scan directly, no hand-bubbling required.
+→
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Create Your First Test
+
+URL: https://camgrader.com/support/quick-start/create-your-first-test/
+
+Create Your First Test
+Quick Start · Create Your First Test
+Every test in CamGrader starts the same way: give it a name, choose how many questions it has, and set up its answer key. Here's how.
+1. Start a new test
+From the Tests tab, tap
++ NEW
+. Give your test a name and, optionally, a course - this is just for your own organization and shows up when you're browsing your test list later.
+Screenshot: the New Test form with Test Name and Course fields
+2. Choose how you'll set up the key
+You'll be asked to choose between two ways to set up the answer key:
+Scan Answer Key
+- you scan a bubble sheet that already has the correct answers marked, and CamGrader reads them off automatically. This is the fastest option if you're already printing bubble sheets for your class.
+Manual Entry
+- you tap in the correct answer for each question yourself, right on your device. This is the better option if you don't have a physical key sheet handy, or you're building the key from a textbook or answer document.
+Screenshot: the "Scan Answer Key" vs "Manual Entry" choice modal
+3. If you're scanning a key: paper or Key Generator
+There are two ways to get a scannable key sheet:
+Paper
+- print a blank bubble sheet, hand-bubble in the correct answers yourself, then scan it just like you would a student's sheet.
+Key Generator
+- go to
+camgrader.com/keygen
+, type or paste in your answers, and it generates an on-screen sheet with the correct bubbles already filled in. You can scan that directly from your screen or a printout - no hand-bubbling needed. See
+How to Use the Online Key Generator
+for the full walkthrough.
+Screenshot: scanning a key sheet
+4. Sheet size doesn't have to match your question count exactly
+If your test has fewer questions than the bubble sheet has rows, that's fine - leave the extra rows blank when you bubble or scan the key, and CamGrader will detect where your answers stop and save the key at the right length automatically.
+5. If you're entering manually
+Tap through each question number and select the correct answer choice. You can leave trailing questions blank the same way as above if your sheet format has more rows than you need.
+Screenshot: manual key entry grid
+Once your key is saved, your test is ready. Next up:
+Scan Your First Test
+.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Scan Your First Test
+
+URL: https://camgrader.com/support/quick-start/scan-your-first-test/
+
+Scan Your First Test
+Quick Start · Scan Your First Test
+Once your test and answer key are set up, scanning student sheets is quick - a good scan starts with good lighting.
+Lighting recommendations
+CamGrader reads bubble sheets using your device's camera, so lighting makes a real difference in accuracy:
+Scan in a well-lit room with even, diffuse light - daylight near a window or standard classroom overhead lighting both work well. Avoid harsh, directional light (like a single desk lamp) that casts a shadow across the sheet.
+Screenshot: example of good, even lighting on a bubble sheet
+Do's and don'ts
+Do
+lay the sheet flat on a non-glossy surface, keep the whole sheet inside the camera frame, and hold your device steady and parallel to the sheet.
+Don't
+scan at a steep angle, allow glare from overhead lights or windows to wash out a section of the sheet, or scan a sheet that's heavily creased or folded across the bubble grid.
+How to scan
+Open the test, tap
+Scan
+, and line the sheet up inside the frame. CamGrader will detect the sheet automatically and capture it - hold steady for a moment while it processes.
+Screenshot: the scan camera view with sheet alignment guide
+Reading the Question Breakdown colors
+After a scan, each student's results page includes a Question Breakdown grid that color-codes every question:
+Green
+- answered correctly.
+Red
+- answered, but incorrect.
+Gray
+- left blank.
+Yellow
+- detected as blank, but there may be faint glare or a light mark worth a second look.
+Blue
+- the mark was ambiguous (for example, two bubbles filled in) and needs a manual check.
+On a red or blank question, you may also see a dashed outline around a different bubble - that's the correct answer, shown for quick comparison so you don't have to look it up separately.
+Screenshot: Question Breakdown grid showing all color states
+If a question is flagged blue or yellow, you can tap it to review the actual mark and correct it if needed - see
+Editing Student Results
+.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## How to Use the Online Key Generator
+
+URL: https://camgrader.com/support/quick-start/use-the-key-generator/
+
+How to Use the Online Key Generator
+Quick Start · Key Generator
+The Key Generator at camgrader.com/keygen lets you build a scannable answer key without printing and hand-bubbling a blank sheet.
+1. Choose your sheet format
+Visit
+camgrader.com/keygen
+and choose the bubble sheet format that matches the one you'll use with your class (for example, by number of questions).
+Screenshot: Key Generator format selection step
+2. Enter your answers
+Type or paste in your answer key, or upload a CSV. The Key Generator accepts however many answers your test actually has - you don't need to fill every row on the sheet format you picked.
+Screenshot: answer entry step, showing paste and CSV upload options
+3. Get your ready-to-scan sheet
+The Key Generator renders an on-screen answer sheet with the correct bubbles already filled in. From here you can either scan it directly off your screen, or print it and scan the printout.
+Back in the CamGrader app, start a new test, choose
+Scan Answer Key
+, and scan this sheet the same way you'd scan any bubble sheet.
+Screenshot: the finished Key Generator sheet, ready to scan
+That's it - no hand-bubbling a blank key sheet required. See
+Create Your First Test
+for how this fits into setting up a full test.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Deploy Your First Test (hub)
+
+URL: https://camgrader.com/support/deploy-your-first-test/
+
+Deploy Your First Test
+Tutorials · Deploy Your First Test
+Ready to hand a test to your class? These tutorials cover printing sheets, scanning student results, and managing them afterward.
+Download and Print Answer Sheets
+Get blank bubble sheets ready to hand out to your class.
+→
+Choose the Right Sheet Format
+Pick the bubble sheet size that matches your test.
+→
+How to Use the Student ID Section
+Fill in student IDs correctly, and fix them after a scan if needed.
+→
+Editing Student Results
+Correct a misread answer or update a grade after scanning.
+→
+Re-grade a Test
+Update the answer key and automatically re-grade every submitted sheet.
+→
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Choose the Right Sheet Format
+
+URL: https://camgrader.com/support/deploy-your-first-test/choose-sheet-format/
+
+Choose the right sheet format
+Deploy Your First Test · 2 min
+CamGrader has three sheet sizes: 25Q, 50Q, and 100Q. You don't need an exact match for your test length. Pick any sheet size that covers your question count.
+Step 1: Count your test questions
+Look at your test and note how many questions it has. That number determines the minimum sheet size you need.
+Screenshot: A sample paper test with 20 multiple-choice questions visible. The question count (20) is the focus.
+Step 2: Pick the smallest sheet that fits
+Use the 25Q sheet for tests up to 25 questions. Use 50Q for up to 50 questions. Use 100Q for up to 100 questions. You can also use a larger sheet. Extra bubbles are simply left blank.
+Screenshot: Three answer sheets laid side by side: 25Q (shortest), 50Q (medium), and 100Q (longest), with a label under each showing its question capacity.
+Step 3: Students leave extra bubbles blank
+If you use a 25Q sheet for a 20-question test, students fill questions 1–20 and leave 21–25 blank. CamGrader only grades the questions defined in the answer key and ignores the rest.
+Screenshot: A filled 25Q sheet where questions 1–20 have bubbles filled in and questions 21–25 are visibly empty. An annotation or callout highlights the unused rows.
+Step 4: CamGrader grades only the key questions
+After scanning, the results screen shows scores out of the number of questions in the key, not out of the total sheet capacity. A 20-question key on a 25Q sheet shows scores out of 20.
+Screenshot: Student result screen showing "17 / 20" with a 25Q sheet in the background. The score denominator matches the key (20), not the sheet capacity (25).
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Download and Print Answer Sheets
+
+URL: https://camgrader.com/support/deploy-your-first-test/download-answer-sheets/
+
+Download and print answer sheets
+Deploy Your First Test · 3 min
+CamGrader provides ready-to-print bubble sheets in multiple formats and darkness levels. Here's how to get the right one for your printer.
+Step 1: Go to the Sheets tab in the app
+From the home screen, tap the Sheets tab (or the equivalent section in the navigation). You'll see all available sheet formats.
+Screenshot: App home screen or bottom navigation with the "Sheets" tab selected. The sheet library is visible with format options listed.
+Step 2: Choose your question count
+Select 25Q, 50Q, or 100Q. Pick the smallest format that covers your question count. A 20-question test can use the 25Q sheet.
+Screenshot: Sheet format selection screen showing three options (25Q, 50Q, 100Q) displayed as cards or tabs. The 25Q option is highlighted as selected.
+Step 3: Choose a darkness level
+Sheets come in light, medium, and dark versions. If your printer produces faint output, use a darker sheet. If your printer prints very bold, use a lighter sheet. When in doubt, start with medium.
+Screenshot: Darkness selection screen showing three sheet thumbnails side by side: light (pale bubbles and lines), medium (standard), and dark (bold bubbles and lines). Medium is selected.
+Step 4: Download as PDF or JPEG
+Tap Download and choose your format. PDF is best for printing directly. JPEG works if you need to share the sheet digitally or print from a service that doesn't accept PDF.
+Screenshot: Download options screen with two buttons: "Download as PDF" and "Download as JPEG". The PDF option is visually primary.
+Step 5: Print at 100%, no scaling
+This is the most important step. Open the file and print at 100% scale with no page fitting or shrink-to-fit. Scaling the sheet changes the bubble positions and will cause detection errors.
+Screenshot: Print dialog (macOS or Windows) with the scale set to 100% and "Fit to page" unchecked. The sheet preview shows the full-size layout with no clipping.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## How to Use the Student ID Section
+
+URL: https://camgrader.com/support/deploy-your-first-test/student-id-section/
+
+How to Use the Student ID Section
+Deploy Your First Test · Student ID Section
+Every bubble sheet has a Student ID section so results can be matched to the right student. Here's how to fill it in and how to fix it if something goes wrong.
+What can go in the Student ID section
+The Student ID section accepts any number up to 6 digits - there's no need to pad it with leading zeros. It can be an actual student ID number issued by your school, or, if your school's IDs don't fit in 6 digits, a serial number you assign yourself offline (for example, an alphabetical class roster number).
+Screenshot: the Student ID bubble section on a sheet
+If a student ID can't be read
+If the ID grid is left blank, filled in incorrectly, or otherwise can't be read during a scan, CamGrader assigns the result a placeholder "null ID" so nothing gets lost - you can still see and grade the sheet, you'll just need to assign it to the right student afterward.
+Editing an ID after a scan
+Open the student's result from the test's results list. If the ID needs to be corrected - or it's showing a null ID - tap
+Edit ID
+and enter the correct number. This works the same way whether you're fixing a simple mistake or assigning a real ID to a null-ID result.
+Screenshot: the Edit ID control on a student result page
+Once corrected, the result is linked to that student going forward, including in any exports or reports.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Editing Student Results
+
+URL: https://camgrader.com/support/deploy-your-first-test/editing-student-results/
+
+Editing Student Results
+Deploy Your First Test · Editing Student Results
+If a scan misreads an answer - or a student's mark was genuinely ambiguous - you can correct it directly on their results page.
+When you'd edit a result
+Most scans need no correction at all. You might want to edit a result when a question was flagged blue (an ambiguous mark) or yellow (possible glare) in the Question Breakdown, or if you spot a genuine misread while reviewing a sheet.
+How to edit answers
+Open the student's result page and tap
+Edit
+. This puts the Question Breakdown into edit mode, where you can tap any question and select the correct bubble.
+Screenshot: a result page in edit mode, showing tappable answer bubbles
+Once you've made your changes, tap
+Done
+to save. The student's score and the Question Breakdown recalculate automatically to reflect your edits.
+Screenshot: the Done button confirming saved edits
+Editing a Student ID
+Correcting a student's ID number is a separate action from editing answers - see
+How to Use the Student ID Section
+for that.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Re-grade a Test
+
+URL: https://camgrader.com/support/deploy-your-first-test/regrade-a-test/
+
+Re-grade a test
+Deploy Your First Test · 2 min
+Made a mistake on the key? Decided to drop a question? Edit the answer key at any time and CamGrader instantly recalculates every student's score. No rescanning needed.
+Step 1: Open the test
+Tap the test you want to update from the home screen. You'll see the current class results and answer key.
+Screenshot: Test detail screen showing the class results list with student scores already graded (e.g. 24 students scanned).
+Step 2: Open the answer key
+Tap the Answer Key section or button to open the key editor.
+Screenshot: Test detail screen with the Answer Key section visible. An "Edit" button or the key itself is tappable.
+Step 3: Change the answer
+Tap the question you want to change and select the new correct answer. You can update as many questions as needed in one go.
+Screenshot: Answer key editor with question 7 selected. The current answer "B" is highlighted; the teacher is about to tap "D" to change it.
+Step 4: Save
+Tap Save. CamGrader immediately recalculates scores for every student using the updated key. No action needed on individual sheets.
+Screenshot: Brief regrading indicator or loading state (e.g. "Regrading 24 sheets...") appearing immediately after saving the key.
+Step 5: View updated results
+The class results list now reflects the new scores. Any student who answered the changed question correctly will have a higher score.
+Screenshot: Updated class results list showing revised scores. A few students who previously got question 7 wrong now have a higher score, visually distinguishable from before.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Results & Export (hub)
+
+URL: https://camgrader.com/support/export/
+
+Results & Export
+Tutorials · Results & Export
+Get your grades out of CamGrader and into your gradebook or share them with students.
+Export grades to CSV
+Export the full class results as a CSV file, compatible with Google Sheets, Excel, Canvas, and any gradebook.
+→
+Export student results
+Export an individual student's result as a PDF, including their answer sheet thumbnail and per-question breakdown.
+→
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Export Grades to CSV
+
+URL: https://camgrader.com/support/export/export-grades-csv/
+
+Export grades to CSV
+Results & Export · 2 min
+Once all sheets are scanned, you can export the full class results as a CSV file. The file opens in Google Sheets, Excel, Canvas, or any gradebook that accepts CSV.
+Step 1: Open the test results
+From the home screen, tap the test you want to export. The class results list shows all scanned students.
+Screenshot: Class results screen showing a list of all scanned students, their scores, and the class average at the top.
+Step 2: Tap the Export button
+Tap the Share or Export button, usually a share icon in the top right corner of the test screen.
+Screenshot: Test results screen with the share/export icon highlighted in the navigation bar (top right). An arrow or callout points to the icon.
+Step 3: Choose "Export as CSV"
+A menu appears with export options. Tap "Export as CSV" to generate the file.
+Screenshot: Export options bottom sheet or modal showing "Export as CSV" and "Export Student PDFs" as options. "Export as CSV" is highlighted.
+Step 4: Open or save the file
+Your device's share sheet appears. You can open the file directly in Google Sheets, save it to Files, AirDrop it to your computer, or share it via email.
+Screenshot: iOS or Android share sheet showing options including "Open in Google Sheets", "Save to Files", and "Mail". Google Sheets is highlighted as a common choice.
+What's in the CSV
+The CSV includes one row per student with their student ID, score (number of correct answers), total questions, percentage, and the answer they gave for each question. Column headers are on the first row.
+Screenshot: The CSV file open in Google Sheets, showing columns: Student ID, Score, Total, Percentage, Q1, Q2, Q3 ... The first few rows of data are visible with realistic-looking student IDs and scores.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Export Student Results
+
+URL: https://camgrader.com/support/export/export-student-results/
+
+Export student results
+Results & Export · 2 min
+For each student, you can export a PDF that includes their scanned answer sheet thumbnail and a complete per-question breakdown. Useful for parent conferences, student feedback, or your own records.
+Step 1: Open the test and tap a student
+From the class results list, tap any student's row to open their individual result screen.
+Screenshot: Class results list with one student row highlighted (tapped). The student's name/ID and score are visible in the row.
+Step 2: Review the student's result
+The student detail screen shows their score, the thumbnail of their scanned answer sheet, and a question-by-question breakdown. Verify this looks correct before exporting.
+Screenshot: Student detail screen showing the student's name, total score (e.g. "17 / 25 · 68%"), a thumbnail image of their answer sheet on the left, and a per-question list on the right or below.
+Step 3: Tap "Export PDF"
+Tap the Export PDF button (or the share icon and choose "Export as PDF"). CamGrader generates the PDF on-device.
+Screenshot: Student detail screen with the "Export PDF" button visible, either as a dedicated button at the bottom of the screen or as an option inside a share/export menu.
+Step 4: Preview the PDF
+The generated PDF includes: the student's name or ID, the test name, their overall score and percentage, a thumbnail of their scanned bubble sheet with correct/incorrect answers marked, and a numbered list of every question with their answer and the correct answer.
+Screenshot: PDF preview on device showing the CamGrader header, student name and score at the top, a thumbnail of the answer sheet in the upper half, and a two-column question breakdown below (Q1: student answered B, correct was B, correct; Q2: student answered A, correct was C, incorrect).
+Step 5: Save or share the PDF
+Use the share sheet to save to Files, send via email, AirDrop to your computer, or print directly. The PDF is self-contained and requires no internet connection to open.
+Screenshot: iOS or Android share sheet showing the generated PDF being shared. Options visible include Save to Files, Mail, AirDrop, and Print.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Account & Billing (hub)
+
+URL: https://camgrader.com/support/billing/
+
+Account & Billing
+Tutorials · Account & Billing
+Managing your CamGrader Personal subscription.
+Upgrade to CamGrader Personal
+What's included and how to subscribe from the app.
+→
+Backup and Restore
+What's backed up as a Guest, unsubscribed, or subscriber - and how to restore it.
+→
+Manage or cancel your subscription
+View invoices, update your payment method, or cancel anytime.
+→
+Need billing help?
+If you have a question about your account or subscription, contact us directly.
+Contact us
+
+---
+
+## Manage or Cancel Your Subscription
+
+URL: https://camgrader.com/support/billing/manage-your-subscription/
+
+Manage or cancel your subscription
+Account & Billing · 3 min
+All subscription management is handled through your Stripe account portal. You can view invoices, update your payment method, or cancel at any time without contacting us.
+Step 1: Open your account management page
+Go to
+your account management page
+or tap the "Manage Your Account" link in the footer of any page on camgrader.com.
+Screenshot: Browser showing the Stripe customer portal login page with a field labelled "Email address" and a "Send link" or "Continue" button.
+Step 2: Enter your email and check your inbox
+Enter the email address you used when you subscribed, then tap Continue. Stripe will send you a secure login link. Check your inbox and tap the link to open your account dashboard.
+Screenshot: Email inbox showing a message from Stripe or CamGrader with the subject "Your customer portal link" or similar. The email contains a single button or link to access the portal.
+Step 3: Your account dashboard
+Once inside, you can see your active plan, upcoming renewal date, past invoices, and your payment method on file.
+Screenshot: Stripe customer portal dashboard showing the plan name (CamGrader Personal), next billing date, a list of past invoices, and the card on file (e.g. Visa ending in 4242).
+Update your payment method
+To update your card, tap the payment method section and enter your new card details. Changes take effect on your next billing cycle.
+Screenshot: Payment method section of the portal with an "Update" button next to the card on file. Tapping it opens a card input form.
+Cancel your subscription
+To cancel, tap "Cancel plan" in the portal and confirm. Your subscription will be cancelled immediately. If you have unused time remaining in your billing period, you will receive a prorated refund within 2 weeks.
+Screenshot: Stripe portal showing a "Cancel plan" button or link near the bottom of the subscription section. A confirmation dialog appears asking the user to confirm the cancellation.
+After cancellation
+You will receive a confirmation email at the address you subscribed with. If a prorated refund applies, it will be returned to your original payment method within 2 weeks. Your account in the app will revert to Guest Mode on the next app launch.
+Screenshot: CamGrader app Settings screen showing the account status as "Guest Mode" with the scan counter visible, indicating the subscription is no longer active.
+Still need help?
+If you run into any issues with your subscription, reach out and we'll help.
+Contact us
+
+---
+
+## Upgrade to CamGrader Personal
+
+URL: https://camgrader.com/support/billing/upgrade-to-personal/
+
+Upgrade to CamGrader Personal
+Account & Billing · 3 min
+CamGrader Personal removes the 50-scan monthly limit and gives you unlimited student scans. Here's how to subscribe.
+What's included
+CamGrader Personal includes unlimited student scans per month, all sheet formats, and full access to results and export features. Answer key scans do not count against any limit on either plan.
+Step 1: Tap the upgrade prompt in the app
+When you're on Guest Mode, you'll see your remaining scans for the month at the top of the scan screen. Tap the upgrade prompt, or go to Settings and tap "Upgrade to Personal."
+Screenshot: Scan screen showing the scan counter near the top (e.g. "38 scans remaining this month") with a small "Upgrade" link or banner below it. Or: Settings screen with an "Upgrade to Personal" row highlighted.
+Step 2: You'll be taken to the CamGrader website
+The app opens camgrader.com/account/create in your browser. This is where you complete the purchase. Payment is handled entirely on the website, not inside the app.
+Screenshot: Browser opening to the CamGrader Personal page at camgrader.com/account/create, showing the plan name, price, and a "Continue" button or email entry field.
+Step 3: Enter your email and complete payment
+Enter the email address you want to use for your account and tap Continue. You'll be taken to Stripe's secure checkout to enter your payment details. Use the email address you'll sign into the app with.
+Screenshot: Email entry field on the CamGrader Personal page with a Continue button. Below it, a note that payment is processed securely by Stripe.
+Step 4: Stripe checkout
+Complete the Stripe payment form with your card details. Once your payment is confirmed, Stripe will redirect you back to a confirmation page.
+Screenshot: Stripe hosted checkout page showing the CamGrader Personal plan name, price, and payment fields (card number, expiry, CVC). A "Subscribe" button is at the bottom.
+Step 5: Sign in to the app with the same email
+Open CamGrader and sign in using the same email address you used at checkout. Go to Settings and tap "Sign In," then enter your email. You'll receive a one-time code. Once signed in, your account will show as active with unlimited scans.
+Screenshot: CamGrader sign-in screen with an email field and a "Send Code" button. The placeholder text reads something like "your@email.com."
+Step 6: Confirm your plan is active
+Once signed in, go to Settings. You should see your subscription status listed as active. The scan counter will no longer appear on the scan screen.
+Screenshot: Settings screen showing "CamGrader Personal" with a status of "Active" and the subscription renewal date. The scan counter that appeared in Guest Mode is no longer visible on the scan screen.
+Still need help?
+If your subscription isn't showing as active after signing in, contact us and we'll sort it out.
+Contact us
+
+---
+
+## Backup and Restore
+
+URL: https://camgrader.com/support/billing/backup-and-restore/
+
+Backup and Restore
+Account & Billing · Backup and Restore
+Whether your tests and results are backed up to the cloud - and whether you can restore them - depends on your account type.
+Guest
+If you're using CamGrader without an account, everything stays on your device only. There's no cloud backup and nothing to restore - if you get a new device or lose this one, your tests and results won't carry over. Create an account if you want your data backed up.
+Signed in, not subscribed
+Signing in without a subscription does not turn on cloud backup or restore. Your tests and results still live only on your device. Subscribing is what enables the cloud backup features below.
+Subscriber
+A subscription includes automatic cloud sync, so your tests and results are continuously backed up in the background - you don't need to do anything for this to happen.
+You can also trigger a manual backup at any time from Settings using
+Download My Data
+, which exports a complete copy of your account's data.
+Screenshot: the Download My Data option in Settings
+To restore, use
+Import
+from Settings and choose your exported file. If the file is a cloud export, CamGrader will also download the associated images and email you a confirmation once the restore finishes.
+Screenshot: the Import flow with progress and summary screen
+If you sign in on a new device, your data restores automatically through cloud sync as well - manual export/import is there as an extra option, not a requirement.
+Still need help?
+Can't find what you're looking for? We're happy to help.
+Contact us
+
+---
+
+## Privacy Policy
+
+URL: https://camgrader.com/privacy/
+
+Privacy Policy
+Effective date: June 14, 2026 · Last updated: September 11, 2026
+CamGrader is a grading app built for teachers. This policy explains what data the app collects, where it goes, and how it is handled.
+1. Two Ways to Use CamGrader
+Guest users
+do not create an account. All classroom data stays on your device in a local database. Nothing is transmitted to our servers.
+Signed-in users
+create an account with their email address. Signing in enables cloud backup, which stores your data on Supabase servers so it can be restored if you reinstall the app or switch devices. Before cloud backup is enabled, you are shown a plain-language consent screen explaining exactly what gets backed up and where it goes.
+2. Data You Enter
+When you use CamGrader you create tests, scan answer sheets, and the app records:
+Test names, question counts, and answer keys
+Student ID numbers detected from scanned answer sheets
+Per-question grading results and scores
+Scan thumbnails saved to your device
+For guest users, all of this stays on your device. Deleting the app removes it permanently.
+For signed-in users, this data is also backed up to Supabase after you give consent. Camera frames are processed on-device and are never transmitted externally.
+3. Authentication
+When you sign in, you provide your email address. CamGrader uses
+Supabase Auth
+to manage your account. A one-time sign-in code is sent to your email via
+Resend
+, an email delivery service. Resend receives your email address solely to deliver this code. No password is ever created or stored. Your email address is stored in Supabase and is used to identify your account and restore your backed-up data.
+4. Cloud Backup (Signed-In Users)
+With your consent, CamGrader backs up the following to Supabase:
+Tests and answer keys
+Student ID numbers and scan results
+Scan images (stored in a private Supabase Storage bucket)
+Cloud backup happens automatically in the background when a connection is available. Your device remains the source of truth. Backed-up data is stored on Supabase infrastructure hosted in South Korea and is governed by
+Supabase's Privacy Policy
+. See Section 13 for a full list of the service providers CamGrader uses and where each stores data.
+5. Crash Reporting
+CamGrader uses
+Sentry
+for crash reporting and performance monitoring. When the app encounters an unexpected error, Sentry automatically captures a report containing:
+Device model and manufacturer
+Operating system version
+App version
+A technical stack trace describing where the error occurred
+Crash reports never include classroom data, student IDs, test content, or scores. They are used solely to identify and fix bugs. Sentry data is stored in the European Union and processed in accordance with
+Sentry's Privacy Policy
+.
+CamGrader also uses Sentry's
+Session Replay
+feature, which can record a video-like reconstruction of on-screen activity for a small sample of app sessions (5%) and a larger sample of sessions where an error occurs (75%), to help us understand and fix bugs that are hard to reproduce from a stack trace alone. All text and images on screen are masked in these recordings, so classroom data, student IDs, test content, and scores are never visible in a Session Replay recording. Session Replay data is stored and governed the same way as the crash reports described above.
+6. Student Data
+CamGrader reads numeric student ID numbers from printed bubble grids on answer sheets. No student names, photos, or government-issued IDs are collected. As the teacher using the app, you are responsible for ensuring your use of student data complies with applicable regulations in your jurisdiction, including FERPA in the United States.
+For signed-in users, student ID numbers and associated scores are included in the cloud backup described in Section 4. They are stored on your account only and are never shared with any third party.
+7. Permissions
+CamGrader requests the following device permissions:
+Camera:
+required to scan printed answer sheets. Camera frames are processed on-device and never transmitted externally.
+Local file system access:
+required to save scan thumbnails and exported files to your device.
+Network access (signed-in users only):
+required to sync with Supabase and to receive sign-in codes via email.
+8. Data Export
+CamGrader includes an Export feature that lets you save a backup of your tests and results as a file, shared through your device's native share sheet. You choose where it goes. We do not receive a copy of any exported file.
+9. Deleting Your Data
+You can delete your data at any time:
+Individual tests or students:
+swipe to delete in the app. Local and cloud data are removed immediately.
+All data (Clear All Data):
+available in Settings. Removes all tests and students from your device and from Supabase.
+Your account (Delete Account):
+available in Settings. Permanently removes all your data from Supabase, including tests, students, scan results, scan images, and your account record, and signs you out. Supabase automated backups may retain the data briefly before it is fully purged.
+To request deletion by email, contact
+hello@camgrader.com
+.
+10. Data Retention
+Data for active accounts is retained as long as the account exists. If you delete your account, your data is permanently removed from Supabase. Accounts that have been inactive for 24 months are notified by email and given 30 days to sign in before data is deleted.
+11. Children's Privacy
+CamGrader is intended for use by teachers and educational professionals. The app is not directed at children and does not knowingly collect personal information from anyone under the age of 13.
+12. Changes to This Policy
+We may update this policy as the app adds new features. When we do, the "Last updated" date at the top of this page will change. We encourage you to review this page periodically. Continued use of the app after changes are posted constitutes acceptance of the revised policy.
+13. Subprocessors
+CamGrader uses the following third-party service providers ("subprocessors") to operate the app. Each is bound by a Data Processing Agreement covering how it handles any personal data it processes on our behalf.
+Supabase
+(database, authentication, and file storage for signed-in users) — data hosted in South Korea. See
+Supabase's Privacy Policy
+.
+Stripe
+(payment processing for subscriptions, including your billing address, which is used to calculate any applicable sales tax or VAT), contracted through Stripe Payments Europe, Limited. See
+Stripe's Privacy Policy
+.
+Resend
+(delivers your one-time sign-in code by email) — data hosted in the United States. See
+Resend's Privacy Policy
+.
+Sentry
+(crash and error reporting, described in Section 5) — data hosted in the European Union. See
+Sentry's Privacy Policy
+.
+Mixpanel
+(product analytics; for signed-in users, this includes your account email address so usage can be tied to your account) — data hosted in the United States. See
+Mixpanel's Privacy Policy
+.
+Google Firebase
+(crash-adjacent analytics and basic usage tracking; does not collect classroom data) — hosted on Google's standard infrastructure. See
+Firebase's Privacy and Security page
+.
+Google Tag Manager
+(loads analytics and, if added in the future, advertising tags — currently only Google Analytics 4) — only loads after you accept cookies on the banner shown on your first visit; your choice is remembered in your browser so you won't be asked again. See
+Google's Privacy Policy
+.
+We review this list periodically and will update it if a subprocessor is added, removed, or changes where it stores data.
+14. Your US Privacy Rights (California and Other States)
+If you are a California resident, or a resident of another US state with a similar privacy law, you have rights over the personal information CamGrader holds about you: the right to know what's collected, the right to delete it (see Section 9), and the right to correct inaccurate information. To exercise any of these rights, contact
+hello@camgrader.com
+.
+We do not sell or share your personal information
+(as those terms are defined under California and similar state laws) to third parties for money or for their own advertising purposes. The subprocessors listed in Section 13 process data only on our instructions, under a Data Processing Agreement, to operate CamGrader — not to use it for their own purposes. Because we don't sell or share personal information, there's nothing for a "Do Not Sell or Share My Personal Information" request to opt out of, but we still honor the Global Privacy Control (GPC) signal as an opt-out preference where applicable.
+We do not use sensitive personal information (such as precise geolocation, or the contents of your communications) for any purpose beyond providing the app's core functionality, so there is nothing to limit under a "Limit the Use of My Sensitive Personal Information" request.
+We will not deny you service, charge you a different price, or provide a different level of quality because you exercised any of these rights.
+Contact
+Questions about this privacy policy, requests to delete your data, or general support inquiries can be sent to:
+hello@camgrader.com
+K2 Labs
+SRTIP, Sharjah, United Arab Emirates
+
+---
+
+## Terms of Service
+
+URL: https://camgrader.com/terms/
+
+Terms of Service
+Effective date: June 14, 2026 · Last updated: September 5, 2026
+By downloading or using CamGrader, you agree to these Terms of Service. Please read them carefully. If you do not agree, do not use the app.
+1. Use of the App
+CamGrader is licensed to you for personal, educational, and professional use. You may use the app to grade tests and assessments for classes you teach or administer. You may not resell, sublicense, or distribute the app or its output for commercial purposes without our written permission.
+2. Service Tiers and Usage Limits
+CamGrader offers three tiers of access, each with its own limits. If you use the app without creating an account (Guest Mode), you get a one time trial of 25 scans within a 7 day period. This trial is tracked at the device level, using tools like Apple's DeviceCheck and Google's Play Integrity API, so that reinstalling the app does not grant a new trial. If you create an account but do not subscribe, you get 50 scans per calendar month, tracked against your account. Paid subscribers have unlimited scans for the duration of their active subscription.
+Because CamGrader can be used without an internet connection, your device must check in with our servers periodically (at least once every 7 days, or every 25 scans, whichever comes first) to confirm your usage tier and remaining allowance. If your device stays offline longer than this, scanning will pause until you reconnect. Attempting to circumvent these limits, including by reinstalling the app, using multiple devices or accounts to exceed a single tier's allowance, or interfering with device level usage checks, is a violation of these Terms.
+3. Accounts and Subscriptions
+Some features of CamGrader require a paid subscription. Accounts are created directly in the app using your email address; a one-time code is sent to verify your identity. Subscriptions are billed by K2 Labs through Stripe, a PCI-compliant payment processor. Your card details are handled by Stripe and are never stored on our servers. To manage or cancel your subscription, visit the
+billing portal
+or contact us at
+hello@camgrader.com
+. Your access will continue until the end of the current billing period. Refunds are handled in accordance with our
+Refund Policy
+. Prices shown do not include applicable sales tax, VAT, or similar charges, which may be calculated and added at checkout based on your billing location, in accordance with local tax law.
+A paid subscription is licensed for use on one device at a time. Signing in on a new device will sign you out of, and revoke access on, any previously active device. Frequent or repeated device switching may be treated as a violation of this fair use policy and can result in account suspension.
+4. Cloud Backup, Sync, and Data Restore
+Cloud backup and sync are available to paid subscribers only. If you are signed in but not subscribed, your scan usage is tracked on our servers, but your test, student, and result data is not backed up to the cloud and cannot be restored if lost from your device.
+When a subscriber signs in on a device that does not already have their data (a new install, or a device switch under the one device policy in Section 3), CamGrader performs a one time restore of your data from our servers to that device. This is not continuous two way sync: your device holds the primary copy of your data locally, and changes are pushed to the cloud for backup and restore purposes only. If a different account's data is already present on a device, you will be offered the option to export that data before it is removed from the device (this removal is local only and does not affect that account's own cloud backup), and your data is then restored automatically.
+If your device is offline when you delete a test, student, or result, the deletion is applied to your local data immediately and to your cloud backup automatically the next time your device reconnects. Until that sync completes, the deleted data may still exist in our systems, though it remains private to your account in the meantime.
+5. Account Deletion
+You may delete your account at any time from Settings in the app. Deleting your account permanently removes all associated data from CamGrader's servers, including tests, student results, and scan images. This action cannot be undone. To request deletion by email, contact
+hello@camgrader.com
+.
+6. User Responsibilities
+You are responsible for all data you enter into CamGrader, including student ID numbers and test results. You must ensure your use of student data complies with all applicable laws, including FERPA in the United States and equivalent regulations in your jurisdiction. CamGrader is a tool. You remain responsible for how you collect, store, and share any student information.
+Before using CamGrader, you are required to confirm that you are authorized to share student data with us. If you are based in the United States, you confirm that one of the following applies: your school has a Directory Information exemption on file under FERPA, you qualify as a School Official under your school's policy, or you have obtained written parental consent. If you are based outside the United States, you confirm that you are authorized under your country's student-privacy laws to share this data with CamGrader. This confirmation is a representation you make to us, not a determination we make on your behalf.
+7. Intellectual Property
+CamGrader and all associated software, design, and content are owned by K2 Labs and protected by copyright and other intellectual property laws. The answer sheet templates and key generator tool are provided for your personal classroom use only.
+8. Disclaimer of Warranties
+CamGrader is provided "as is" without warranty of any kind, express or implied. We do not guarantee that the app will be error-free, uninterrupted, or accurate in all grading situations. Always review scan results for accuracy before recording grades.
+9. Limitation of Liability
+To the maximum extent permitted by law, K2 Labs shall not be liable for any indirect, incidental, special, or consequential damages arising from your use of CamGrader, including but not limited to grading errors, data loss, or missed academic deadlines.
+This limitation of liability applies in full to any outage, data loss, security incident, or breach involving our third-party service providers (including but not limited to our hosting, payment processing, email, analytics, and error-tracking providers), regardless of cause. In no event shall K2 Labs' total liability to you for any claim relating to your use of CamGrader exceed the total amount you paid K2 Labs in the twelve months preceding the claim.
+10. Changes to These Terms
+We may update these Terms of Service from time to time. We will notify you of significant changes via the App Store update notes or in-app notice. Continued use of CamGrader after changes are posted constitutes acceptance of the revised terms.
+11. Governing Law
+These Terms are governed by the laws of the jurisdiction in which K2 Labs operates, without regard to conflict of law principles.
+Contact
+Questions about these Terms of Service can be sent to:
+hello@camgrader.com
+K2 Labs
+SRTIP, Sharjah, United Arab Emirates
+
+---
+
+## Refund Policy
+
+URL: https://camgrader.com/refunds/
+
+Refund Policy
+Effective date: June 14, 2026 · Last updated: June 14, 2026
+CamGrader Personal subscriptions are billed by K2 Labs through Stripe.
+Cancelling Your Subscription
+You can cancel anytime from your
+account management page
+. Log in with the email address you used at checkout. Your subscription is cancelled immediately upon confirmation and you will not be charged again.
+Prorated Refunds
+When you cancel a paid subscription before the end of your billing period, we calculate a prorated refund for the unused days remaining. We process that refund within 2 weeks of cancellation and return it to your original payment method. Depending on your bank, it may take an additional 5 to 10 business days to appear on your statement.
+Refunds are not issued for end-of-period cancellations where the full billing period has already been used, for free or trial periods, or for amounts that have already been refunded.
+Billing Errors
+If you believe you were charged incorrectly, contact us at
+hello@camgrader.com
+and we will investigate and correct any error promptly.
+Questions
+Email us at
+hello@camgrader.com
+and we'll get back to you within 1 to 2 business days.
+
+---
+
+## Contact
+
+URL: https://camgrader.com/contact/
+
+Get in touch
+Have a question, feedback, or want to learn more? We'd love to hear from you.
+Thanks! Your message has been sent. We'll get back to you as soon as we can.
+Something went wrong. Please try again or email us directly at
+hello@camgrader.com
+.
+Leave this blank
+Name
+Email
+What can we help with?
+Select a topic
+General question
+Institutional quote
+Technical support
+Billing & account
+Feedback
+Other
+To prepare a quote, it helps to know your
+school or district name
+,
+location
+,
+number of teachers
+who would use CamGrader, and an
+estimated number of students
+. Include whatever you have, and we'll follow up if we need more.
+Message
+Attachment (optional)
+JPG, PNG, or PDF. Max 5MB.
+Send message
