@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=8">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -55,25 +37,39 @@
   <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Results &amp; Export</a> · Export Grades to CSV</p>
   <p class="util-p">Once all sheets are scanned, you can export the full class results as a CSV file. The file opens in Google Sheets, Excel, Canvas, or any gradebook that accepts CSV.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Open the test results</h2>
-  <p class="util-p">From the home screen, tap the test you want to export. The class results list shows all scanned students.</p>
-  <div class="tut-screenshot">Screenshot: Class results screen showing a list of all scanned students, their scores, and the class average at the top.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">1. Open the test and tap Export CSV</h2>
+      <p class="util-p">From the home screen, tap the test you want to export. The test screen shows the class average and key scan, with <strong>Export PDF</strong> and <strong>Export CSV</strong> right below it - tap Export CSV.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-grades-csv/01-test-detail.webp" alt="Test detail screen for Quiz 1A F26 with Export PDF and Export CSV buttons">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: Tap the Export button</h2>
-  <p class="util-p">Tap the Share or Export button, usually a share icon in the top right corner of the test screen.</p>
-  <div class="tut-screenshot">Screenshot: Test results screen with the share/export icon highlighted in the navigation bar (top right). An arrow or callout points to the icon.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Choose "Export as CSV"</h2>
-  <p class="util-p">A menu appears with export options. Tap "Export as CSV" to generate the file.</p>
-  <div class="tut-screenshot">Screenshot: Export options bottom sheet or modal showing "Export as CSV" and "Export Student PDFs" as options. "Export as CSV" is highlighted.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">2. Choose where to send it</h2>
+      <p class="util-p">Your device's share sheet opens with the CSV file ready to go. Pick a contact or app, save it straight to Drive, or open it directly in a spreadsheet app like Google Sheets.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-grades-csv/02-share-sheet.webp" alt="Device share sheet with the exported CSV file ready to send">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 4: Open or save the file</h2>
-  <p class="util-p">Your device's share sheet appears. You can open the file directly in Google Sheets, save it to Files, AirDrop it to your computer, or share it via email.</p>
-  <div class="tut-screenshot">Screenshot: iOS or Android share sheet showing options including "Open in Google Sheets", "Save to Files", and "Mail". Google Sheets is highlighted as a common choice.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">What's in the CSV</h2>
-  <p class="util-p">The CSV includes one row per student with their student ID, score (number of correct answers), total questions, percentage, and the answer they gave for each question. Column headers are on the first row.</p>
-  <div class="tut-screenshot">Screenshot: The CSV file open in Google Sheets, showing columns: Student ID, Score, Total, Percentage, Q1, Q2, Q3 ... The first few rows of data are visible with realistic-looking student IDs and scores.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">3. What's in the file</h2>
+      <p class="util-p">The CSV opens with a short header, the test name, course, sheet format and question count, and the export date, followed by one row per student with their ID, score, questions attempted, and percentage.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-grades-csv/03-csv-content.webp" alt="Exported CSV open in Google Sheets showing the header block and one row per student">
+    </div>
+  </div>
 
   <hr class="util-divider">
 
@@ -81,6 +77,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
