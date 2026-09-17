@@ -17,25 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=1">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -56,16 +39,29 @@
 
   <h2 class="util-h2">1. Choose your sheet format</h2>
   <p class="util-p">Visit <a href="https://camgrader.com/keygen">camgrader.com/keygen</a> and choose the bubble sheet format that matches the one you'll use with your class (for example, by number of questions).</p>
-  <div class="tut-screenshot">Screenshot: Key Generator format selection step</div>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/quick-start/use-the-key-generator/01-format.webp" alt="Answer Key Generator page with the 25-Q sheet format selected">
+
+  <hr class="tut-divider">
 
   <h2 class="util-h2">2. Enter your answers</h2>
   <p class="util-p">Type or paste in your answer key, or upload a CSV. The Key Generator accepts however many answers your test actually has - you don't need to fill every row on the sheet format you picked.</p>
-  <div class="tut-screenshot">Screenshot: answer entry step, showing paste and CSV upload options</div>
+  <div class="tut-shots-row">
+    <img class="tut-shot tut-shot-full" src="../../../images/support/quick-start/use-the-key-generator/02-manual-entry.webp" alt="Copy / Paste tab with answers entered one question per line, in the format question number, comma, letter">
+    <img class="tut-shot tut-shot-full" src="../../../images/support/quick-start/use-the-key-generator/02-csv-upload.webp" alt="Upload CSV tab with a drag-and-drop area and a Download template CSV button">
+  </div>
 
-  <h2 class="util-h2">3. Get your ready-to-scan sheet</h2>
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">3. Confirm your answer key</h2>
+  <p class="util-p">Before generating the sheet, CamGrader shows every question so you can double-check it against what you entered. Anything left blank is flagged so you can catch a missed question before you scan.</p>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/quick-start/use-the-key-generator/03-confirm-key.webp" alt="Confirm Answer Key screen listing Q1 through Q25, with missing questions highlighted in red">
+
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">4. Get your ready-to-scan sheet</h2>
   <p class="util-p">The Key Generator renders an on-screen answer sheet with the correct bubbles already filled in. From here you can either scan it directly off your screen, or print it and scan the printout.</p>
   <p class="util-p">Back in the CamGrader app, start a new test, choose <strong>Scan Answer Key</strong>, and scan this sheet the same way you'd scan any bubble sheet.</p>
-  <div class="tut-screenshot">Screenshot: the finished Key Generator sheet, ready to scan</div>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/quick-start/use-the-key-generator/04-scan-sheet.webp" alt="Scan This Sheet page with the generated answer key bubble sheet, ready to scan from the screen">
 
   <p class="util-p">That's it - no hand-bubbling a blank key sheet required. See <a href="../create-your-first-test/">Create Your First Test</a> for how this fits into setting up a full test.</p>
 
@@ -75,6 +71,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
