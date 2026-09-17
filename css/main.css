@@ -1052,7 +1052,12 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
   display: flex;
   gap: 24px;
   align-items: flex-start;
-  margin: 16px 0 32px;
+  margin: 24px 0;
+}
+.tut-divider {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0 0 24px;
 }
 .tut-step-text { flex: 1 1 auto; min-width: 0; }
 .tut-step-text .util-h2:first-child { margin-top: 0; }
@@ -1062,12 +1067,12 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
   flex-direction: row;
   flex-wrap: wrap;
   align-content: flex-start;
-  gap: 10px;
-  max-width: 230px;
+  gap: 12px;
+  max-width: 280px;
 }
 .tut-shot {
   display: block;
-  height: 200px;
+  height: 280px;
   width: auto;
   max-width: 100%;
   border-radius: var(--radius-md);
@@ -1081,7 +1086,7 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
 @media (max-width: 700px) {
   .tut-step { flex-direction: column; }
   .tut-shots { max-width: 100%; }
-  .tut-shots .tut-shot { height: 170px; }
+  .tut-shots .tut-shot { height: 240px; }
 }
 
 .tut-lightbox {
@@ -1095,8 +1100,14 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
   z-index: 999;
 }
 .tut-lightbox.is-open { display: flex; }
-.tut-lightbox img {
+.tut-lightbox-inner {
+  position: relative;
   max-width: min(420px, 90vw);
+  max-height: 88vh;
+}
+.tut-lightbox-inner img {
+  display: block;
+  max-width: 100%;
   max-height: 88vh;
   border-radius: var(--radius-lg);
   box-shadow: 0 20px 60px rgba(0,0,0,0.45);
@@ -1120,3 +1131,16 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
   box-shadow: var(--shadow-card);
 }
 .tut-lightbox-close:hover { background: var(--cream); }
+
+/* On desktop the close button sits at the enlarged image's own corner
+   instead of the page corner - much closer read, still fully reachable
+   since it overlaps the image only slightly. Mobile keeps the page-corner
+   position (base rule above) since the image runs near full-width there
+   and an overlapping button risks getting clipped or hard to tap. */
+@media (min-width: 701px) {
+  .tut-lightbox-close {
+    position: absolute;
+    top: -16px;
+    right: -16px;
+  }
+}
