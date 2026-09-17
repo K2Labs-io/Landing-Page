@@ -33,13 +33,13 @@
 
 <div class="util-wrap">
   <h1 class="util-h1">Privacy Policy</h1>
-  <p class="util-meta">Effective date: June 14, 2026 &nbsp;·&nbsp; Last updated: September 11, 2026</p>
+  <p class="util-meta">Effective date: June 14, 2026 &nbsp;·&nbsp; Last updated: September 17, 2026</p>
 
   <p class="util-p">CamGrader is a grading app built for teachers. This policy explains what data the app collects, where it goes, and how it is handled.</p>
 
   <h2 class="util-h2">1. Two Ways to Use CamGrader</h2>
   <p class="util-p"><strong>Guest users</strong> do not create an account. All classroom data stays on your device in a local database. Nothing is transmitted to our servers.</p>
-  <p class="util-p"><strong>Signed-in users</strong> create an account with their email address. Signing in enables cloud backup, which stores your data on Supabase servers so it can be restored if you reinstall the app or switch devices. Before cloud backup is enabled, you are shown a plain-language consent screen explaining exactly what gets backed up and where it goes.</p>
+  <p class="util-p"><strong>Signed-in users</strong> create an account with their email address, which lets us track your monthly scan usage against your account instead of your device. <strong>Paid subscribers</strong> additionally get cloud backup, which stores your data on Supabase servers so it can be restored if you reinstall the app or switch devices. Before cloud backup is enabled, you are shown a plain-language consent screen explaining exactly what gets backed up and where it goes.</p>
 
   <h2 class="util-h2">2. Data You Enter</h2>
   <p class="util-p">When you use CamGrader you create tests, scan answer sheets, and the app records:</p>
@@ -55,14 +55,14 @@
   <h2 class="util-h2">3. Authentication</h2>
   <p class="util-p">When you sign in, you provide your email address. CamGrader uses <strong>Supabase Auth</strong> to manage your account. A one-time sign-in code is sent to your email via <strong>Resend</strong>, an email delivery service. Resend receives your email address solely to deliver this code. No password is ever created or stored. Your email address is stored in Supabase and is used to identify your account and restore your backed-up data.</p>
 
-  <h2 class="util-h2">4. Cloud Backup (Signed-In Users)</h2>
-  <p class="util-p">With your consent, CamGrader backs up the following to Supabase:</p>
+  <h2 class="util-h2">4. Cloud Backup (Paid Subscribers)</h2>
+  <p class="util-p">Cloud backup and sync are available to paid subscribers only. Signing in without a subscription lets us track your scan usage, but does not back up your test, student, or result data to the cloud - see Section 2 of our <a href="../terms" class="util-a">Terms of Service</a> for the exact limits at each tier. With your consent, once you subscribe, CamGrader backs up the following to Supabase:</p>
   <ul class="util-ul">
     <li>Tests and answer keys</li>
     <li>Student ID numbers and scan results</li>
     <li>Scan images (stored in a private Supabase Storage bucket)</li>
   </ul>
-  <p class="util-p">Cloud backup happens automatically in the background when a connection is available. Your device remains the source of truth. Backed-up data is stored on Supabase infrastructure hosted in South Korea and is governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="util-a">Supabase's Privacy Policy</a>. See Section 13 for a full list of the service providers CamGrader uses and where each stores data.</p>
+  <p class="util-p">Cloud backup happens automatically in the background when a connection is available, and can also be triggered manually from Settings using "Sync All Now." Your device remains the source of truth. Backed-up data is stored on Supabase infrastructure hosted in South Korea and is governed by <a href="https://supabase.com/privacy" target="_blank" rel="noopener" class="util-a">Supabase's Privacy Policy</a>. See Section 13 for a full list of the service providers CamGrader uses and where each stores data.</p>
 
   <h2 class="util-h2">5. Crash Reporting</h2>
   <p class="util-p">CamGrader uses <strong>Sentry</strong> for crash reporting and performance monitoring. When the app encounters an unexpected error, Sentry automatically captures a report containing:</p>
