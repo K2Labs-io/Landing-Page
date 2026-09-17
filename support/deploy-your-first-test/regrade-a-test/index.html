@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=8">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -55,25 +37,64 @@
   <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Deploy Your First Test</a> · Re-grade a Test</p>
   <p class="util-p">Made a mistake on the key? Decided to drop a question? Edit the answer key at any time and CamGrader instantly recalculates every student's score. No rescanning needed.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Open the test</h2>
-  <p class="util-p">Tap the test you want to update from the home screen. You'll see the current class results and answer key.</p>
-  <div class="tut-screenshot">Screenshot: Test detail screen showing the class results list with student scores already graded (e.g. 24 students scanned).</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">1. Open the test</h2>
+      <p class="util-p">Tap the test you want to update from the home screen. You'll see the class average, the key scan, and every student's result - this class is at 89% across 26 students.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/regrade-a-test/01-test-detail.webp" alt="Test detail screen for Quiz 1A F26 showing a 89% class average and 26 scanned results">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: Open the answer key</h2>
-  <p class="util-p">Tap the Answer Key section or button to open the key editor.</p>
-  <div class="tut-screenshot">Screenshot: Test detail screen with the Answer Key section visible. An "Edit" button or the key itself is tappable.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Change the answer</h2>
-  <p class="util-p">Tap the question you want to change and select the new correct answer. You can update as many questions as needed in one go.</p>
-  <div class="tut-screenshot">Screenshot: Answer key editor with question 7 selected. The current answer "B" is highlighted; the teacher is about to tap "D" to change it.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">2. Open the answer key</h2>
+      <p class="util-p">Tap <strong>Edit Test</strong> and the answer key editor opens, showing the test name, course, the key scan, and every question with its current correct answer already selected.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/regrade-a-test/02-edit-test.webp" alt="Edit Test screen with the answer key, Rescan Key, and Save Changes button">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 4: Save</h2>
-  <p class="util-p">Tap Save. CamGrader immediately recalculates scores for every student using the updated key. No action needed on individual sheets.</p>
-  <div class="tut-screenshot">Screenshot: Brief regrading indicator or loading state (e.g. "Regrading 24 sheets...") appearing immediately after saving the key.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 5: View updated results</h2>
-  <p class="util-p">The class results list now reflects the new scores. Any student who answered the changed question correctly will have a higher score.</p>
-  <div class="tut-screenshot">Screenshot: Updated class results list showing revised scores. A few students who previously got question 7 wrong now have a higher score, visually distinguishable from before.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">3. Change the answer</h2>
+      <p class="util-p">Scroll to the question you want to fix and tap the new correct answer. Here, question 5 is being changed from D to B - the highlighted button updates immediately, and you can change as many questions as needed before saving.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/regrade-a-test/03-answer-before.webp" alt="Answer key list with question 5 set to D">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/regrade-a-test/03-answer-after.webp" alt="Answer key list with question 5 changed to B">
+    </div>
+  </div>
+
+  <hr class="tut-divider">
+
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">4. Save</h2>
+      <p class="util-p">Tap <strong>Save Changes</strong>. CamGrader shows a brief "Updating Results..." indicator over the key scan while it recalculates every student's score against the new key - no rescanning needed.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/regrade-a-test/04-updating-results.webp" alt="Edit Test screen showing an Updating Results loading indicator over the key scan">
+    </div>
+  </div>
+
+  <hr class="tut-divider">
+
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">5. View updated results</h2>
+      <p class="util-p">The class results list reflects the new key right away. Because question 5's correct answer changed from D to B, students who'd picked D lost that point - this class's average dropped from 89% to 86%, with students 96784 and 99474 each down one question.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/regrade-a-test/05-updated-results.webp" alt="Test detail screen now showing an 86% class average with updated individual scores">
+    </div>
+  </div>
 
   <hr class="util-divider">
 
@@ -81,6 +102,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 

@@ -1108,7 +1108,7 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
 
 @media (max-width: 700px) {
   .tut-step { flex-direction: column; }
-  .tut-shots { max-width: 100%; }
+  .tut-shots { max-width: 100%; justify-content: center; }
   .tut-shots .tut-shot { height: 240px; }
 
   .tut-shot-full {
