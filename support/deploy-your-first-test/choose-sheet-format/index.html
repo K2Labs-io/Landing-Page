@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=1">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -52,24 +34,41 @@
 
 <div class="util-wrap">
   <h1 class="util-h1">Choose the right sheet format</h1>
-  <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Deploy Your First Test</a> · 2 min</p>
+  <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Deploy Your First Test</a> · Choose the Right Sheet Format</p>
   <p class="util-p">CamGrader has three sheet sizes: 25Q, 50Q, and 100Q. You don't need an exact match for your test length. Pick any sheet size that covers your question count.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Count your test questions</h2>
+  <h2 class="util-h2">1. Count your test questions</h2>
   <p class="util-p">Look at your test and note how many questions it has. That number determines the minimum sheet size you need.</p>
-  <div class="tut-screenshot">Screenshot: A sample paper test with 20 multiple-choice questions visible. The question count (20) is the focus.</div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: Pick the smallest sheet that fits</h2>
-  <p class="util-p">Use the 25Q sheet for tests up to 25 questions. Use 50Q for up to 50 questions. Use 100Q for up to 100 questions. You can also use a larger sheet. Extra bubbles are simply left blank.</p>
-  <div class="tut-screenshot">Screenshot: Three answer sheets laid side by side: 25Q (shortest), 50Q (medium), and 100Q (longest), with a label under each showing its question capacity.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Students leave extra bubbles blank</h2>
-  <p class="util-p">If you use a 25Q sheet for a 20-question test, students fill questions 1–20 and leave 21–25 blank. CamGrader only grades the questions defined in the answer key and ignores the rest.</p>
-  <div class="tut-screenshot">Screenshot: A filled 25Q sheet where questions 1–20 have bubbles filled in and questions 21–25 are visibly empty. An annotation or callout highlights the unused rows.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">2. Pick the smallest sheet that fits</h2>
+      <p class="util-p">Use the 25Q sheet for tests up to 25 questions. Use 50Q for up to 50 questions. Use 100Q for up to 100 questions. You can also use a larger sheet - extra bubbles are simply left blank.</p>
+      <p class="util-p">When you create a key that's shorter than the sheet you picked, CamGrader shows a quick confirmation before saving, so you can double check you meant to leave the extra questions blank.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/choose-sheet-format/02-confirm-length.webp" alt="Confirmation dialog: Create 20-Q Key? Questions 21-25 are blank.">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 4: CamGrader grades only the key questions</h2>
-  <p class="util-p">After scanning, the results screen shows scores out of the number of questions in the key, not out of the total sheet capacity. A 20-question key on a 25Q sheet shows scores out of 20.</p>
-  <div class="tut-screenshot">Screenshot: Student result screen showing "17 / 20" with a 25Q sheet in the background. The score denominator matches the key (20), not the sheet capacity (25).</div>
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">3. Extra bubbles are left blank and ignored</h2>
+  <p class="util-p">If you use a 25Q sheet for a 20-question test, students fill questions 1-20 and leave 21-25 blank. CamGrader only grades the questions defined in the answer key and ignores the rest - after scanning, the results screen shows scores out of the key length (20), not the sheet's full capacity (25).</p>
+
+  <hr class="tut-divider">
+
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">4. Scanning works the same either way</h2>
+      <p class="util-p">CamGrader detects a sheet from its four corner markers, not from how many bubbles are actually filled in. A 20-question key on a 25Q sheet scans exactly like any other sheet - there's nothing extra to set up for the unused rows.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/choose-sheet-format/04-scan-camera.webp" alt="Scan camera view with all four corner alignment guides locked on and Hold still confirmation showing">
+    </div>
+  </div>
 
   <hr class="util-divider">
 
@@ -77,6 +76,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
