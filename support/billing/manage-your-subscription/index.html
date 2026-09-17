@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=9">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -55,29 +37,29 @@
   <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Account &amp; Billing</a> · Manage or Cancel Your Subscription</p>
   <p class="util-p">All subscription management is handled through your Stripe account portal. You can view invoices, update your payment method, or cancel at any time without contacting us.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Open your account management page</h2>
-  <p class="util-p">Go to <a href="https://billing.stripe.com/p/login/9B600j5l45ha6m1h2SeAg01" class="util-a" target="_blank" rel="noopener">your account management page</a> or tap the "Manage Your Account" link in the footer of any page on camgrader.com.</p>
-  <div class="tut-screenshot">Screenshot: Browser showing the Stripe customer portal login page with a field labelled "Email address" and a "Send link" or "Continue" button.</div>
+  <h2 class="util-h2">1. Open your account management page</h2>
+  <p class="util-p">Go to <a href="https://billing.stripe.com/p/login/9B600j5l45ha6m1h2SeAg01" class="util-a" target="_blank" rel="noopener">your account management page</a> or tap the "Manage Your Account" link in the footer of any page on camgrader.com. Enter the email address you subscribed with and tap Send.</p>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/billing/manage-your-subscription/01-portal-login.webp" alt="Stripe customer portal login page with an email field and Send button">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: Enter your email and check your inbox</h2>
-  <p class="util-p">Enter the email address you used when you subscribed, then tap Continue. Stripe will send you a secure login link. Check your inbox and tap the link to open your account dashboard.</p>
-  <div class="tut-screenshot">Screenshot: Email inbox showing a message from Stripe or CamGrader with the subject "Your customer portal link" or similar. The email contains a single button or link to access the portal.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Your account dashboard</h2>
-  <p class="util-p">Once inside, you can see your active plan, upcoming renewal date, past invoices, and your payment method on file.</p>
-  <div class="tut-screenshot">Screenshot: Stripe customer portal dashboard showing the plan name (CamGrader Personal), next billing date, a list of past invoices, and the card on file (e.g. Visa ending in 4242).</div>
+  <h2 class="util-h2">2. Check your inbox</h2>
+  <p class="util-p">Stripe emails you a secure link to your customer portal - no password needed. Open the email and tap <strong>Log in to your customer portal</strong>.</p>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/billing/manage-your-subscription/02-portal-email.webp" alt="Email from Stripe with a Log in to your customer portal button">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Update your payment method</h2>
-  <p class="util-p">To update your card, tap the payment method section and enter your new card details. Changes take effect on your next billing cycle.</p>
-  <div class="tut-screenshot">Screenshot: Payment method section of the portal with an "Update" button next to the card on file. Tapping it opens a card input form.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Cancel your subscription</h2>
-  <p class="util-p">To cancel, tap "Cancel plan" in the portal and confirm. Your subscription will be cancelled immediately. If you have unused time remaining in your billing period, you will receive a prorated refund within 2 weeks.</p>
-  <div class="tut-screenshot">Screenshot: Stripe portal showing a "Cancel plan" button or link near the bottom of the subscription section. A confirmation dialog appears asking the user to confirm the cancellation.</div>
+  <h2 class="util-h2">3. Your account dashboard</h2>
+  <p class="util-p">Once inside, you can see your payment method, billing name and address, and invoice history in one place. Tap <strong>Update information</strong> to change your card or billing details, or use the "..." menu next to your card to update your payment method directly.</p>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/billing/manage-your-subscription/03-portal-dashboard.webp" alt="Stripe customer portal dashboard showing payment method, billing information, and invoice history">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">After cancellation</h2>
-  <p class="util-p">You will receive a confirmation email at the address you subscribed with. If a prorated refund applies, it will be returned to your original payment method within 2 weeks. Your account in the app will revert to Guest Mode on the next app launch.</p>
-  <div class="tut-screenshot">Screenshot: CamGrader app Settings screen showing the account status as "Guest Mode" with the scan counter visible, indicating the subscription is no longer active.</div>
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">Cancel your subscription</h2>
+  <p class="util-p">To cancel, use the subscription options in the portal and confirm. Your subscription is cancelled immediately - if you have unused time left in your billing period, you'll receive a prorated refund within 2 weeks.</p>
+
+  <h2 class="util-h2" style="margin-top:28px;">After cancellation</h2>
+  <p class="util-p">You'll get a confirmation email at the address you subscribed with. Any prorated refund goes back to your original payment method within 2 weeks, and your account in the app reverts to Guest Mode on the next app launch.</p>
 
   <hr class="util-divider">
 
@@ -85,6 +67,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">If you run into any issues with your subscription, reach out and we'll help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 

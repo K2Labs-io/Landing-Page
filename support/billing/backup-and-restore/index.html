@@ -17,25 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=9">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -61,11 +44,27 @@
   <p class="util-p">Signing in without a subscription does not turn on cloud backup or restore. Your tests and results still live only on your device. Subscribing is what enables the cloud backup features below.</p>
 
   <h2 class="util-h2">Subscriber</h2>
-  <p class="util-p">A subscription includes automatic cloud sync, so your tests and results are continuously backed up in the background - you don't need to do anything for this to happen.</p>
-  <p class="util-p">You can also trigger a manual backup at any time from Settings using <strong>Download My Data</strong>, which exports a complete copy of your account's data.</p>
-  <div class="tut-screenshot">Screenshot: the Download My Data option in Settings</div>
-  <p class="util-p">To restore, use <strong>Import</strong> from Settings and choose your exported file. If the file is a cloud export, CamGrader will also download the associated images and email you a confirmation once the restore finishes.</p>
-  <div class="tut-screenshot">Screenshot: the Import flow with progress and summary screen</div>
+  <p class="util-p">A subscription includes automatic cloud sync, so your tests and results are continuously backed up in the background, usually within a few seconds of each change - you don't need to do anything for this to happen.</p>
+  <p class="util-p">If you want everything synced right away instead of waiting, open <strong>Settings → Sync All Now</strong>. It shows when your data last synced, and is mainly useful right before switching devices or going offline.</p>
+
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <p class="util-p">The same Data section in Settings also has your export and import options. <strong>Export Local Data</strong> backs up what's on this device (scores and answers only, no key or scan images), while <strong>Download My Cloud Data</strong> - subscribers only - exports everything backed up to the cloud, including temporary 24-hour links to download your key and scan images.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/billing/backup-and-restore/01-sync-export-settings.webp" alt="Settings Data section showing Sync All Now, Export Local Data, Import Data, and Download My Cloud Data">
+    </div>
+  </div>
+
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <p class="util-p">To restore, use <strong>Import Data</strong> and choose either a local or cloud export file. CamGrader skips anything already on the device and only adds what's missing, then emails you a confirmation - the summary shows how many tests and results were newly added versus already there. This example shows a re-import of data that was already present, so nothing new was added.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/billing/backup-and-restore/02-import-complete.webp" alt="Import Complete screen showing how many tests and results were added versus already existing">
+    </div>
+  </div>
+
   <p class="util-p">If you sign in on a new device, your data restores automatically through cloud sync as well - manual export/import is there as an extra option, not a requirement.</p>
 
   <hr class="util-divider">
@@ -74,6 +73,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
