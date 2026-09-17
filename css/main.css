@@ -1083,6 +1083,13 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
 }
 .tut-shot:hover { transform: scale(1.035); }
 
+.tut-shot-full {
+  height: auto;
+  width: 100%;
+  max-width: 520px;
+  margin-top: 12px;
+}
+
 @media (max-width: 700px) {
   .tut-step { flex-direction: column; }
   .tut-shots { max-width: 100%; }
