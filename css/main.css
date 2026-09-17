@@ -1084,10 +1084,11 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
 .tut-shot:hover { transform: scale(1.035); }
 
 .tut-shot-full {
+  display: block;
   height: auto;
   width: 100%;
   max-width: 520px;
-  margin-top: 12px;
+  margin: 12px auto 24px;
 }
 
 .tut-shot-full.tut-shot-wide {
