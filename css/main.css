@@ -820,6 +820,15 @@ header {
   color: var(--text-secondary);
   margin-bottom: 48px;
 }
+.util-meta a {
+  color: var(--text-secondary);
+  text-decoration: none;
+}
+.util-meta a:hover {
+  color: var(--plum-mid);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
 .util-h2 {
   font-size: 18px;
   font-weight: 700;
@@ -1037,3 +1046,73 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
   .consent-banner-actions { width: 100%; }
   .consent-btn { flex: 1; text-align: center; }
 }
+
+/* ── Tutorial step screenshots + lightbox ─────────────────────────────────── */
+.tut-step {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+  margin: 16px 0 32px;
+}
+.tut-step-text { flex: 1 1 auto; min-width: 0; }
+.tut-step-text .util-h2:first-child { margin-top: 0; }
+.tut-shots {
+  flex: 0 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 168px;
+}
+.tut-shot {
+  display: block;
+  width: 100%;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-card);
+  cursor: zoom-in;
+  transition: transform 0.15s ease;
+}
+.tut-shot:hover { transform: scale(1.035); }
+
+@media (max-width: 700px) {
+  .tut-step { flex-direction: column; }
+  .tut-shots { flex-direction: row; width: 100%; flex-wrap: wrap; }
+  .tut-shots .tut-shot { width: 132px; flex: 0 0 auto; }
+}
+
+.tut-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(29,18,41,0.85);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 40px 16px;
+  z-index: 999;
+}
+.tut-lightbox.is-open { display: flex; }
+.tut-lightbox img {
+  max-width: min(420px, 90vw);
+  max-height: 88vh;
+  border-radius: var(--radius-lg);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.45);
+}
+.tut-lightbox-close {
+  position: fixed;
+  top: 20px;
+  right: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  color: var(--text-primary);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-card);
+}
+.tut-lightbox-close:hover { background: var(--cream); }
