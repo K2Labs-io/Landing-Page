@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=9">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -55,25 +37,51 @@
   <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Results &amp; Export</a> · Export Student Results</p>
   <p class="util-p">For each student, you can export a PDF that includes their scanned answer sheet thumbnail and a complete per-question breakdown. Useful for parent conferences, student feedback, or your own records.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Open the test and tap a student</h2>
-  <p class="util-p">From the class results list, tap any student's row to open their individual result screen.</p>
-  <div class="tut-screenshot">Screenshot: Class results list with one student row highlighted (tapped). The student's name/ID and score are visible in the row.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">1. Open the test and tap a student</h2>
+      <p class="util-p">From the home screen, tap the test, then tap any student's row in the results list to open their individual result.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-student-results/01-test-detail.webp" alt="Test detail screen with the class results list">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: Review the student's result</h2>
-  <p class="util-p">The student detail screen shows their score, the thumbnail of their scanned answer sheet, and a question-by-question breakdown. Verify this looks correct before exporting.</p>
-  <div class="tut-screenshot">Screenshot: Student detail screen showing the student's name, total score (e.g. "17 / 25 · 68%"), a thumbnail image of their answer sheet on the left, and a per-question list on the right or below.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Tap "Export PDF"</h2>
-  <p class="util-p">Tap the Export PDF button (or the share icon and choose "Export as PDF"). CamGrader generates the PDF on-device.</p>
-  <div class="tut-screenshot">Screenshot: Student detail screen with the "Export PDF" button visible, either as a dedicated button at the bottom of the screen or as an option inside a share/export menu.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">2. Review the result, then tap Export PDF</h2>
+      <p class="util-p">The result screen shows the student's score, their scanned answer sheet, and the Question Breakdown legend - once it looks right, tap <strong>Export PDF</strong> right below the sheet.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-student-results/02-result-export.webp" alt="Student result screen with score and the Export PDF button">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 4: Preview the PDF</h2>
-  <p class="util-p">The generated PDF includes: the student's name or ID, the test name, their overall score and percentage, a thumbnail of their scanned bubble sheet with correct/incorrect answers marked, and a numbered list of every question with their answer and the correct answer.</p>
-  <div class="tut-screenshot">Screenshot: PDF preview on device showing the CamGrader header, student name and score at the top, a thumbnail of the answer sheet in the upper half, and a two-column question breakdown below (Q1: student answered B, correct was B, correct; Q2: student answered A, correct was C, incorrect).</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 5: Save or share the PDF</h2>
-  <p class="util-p">Use the share sheet to save to Files, send via email, AirDrop to your computer, or print directly. The PDF is self-contained and requires no internet connection to open.</p>
-  <div class="tut-screenshot">Screenshot: iOS or Android share sheet showing the generated PDF being shared. Options visible include Save to Files, Mail, AirDrop, and Print.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">3. What's in the PDF</h2>
+      <p class="util-p">CamGrader generates the PDF through your device's share sheet, so opening it - inside an app like WhatsApp, for example - shows exactly what's in it: the test name, course, sheet format, student ID and score, a thumbnail of their scanned sheet, and a full question-by-question table of their answer against the key.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-student-results/03-pdf-preview.webp" alt="Exported PDF preview showing the score, sheet thumbnail, and per-question answer table">
+    </div>
+  </div>
+
+  <hr class="tut-divider">
+
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">4. Choose where to send it</h2>
+      <p class="util-p">Tapping Export PDF opens your device's share sheet with the file ready to go - pick a contact or app, save it straight to Drive, or print it directly. No internet connection is needed to open the PDF itself.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/export/export-student-results/04-share-sheet.webp" alt="Device share sheet with the exported student PDF ready to send">
+    </div>
+  </div>
 
   <hr class="util-divider">
 
@@ -81,6 +89,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
