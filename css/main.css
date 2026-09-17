@@ -822,12 +822,11 @@ header {
 }
 .util-meta a {
   color: var(--text-secondary);
-  text-decoration: none;
+  text-decoration: underline;
+  text-underline-offset: 2px;
 }
 .util-meta a:hover {
   color: var(--plum-mid);
-  text-decoration: underline;
-  text-underline-offset: 2px;
 }
 .util-h2 {
   font-size: 18px;
@@ -1057,7 +1056,7 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
 .tut-divider {
   border: none;
   border-top: 1px solid var(--border);
-  margin: 0 0 24px;
+  margin: 28px 0;
 }
 .tut-step-text { flex: 1 1 auto; min-width: 0; }
 .tut-step-text .util-h2:first-child { margin-top: 0; }
@@ -1111,6 +1110,23 @@ textarea.form-input { resize: vertical; min-height: 140px; line-height: 1.6; }
   .tut-step { flex-direction: column; }
   .tut-shots { max-width: 100%; }
   .tut-shots .tut-shot { height: 240px; }
+
+  .tut-shot-full {
+    height: auto;
+    width: 100%;
+    max-width: 100%;
+    margin: 12px auto 24px;
+  }
+
+  .tut-shots-row {
+    flex-wrap: nowrap;
+    gap: 10px;
+  }
+  .tut-shots-row .tut-shot-full {
+    flex: 1 1 0;
+    min-width: 0;
+    width: auto;
+  }
 }
 
 .tut-lightbox {

@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=1">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -55,25 +37,23 @@
   <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Deploy Your First Test</a> · 3 min</p>
   <p class="util-p">CamGrader provides ready-to-print bubble sheets in multiple formats and darkness levels. Here's how to get the right one for your printer.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Go to the Sheets tab in the app</h2>
-  <p class="util-p">From the home screen, tap the Sheets tab (or the equivalent section in the navigation). You'll see all available sheet formats.</p>
-  <div class="tut-screenshot">Screenshot: App home screen or bottom navigation with the "Sheets" tab selected. The sheet library is visible with format options listed.</div>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">1. Find your sheet</h2>
+      <p class="util-p">From the home screen, tap the <strong>Sheets</strong> tab. Sheets are grouped by question count - 25Q, 50Q, or 100Q - pick the smallest format that covers your test (a 20-question test can use the 25Q sheet).</p>
+      <p class="util-p">Each format comes in three darkness levels: Regular, Lighter, and Lightest. Regular works for most printers - switch to Lighter or Lightest only if your printer runs dark and bubbles print too bold.</p>
+      <p class="util-p">Tap <strong>PDF</strong> or <strong>JPG</strong> under the darkness level you want to download it. PDF is best for printing directly - JPG works if you need to share the sheet digitally or print from a service that doesn't accept PDF.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/download-answer-sheets/01-sheets-tab.webp" alt="Answer Sheets screen grouped by question count, each with PDF and JPG download options at three darkness levels">
+    </div>
+  </div>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: Choose your question count</h2>
-  <p class="util-p">Select 25Q, 50Q, or 100Q. Pick the smallest format that covers your question count. A 20-question test can use the 25Q sheet.</p>
-  <div class="tut-screenshot">Screenshot: Sheet format selection screen showing three options (25Q, 50Q, 100Q) displayed as cards or tabs. The 25Q option is highlighted as selected.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Choose a darkness level</h2>
-  <p class="util-p">Sheets come in light, medium, and dark versions. If your printer produces faint output, use a darker sheet. If your printer prints very bold, use a lighter sheet. When in doubt, start with medium.</p>
-  <div class="tut-screenshot">Screenshot: Darkness selection screen showing three sheet thumbnails side by side: light (pale bubbles and lines), medium (standard), and dark (bold bubbles and lines). Medium is selected.</div>
-
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 4: Download as PDF or JPEG</h2>
-  <p class="util-p">Tap Download and choose your format. PDF is best for printing directly. JPEG works if you need to share the sheet digitally or print from a service that doesn't accept PDF.</p>
-  <div class="tut-screenshot">Screenshot: Download options screen with two buttons: "Download as PDF" and "Download as JPEG". The PDF option is visually primary.</div>
-
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 5: Print at 100%, no scaling</h2>
+  <h2 class="util-h2">2. Print at 100%, no scaling</h2>
   <p class="util-p">This is the most important step. Open the file and print at 100% scale with no page fitting or shrink-to-fit. Scaling the sheet changes the bubble positions and will cause detection errors.</p>
-  <div class="tut-screenshot">Screenshot: Print dialog (macOS or Windows) with the scale set to 100% and "Fit to page" unchecked. The sheet preview shows the full-size layout with no clipping.</div>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/deploy-your-first-test/download-answer-sheets/02-print-dialog.webp" alt="Print dialog with the sheet preview and scale options">
 
   <hr class="util-divider">
 
@@ -81,6 +61,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
