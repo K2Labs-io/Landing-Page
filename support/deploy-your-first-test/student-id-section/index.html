@@ -17,25 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=1">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -56,16 +39,25 @@
 
   <h2 class="util-h2">What can go in the Student ID section</h2>
   <p class="util-p">The Student ID section accepts any number up to 6 digits - there's no need to pad it with leading zeros. It can be an actual student ID number issued by your school, or, if your school's IDs don't fit in 6 digits, a serial number you assign yourself offline (for example, an alphabetical class roster number).</p>
-  <div class="tut-screenshot">Screenshot: the Student ID bubble section on a sheet</div>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/deploy-your-first-test/student-id-section/01-student-id-grid.webp" alt="The Student ID bubble grid on a CamGrader answer sheet, six digit columns numbered 0 through 9">
+
+  <hr class="tut-divider">
 
   <h2 class="util-h2">If a student ID can't be read</h2>
   <p class="util-p">If the ID grid is left blank, filled in incorrectly, or otherwise can't be read during a scan, CamGrader assigns the result a placeholder "null ID" so nothing gets lost - you can still see and grade the sheet, you'll just need to assign it to the right student afterward.</p>
 
-  <h2 class="util-h2">Editing an ID after a scan</h2>
-  <p class="util-p">Open the student's result from the test's results list. If the ID needs to be corrected - or it's showing a null ID - tap <strong>Edit ID</strong> and enter the correct number. This works the same way whether you're fixing a simple mistake or assigning a real ID to a null-ID result.</p>
-  <div class="tut-screenshot">Screenshot: the Edit ID control on a student result page</div>
+  <hr class="tut-divider">
 
-  <p class="util-p">Once corrected, the result is linked to that student going forward, including in any exports or reports.</p>
+  <div class="tut-step">
+    <div class="tut-step-text">
+      <h2 class="util-h2">Editing an ID after a scan</h2>
+      <p class="util-p">Open the student's result from the test's results list. If the ID needs to be corrected - or it's showing a null ID - tap <strong>Edit ID</strong> and enter the correct number. This works the same way whether you're fixing a simple mistake or assigning a real ID to a null-ID result.</p>
+      <p class="util-p">Once corrected, the result is linked to that student going forward, including in any exports or reports.</p>
+    </div>
+    <div class="tut-shots">
+      <img class="tut-shot" src="../../../images/support/deploy-your-first-test/student-id-section/02-edit-id.webp" alt="Edit Student ID dialog on a result page, entering a 5-digit ID before tapping Assign">
+    </div>
+  </div>
 
   <hr class="util-divider">
 
@@ -73,6 +65,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">Can't find what you're looking for? We're happy to help.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
