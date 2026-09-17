@@ -17,26 +17,8 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../../../css/main.css">
-
-  <style>
-    .tut-screenshot {
-      background: #f0ebf8;
-      border: 2px dashed rgba(94,64,116,0.3);
-      border-radius: var(--radius-lg);
-      min-height: 200px;
-      margin: 16px 0 32px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 32px 24px;
-      text-align: center;
-      color: var(--text-secondary);
-      font-size: 13px;
-      font-style: italic;
-      line-height: 1.6;
-    }
-  </style>
+  <link rel="stylesheet" href="../../../css/main.css?v=9">
+  <script src="../../../js/tut-lightbox.js?v=1" defer></script>
 </head>
 <body class="util-body">
 
@@ -53,34 +35,43 @@
 <div class="util-wrap">
   <h1 class="util-h1">Upgrade to CamGrader Personal</h1>
   <p class="util-meta"><a href="../../">Help Center</a> · <a href="../">Account &amp; Billing</a> · Upgrade to CamGrader Personal</p>
-  <p class="util-p">CamGrader Personal removes the 50-scan monthly limit and gives you unlimited student scans. Here's how to subscribe.</p>
+  <p class="util-p">CamGrader Personal removes your monthly scan limit and gives you unlimited student scans. Here's what each tier gets, and how to subscribe.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">What's included</h2>
-  <p class="util-p">CamGrader Personal includes unlimited student scans per month, all sheet formats, and full access to results and export features. Answer key scans do not count against any limit on either plan.</p>
+  <h2 class="util-h2">Guest</h2>
+  <p class="util-p">Without an account, you get a one-time trial of 25 scans over 7 days, per device. Create an account for a monthly allowance instead, or subscribe for unlimited scans.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:36px;">Step 1: Tap the upgrade prompt in the app</h2>
-  <p class="util-p">When you're on Guest Mode, you'll see your remaining scans for the month at the top of the scan screen. Tap the upgrade prompt, or go to Settings and tap "Upgrade to Personal."</p>
-  <div class="tut-screenshot">Screenshot: Scan screen showing the scan counter near the top (e.g. "38 scans remaining this month") with a small "Upgrade" link or banner below it. Or: Settings screen with an "Upgrade to Personal" row highlighted.</div>
+  <h2 class="util-h2">Signed in, not subscribed</h2>
+  <p class="util-p">Once you're signed in, you get 50 scans every calendar month, no purchase required. Answer key scans don't count against this limit on any tier.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 2: You'll be taken to the CamGrader website</h2>
-  <p class="util-p">The app opens camgrader.com/account/create in your browser. This is where you complete the purchase. Payment is handled entirely on the website, not inside the app.</p>
-  <div class="tut-screenshot">Screenshot: Browser opening to the CamGrader Personal page at camgrader.com/account/create, showing the plan name, price, and a "Continue" button or email entry field.</div>
+  <h2 class="util-h2">CamGrader Personal (subscriber)</h2>
+  <p class="util-p">Unlimited scans every month, plus 25-Q, 50-Q, and 100-Q sheet formats, Student ID detection, and CSV and PDF export - on iPhone and Android, with no internet needed to scan. $9.99/month, or $6/month billed annually at $72/year.</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 3: Enter your email and complete payment</h2>
-  <p class="util-p">Enter the email address you want to use for your account and tap Continue. You'll be taken to Stripe's secure checkout to enter your payment details. Use the email address you'll sign into the app with.</p>
-  <div class="tut-screenshot">Screenshot: Email entry field on the CamGrader Personal page with a Continue button. Below it, a note that payment is processed securely by Stripe.</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 4: Stripe checkout</h2>
-  <p class="util-p">Complete the Stripe payment form with your card details. Once your payment is confirmed, Stripe will redirect you back to a confirmation page.</p>
-  <div class="tut-screenshot">Screenshot: Stripe hosted checkout page showing the CamGrader Personal plan name, price, and payment fields (card number, expiry, CVC). A "Subscribe" button is at the bottom.</div>
+  <h2 class="util-h2">1. Tap the upgrade prompt in the app</h2>
+  <p class="util-p">When you're on Guest Mode or signed in without a subscription, you'll see your remaining scans at the top of the scan screen. Tap the upgrade prompt, or go to Settings and tap "Upgrade to Personal."</p>
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 5: Sign in to the app with the same email</h2>
-  <p class="util-p">Open CamGrader and sign in using the same email address you used at checkout. Go to Settings and tap "Sign In," then enter your email. You'll receive a one-time code. Once signed in, your account will show as active with unlimited scans.</p>
-  <div class="tut-screenshot">Screenshot: CamGrader sign-in screen with an email field and a "Send Code" button. The placeholder text reads something like "your@email.com."</div>
+  <hr class="tut-divider">
 
-  <h2 class="util-h2" style="font-size:16px;margin-top:28px;">Step 6: Confirm your plan is active</h2>
-  <p class="util-p">Once signed in, go to Settings. You should see your subscription status listed as active. The scan counter will no longer appear on the scan screen.</p>
-  <div class="tut-screenshot">Screenshot: Settings screen showing "CamGrader Personal" with a status of "Active" and the subscription renewal date. The scan counter that appeared in Guest Mode is no longer visible on the scan screen.</div>
+  <h2 class="util-h2">2. Choose a plan</h2>
+  <p class="util-p">The app opens the CamGrader Personal page in your browser, showing monthly and annual pricing alongside what's included. Tap <strong>Continue to payment</strong>.</p>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/billing/upgrade-to-personal/01-pricing-page.webp" alt="CamGrader Personal pricing page with monthly and annual plans and a Continue to payment button">
+
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">3. Enter your email and payment details</h2>
+  <p class="util-p">This opens Stripe's secure checkout, where you enter the email you'll sign into the app with and your card details, then tap Subscribe. Use the same email address you plan to sign in with.</p>
+  <img class="tut-shot tut-shot-full tut-shot-wide" src="../../../images/support/billing/upgrade-to-personal/02-stripe-checkout.webp" alt="Stripe checkout page with contact information and card payment fields">
+
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">4. Sign in to the app with the same email</h2>
+  <p class="util-p">Open CamGrader, go to Settings, and tap "Sign In." Enter the same email address you used at checkout - you'll get a one-time code by email to complete sign-in.</p>
+
+  <hr class="tut-divider">
+
+  <h2 class="util-h2">5. Confirm your plan is active</h2>
+  <p class="util-p">Once signed in, Settings will show your subscription as active, and the scan counter will no longer appear on the scan screen.</p>
 
   <hr class="util-divider">
 
@@ -88,6 +79,13 @@
     <h2 class="util-h2">Still need help?</h2>
     <p class="util-p">If your subscription isn't showing as active after signing in, contact us and we'll sort it out.</p>
     <a href="../../../contact" class="btn btn-primary">Contact us</a>
+  </div>
+</div>
+
+<div class="tut-lightbox">
+  <div class="tut-lightbox-inner">
+    <button type="button" class="tut-lightbox-close" aria-label="Close">&times;</button>
+    <img src="" alt="">
   </div>
 </div>
 
